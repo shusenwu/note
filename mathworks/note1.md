@@ -10,8 +10,6 @@
 
 ### 如果你对virtual function模棱两可，那么你必！跪！无！疑！。说白了就是OOP三大项，encapsulation，inheritance，dynamic binding。  
 
-### 199. Binary Tree Right Side View
-
 
 ### 1. 项目structure
 ### 2. OOD - ATM, 没让coding，最后问了多线程情况怎么办
