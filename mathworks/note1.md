@@ -5,8 +5,7 @@
 
 ### 挑之前的project让我给她说说是怎么设计的，用Java简单写一下
 
-### introduce your most interesting project，你简历上他比较感兴趣的一些
-点，然后问一些和之前录video时候差不多的问题
+### introduce your most interesting project，你简历上他比较感兴趣的一些点，然后问一些和之前录video时候差不多的问题
 
 ### 如果你对virtual function模棱两可，那么你必！跪！无！疑！。说白了就是OOP三大项，encapsulation，inheritance，dynamic binding。  
 
