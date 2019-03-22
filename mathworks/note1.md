@@ -2,8 +2,6 @@
 ===
 ### 1. 解释@NotNull java问题  
 
-### Leetcode 238. Product of Array Except Self  
-
 
 ### 挑之前的project让我给她说说是怎么设计的，用Java简单写一下
 
