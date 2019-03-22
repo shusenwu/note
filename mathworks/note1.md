@@ -14,12 +14,10 @@
 
 ### 199. Binary Tree Right Side View
 
-### 4. Median of Two Sorted Arrays
-### 780. Reaching Points
 
 ### 1. 项目structure
 ### 2. OOD - ATM, 没让coding，最后问了多线程情况怎么办
-### 3. java coding - reverse linkedlist in k-group
+
 ### 4. java basics - 两个程序运行结果主要是关于继承和多态，method override, function signature，好像还有一些小题目不太记得了
 ### 5. python - coding: find even numbers in a given list
 ### 6. python basics: string immutable, global variable, 记得的还有a=[[]]*4然后a[0].append(0),output
