@@ -1,6 +1,6 @@
 How to Show that You're Finished Speaking in English 
 ===
-Link: https://www.youtube.com/watch?v=VGjctJgQ1eA  
+
 Instead of using "Umm, that’s it.” Or “I don’t know what else to say.” Or, “I’m done.” we can use the following 4 strategies:  
 - Make our voice go up which indicates we are not finished with what we are saying and then the voice goes down indicates that we are finished.
 
@@ -17,3 +17,5 @@ e.x That was a great movie, don't you think? What about you? What do you think? 
 ex. Anyway, that was my weekend.  or anyway that is what happended.   
 So in summary, that's why I think we should increase the budget. 
 All in all, the meeting went really well.
+
+Reference: https://www.youtube.com/watch?v=VGjctJgQ1eA  
