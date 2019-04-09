@@ -97,3 +97,25 @@ class Solution:
         dfs(0, 0, float('inf'))
         return self.re
 ```
+### Count Number of substrings with exactly k distinct characters 
+https://www.geeksforgeeks.org/count-number-of-substrings-with-exactly-k-distinct-characters/
+```python
+def countkDist(str1, k):
+    # Consider all substrings between str[i..j] 
+    res = 0
+    for i in xrange(len(str1)):
+        count = 0
+        dic = {}
+        for j in xrange(i, len(str1)):
+            c = str1[j]
+            if c not in dic:
+                count += 1
+                dic[c] = 1
+            else:
+                dic[c] += 1
+            if count == k:
+                res += 1
+            elif count > k:
+                break
+    return res
+```
