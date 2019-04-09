@@ -163,3 +163,58 @@ def closesTwoSum(arr1, arr2, x):
             p2 -= 1
     return res
 ```
+### Subtree with Maximum Average
+Description Given a binary tree, ﬁnd the subtree with maximum average. Return the root of the subtree. Example Given a binary tree: 1 / \ -5 11 / \ / \ 1 2 4 -2 return the node 11. Your problem can be diﬀerent in ways like -- it may not be a binary tree or the average doesn't include the root of the substree.  
+https://blog.csdn.net/sinat_32547403/article/details/77824104  
+```
+class Solution:
+    def findSubtree2(self, root):
+        if not root:
+            return
+        self.avg, self.node = float('inf'), None
+
+    def helper(self, root):
+        if not root: return 0, 0
+        sumLeft, countLeft = self.helper(root.left)
+        sumRight, countRight = self.helper(root.right)
+        sumRoot = sumLeft + sumRight + root.val
+        countRoot = countLeft + countLeft + 1
+        avg = sumRoot * 1.0 / countRoot
+        if avg > self.avg:
+            self.avg = avg
+            self.node = root
+        return sumRoot, countRoot
+```
+变形：
+Maximum Subtree of Average
+就是给一棵多叉树，表示公司内部的上下级关系。每个节点表示一个员工，节点包含的成员是他工作了几个月(int)，以及一个下属数组(ArrayList)。目标就是找到一棵子树，满足：这棵子树所有节点的工作月数的平均数是所有子树中最大的。最后返回这棵子树的根节点。这题补充一点，返回的不能是叶子节点(因为叶子节点没有下属)，一定要是一个有子节点的节点。  
+https://www.jianshu.com/p/3c1a6726651e  
+```python
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.children = []
+class Solution:
+    def find(self, Node):
+        self.avg = float('-inf')
+        self.node = None
+        self.dfs(root)
+        return self.node
+
+    def dfs(self, root):
+        if not root: return 0, 0  # sum, count
+        if not root.children:
+            return root.val, 1
+        sumRoot, countRoot = root.val, 1
+        for node in root.children:
+            sumChild, countChild = self.dfs(node)
+            sumRoot += sumChild
+            countRoot += countChild
+        if countRoot > 1 and sumRoot * 1.0 / countRoot > self.avg:
+            self.avg = sumRoot * 1.0 / countRoot
+            self.node = root
+        return sumRoot, countRoot
+```
+
+ 
