@@ -119,3 +119,47 @@ def countkDist(str1, k):
                 break
     return res
 ```
+### Two sum closest diff
+http://www.noteanddata.com/Amazon-OA-2-sum-closest.html  
+```python
+def twoSumClosestDiff(arr, target):
+    arr.sort()
+    res = float('inf')
+    l, r = 0, len(arr) - 1
+    while l < r:
+        s = arr[l] + arr[r]
+        res = min(res, abs(s-target))
+        if s < target:
+            l += 1
+        elif s > target:
+            r -= 1
+        else:
+            return 0
+    return res
+```
+### Two Sum Closest
+Given two sorted arrays and a number x, ﬁnd the pair whose sum is closest to x and << x and the pair has an element from each array. We are given two arrays ar1[0…m-1] and ar2[0..n-1] and a number x, we need to ﬁnd the pair ar1[i] + ar2[j] such that absolute value of (ar1[i] + ar2[j] – x) is minimum  
+```
+Input:  ar1[] = {1, 4, 5, 7};        ar2[] = {10, 20, 30, 40};        x = 32       Output:  1 and 30
+ 
+Input:  ar1[] = {1, 4, 5, 7};        ar2[] = {10, 20, 30, 40};        x = 50       Output:  7 and 40
+```
+```python
+def closesTwoSum(arr1, arr2, x):
+    arr1.sort()
+    arr2.sort()
+    n1, n2 = len(arr1), len(arr2)
+    p1, p2 = 0, n2-1
+    minDiff = float('inf')
+    res = [float('inf'), float('inf')]
+    while p1 < n1 and p2 >= 0:
+        curDiff = x - arr1[p1] - arr2[p2]
+        if 0 < curDiff < minDiff:
+            minDiff = curDiff
+            res = [arr1[p1], arr2[p2]]
+        if curDiff > 0:
+            p1 += 1
+        else:
+            p2 -= 1
+    return res
+```
