@@ -216,5 +216,96 @@ class Solution:
             self.node = root
         return sumRoot, countRoot
 ```
+### 7. K minimum Distances
+A 2D matrix with 0, 1, 9. Get minimum number of steps to achieve 9.    
+0 -- obstable  
+1--path  
+9--gold  
+```python
+class Solution:
+    def removeObstacle(self, m, n, lot):
+        self.res = float('inf')
+        self.dfs(lot, m, n, 0)
+        return self.res
 
- 
+    def dfs(self, lot, i, j, step):
+        if 0 <= i < len(lot) and 0 <= j < len(lot[0]) and lot[i][j] != 0:
+            if lot[i][j] == 9:
+                self.res = min(self.res, step)
+                return
+            lot[i][j] = 0
+            self.dfs(lot, i-1, j, step+1)
+            self.dfs(lot, i+1, j, step+1)
+            self.dfs(lot, i, j-1, step+1)
+            self.dfs(lot, i, j+1, step+1)
+            lot[i][j] = 1
+```
+### K Nearest Points 
+Load goods into a truck. Truck is at the origin and you are given the coordinates of all goos, ﬁnd the k nearest goods.   
+https://blog.csdn.net/Sengo_GWU/article/details/82490880  
+O(n + klogn)  
+```python
+import heapq
+def findKClosest(p, k):
+    nums = [(x*x+y*y, x, y) for x, y in p]
+    heapq.heapify(nums)
+    res = []
+    for _ in xrange(k):
+        if nums:
+            res.append(heapq.heappop(nums)[1:])
+    return res
+```
+### high five
+Description There are two properties in the node student id and scores, to ensure that each student will have at least 5 points, ﬁnd the average of 5 highest scores for each person.   
+```python
+from heapq import heappush, heappushpop
+def highfive(students):
+    result = {}
+    for student in students:
+        id = student[0]
+        mark = student[1]
+        if id not in result:
+            result[id] = [mark]
+        else:
+            marks = result[id]
+            if len(marks) < 5:
+                heappush(marks, mark)
+            elif mark > marks[0]:
+                heappushpop(marks, mark)
+    for id, marks in result.items():
+        result[id] = sum(marks) / 5
+    return result
+```
+### Flight
+
+### 505. The Maze II
+https://leetcode.com/problems/the-maze-ii/description/ 
+```python
+class Solution(object):
+    def shortestDistance(self, maze, start, destination):
+        des = tuple(destination)
+        r, c = len(maze), len(maze[0])
+        
+        def go(x, y, dx, dy):
+            step = 0
+            while 0 <= x+dx < r and 0 <= y+dy < c and maze[x+dx][y+dy] == 0:
+                x += dx
+                y += dy
+                step += 1
+            return (x, y), step
+        
+        heap = [(0, tuple(start))]
+        visited = {}
+        while heap:
+            distance, cur = heapq.heappop(heap)
+            if cur in visited and visited[cur] <= distance:
+                continue
+            if cur == des: return distance
+            visited[cur] = distance
+            
+            for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+                nextCur, step = go(cur[0], cur[1], dx, dy)
+                heapq.heappush(heap, (distance+step, nextCur))
+        return -1
+```
+
