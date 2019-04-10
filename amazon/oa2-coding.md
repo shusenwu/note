@@ -310,4 +310,48 @@ class Solution(object):
 ```
 ### MST
 城市连接问题: https://www.ctolib.com/topics-80931.html  
+写了一遍没有测试用例试也是感觉很虚
+```python
+class Solution:
+    def getLowCost(self, connections):
+        if not connections: return []
+        # sort for kruskal
+        connections.sort(key=lambda cnt: cnt[2])
+        res = []
+        # init
+        self.parents = {}
+        for c1, c2, cost in connections:
+            if c1 not in self.parents:
+                self.parents[c1] = c1
+            if c2 not in self.parents:
+                self.parents[c2] = c2
+            if self.union(c1, c2):  # if not circle, union else drop
+                res.append([c1, c2, cost])
 
+
+        # check all the city is in the same root
+        root = ''
+        for c in self.parents.keys():
+            if not root:
+                root = self.find(c)
+            elif self.find(c) != root:
+                return []
+        # sort city name according to city1 name then city2 name
+        res.sort()
+        return res
+
+    def union(self, city1, city2):
+        p1 = self.find(city1)
+        p2 = self.find(city2)
+        if p1 == p2:  # circle
+            return False
+        else:
+            self.parents[p2] = p1
+            return True
+
+    def find(self, city):
+        if self.parents[city] == city:
+            return city
+        self.parents[city] = self.find(self.parents[city])
+        return self.parents[city]
+```
