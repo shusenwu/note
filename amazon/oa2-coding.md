@@ -429,3 +429,28 @@ def shopper(shops):
             res.append([start, end])
     return [end - start + 1 for start, end in res]
 ```
+### 138. Copy List with Random Pointer
+https://leetcode.com/problems/copy-list-with-random-pointer/description/ 
+```python
+# Definition for singly-linked list with a random pointer.
+# class RandomListNode(object):
+#     def __init__(self, x):
+#         self.label = x
+#         self.next = None
+#         self.random = None
+ 
+class Solution(object):
+    def copyRandomList(self, head):
+        d = dict()
+        p1 = p2 = head
+        
+        while p1:
+            d[p1] = RandomListNode(p1.label)
+            p1 = p1.next
+            
+        while p2:
+            d[p2].next = d.get(p2.next)
+            d[p2].random = d.get(p2.random)
+            p2 = p2.next
+        return d.get(head)
+```
