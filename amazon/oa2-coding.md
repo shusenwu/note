@@ -328,7 +328,6 @@ class Solution:
             if self.union(c1, c2):  # if not circle, union else drop
                 res.append([c1, c2, cost])
 
-
         # check all the city is in the same root
         root = ''
         for c in self.parents.keys():
