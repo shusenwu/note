@@ -308,4 +308,6 @@ class Solution(object):
                 heapq.heappush(heap, (distance+step, nextCur))
         return -1
 ```
+### MST
+城市连接问题: https://www.ctolib.com/topics-80931.html  
 
