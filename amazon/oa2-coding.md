@@ -404,3 +404,28 @@ class Solution:
         self.parents[city] = self.find(self.parents[city])
         return self.parents[city]
 ```
+### shoppers
+![shoppers](https://github.com/shusenwu/note/blob/master/amazon/OA2-shopper.jpeg?raw=true)
+```python
+import collections
+def shopper(shops):
+    if not shops: return []
+    d = collections.defaultdict(list)
+    for i, s in enumerate(shops):
+        d[s].append(i)
+
+    intervals = d.values()
+    intervals.sort()
+    for i, inter in enumerate(intervals):
+        if len(inter) == 1:
+            intervals[i] = inter + inter
+        else:
+            intervals[i] = [inter[0], inter[-1]]
+    res = [intervals[0]]
+    for start, end in intervals[1:]:
+        if start <= res[-1][1]:
+            res[-1][1] = max(res[-1][1], end)
+        else:
+            res.append([start, end])
+    return [end - start + 1 for start, end in res]
+```
