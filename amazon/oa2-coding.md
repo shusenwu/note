@@ -454,3 +454,24 @@ class Solution(object):
             p2 = p2.next
         return d.get(head)
 ```
+### Order Dependency 
+https://leetcode.com/problems/course-schedule/description/ 
+https://blog.csdn.net/Sengo_GWU/article/details/81966972 
+### Window Sum
+```java
+public static ArrayList<Integer> getWindowSum(ArrayList<Integer> list, int k){ 
+	if(list == null || list.size() == 0) return new ArrayList<Integer>(); 
+	if(k < 1 || k > list.size()) return null; 
+	ArrayList<Integer> ans = new ArrayList<Integer>(); 
+	int len = list.size(); 
+	int sum = 0; 
+	for(int i = 0; i < len; i++){ 
+		sum += list.get(i);
+		if(i-k+1 >= 0){ 
+			ans.add(sum); 
+			sum -= list.get(i-k+1); 
+		} 
+	} 
+	return ans; 
+}
+```
