@@ -513,3 +513,5 @@ def accumateTime(sizes):
 
 print accumateTime([8, 4, 6, 12])
 ```
+### 1000. Minimum Cost to Merge Stones 
+https://blog.csdn.net/Sengo_GWU/article/details/81603006 
