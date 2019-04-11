@@ -407,6 +407,23 @@ class Solution:
 ### shoppers  partition labels
 https://leetcode.com/problems/partition-labels/description/
 ![shoppers](https://github.com/shusenwu/note/blob/master/amazon/OA2-shopper.jpeg?raw=true)
+O(n) 24 char
+```python
+class Solution(object):
+    def partitionLabels(self, s):
+        dic = {}
+        for i, char in enumerate(s):
+            dic[char] = i
+        
+        res = []
+        l , r = 0, 0
+        for i, char in enumerate(s):
+            r = max(r, dic[char])
+            if i == r:
+                res.append(r-l+1)
+                l = r + 1
+        return res
+```
 ```python
 import collections
 def shopper(shops):
