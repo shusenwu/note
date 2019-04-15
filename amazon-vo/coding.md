@@ -111,3 +111,28 @@ class Solution(object):
         bucket = [b for b in bucket if b[0] is not None]
         return max(bucket[i][0]-bucket[i-1][1] for i in range(1, len(bucket)))
   ```
+### 310. Minimum Height Trees
+https://leetcode.com/problems/minimum-height-trees/description/
+### 189. Rotate Array
+https://leetcode.com/problems/rotate-array/description/
+### 459. Repeated Substring Pattern
+https://leetcode.com/problems/repeated-substring-pattern/description/
+### sort colors 
+```python
+class Solution(object):
+    def sortColors(self, nums):
+        left = cur = 0
+        right = len(nums) - 1
+        while cur <= right:
+            if nums[cur] == 0:
+                nums[left], nums[cur] = nums[cur], nums[left]
+                left += 1
+                cur += 1
+            elif nums[cur] == 1:
+                cur += 1
+            else:
+                nums[cur], nums[right] = nums[right], nums[cur]
+                right -= 1
+```
+### Sort colors II
+https://www.jiuzhang.com/solution/sort-colors-ii/ 
