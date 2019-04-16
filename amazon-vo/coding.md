@@ -162,3 +162,5 @@ class Solution:
         self.rainBowSort(colors, left, r, colorFrom, colorMid)
         self.rainBowSort(colors, l, right, colorMid+1, colorTo)
 ```
+### 496. Next Greater Element I
+### 415. Add Strings 
