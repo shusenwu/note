@@ -167,6 +167,21 @@ class Solution(object):
 ```
 ### 459. Repeated Substring Pattern
 https://leetcode.com/problems/repeated-substring-pattern/description/
+Basic idea:  
+
+- First char of input string is first char of repeated substring  
+- Last char of input string is last char of repeated substring  
+- Let S1 = S + S (where S in input string)
+- Remove 1 and last char of S1. Let this be S2
+- If S exists in S2 then return true else false 
+- Let i be index in S2 where S starts then repeated substring length i + 1 and repeated substring S[0: i+1]
+```python
+def repeatedSubstringPattern(self, str):
+        if not s: return False
+        s1 = s + s
+        s2 = s1[1:-1]
+        return s2.find(s) != -1
+```
 ### sort colors 
 ```python
 class Solution(object):
