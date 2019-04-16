@@ -163,4 +163,21 @@ class Solution:
         self.rainBowSort(colors, l, right, colorMid+1, colorTo)
 ```
 ### 496. Next Greater Element I
+https://leetcode.com/problems/next-greater-element-i/description/ 
+
 ### 415. Add Strings 
+https://leetcode.com/problems/add-strings/description/
+```python
+class Solution(object):
+    def addStrings(self, num1, num2):
+        num1, num2 = list(num1), list(num2)
+        res = []
+        carry = 0
+        while len(num1) or len(num2) or carry:
+            a = ord(num1.pop()) - ord('0') if num1 else 0
+            b = ord(num2.pop()) - ord('0') if num2 else 0
+            total = a + b + carry
+            carry = total / 10
+            res = [total % 10] + res
+        return ''.join(str(c) for c in res)
+```
