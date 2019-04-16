@@ -146,6 +146,25 @@ class Solution(object):
 ```
 ### 189. Rotate Array
 https://leetcode.com/problems/rotate-array/description/
+1. reverse the first n - k elements  
+2. reverse the rest of them  
+3. reverse the entire array  
+```python
+class Solution(object):
+    def rotate(self, nums, k):
+        # O(n) in time, O(1) in space
+        if not k or k <= 0: return 
+        k, end = k % len(nums), len(nums) - 1
+        self.reverse(0, end-k, nums)
+        self.reverse(end-k+1, end, nums)  # end-k+1 不是 k+1
+        self.reverse(0, end, nums)
+    
+    def reverse(self, start, end, nums):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start]
+            start += 1
+            end -= 1
+```
 ### 459. Repeated Substring Pattern
 https://leetcode.com/problems/repeated-substring-pattern/description/
 ### sort colors 
