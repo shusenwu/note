@@ -113,6 +113,37 @@ class Solution(object):
   ```
 ### 310. Minimum Height Trees
 https://leetcode.com/problems/minimum-height-trees/description/
+```python
+class Solution(object):
+    def findMinHeightTrees(self, n, edges):
+       
+        if n == 1: return [0]
+        neighbors = collections.defaultdict(list)
+        degress = collections.defaultdict(int)
+        
+        for u,v in edges:
+            neighbors[u].append(v)
+            neighbors[v].append(u)
+            degress[u] += 1
+            degress[v] += 1
+        
+        level = []
+        for i in xrange(n):  # 找到入度为1的
+            if degress[i] == 1:
+                level.append(i)
+        unvisited = set(range(n))
+        while len(unvisited) > 2:  # 这里是unvisited >2 不是len(level)
+            nextLevel = []
+            for u in level:
+                unvisited.remove(u)
+                for neighbor in neighbors[u]:
+                    if neighbor in unvisited:
+                        degress[neighbor] -= 1
+                        if degress[neighbor] == 1:
+                            nextLevel.append(neighbor)
+            level = nextLevel
+        return level
+```
 ### 189. Rotate Array
 https://leetcode.com/problems/rotate-array/description/
 ### 459. Repeated Substring Pattern
