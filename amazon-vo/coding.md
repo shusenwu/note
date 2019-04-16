@@ -164,7 +164,30 @@ class Solution:
 ```
 ### 496. Next Greater Element I
 https://leetcode.com/problems/next-greater-element-i/description/ 
+常规解： O(n^2)
+```python
+class Solution(object):
+    def nextGreaterElement(self, nums1, nums2):
+        d = {}     
+        for i,num1 in enumerate(nums2):
+            for num2 in nums2[i+1:]:
+                 if num1 < num2:
+                    d[num1] = num2
+                    break
+        return [d.get(num1,-1) for num1 in nums1]
+```
+用Stack O（n） ， stack 部分 O(1)
+```python
+        st, d = [], {}  # stack
+        for n in nums:
+            while st and st[-1] < n:  # At max it can go up to 2*i operations for any given i. But overall it is not n^2
+                d[st.pop()] = n
+            st.append(n)
+        
+        return [d.get(x, -1) for x in findNums]
 
+
+```python
 ### 415. Add Strings 
 https://leetcode.com/problems/add-strings/description/
 ```python
