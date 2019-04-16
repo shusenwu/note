@@ -136,6 +136,7 @@ class Solution(object):
 ```
 ### Sort colors II
 https://www.jiuzhang.com/solution/sort-colors-ii/ 
+除了下面这种在原来数组操作的，牺牲空间的话，可以用数组记录color出现的数次，或者bucket sort
 ```python
 class Solution:
     def sortColor(self, colors, k):
