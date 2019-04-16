@@ -166,7 +166,7 @@ class Solution(object):
             end -= 1
 ```
 ### 459. Repeated Substring Pattern
-https://leetcode.com/problems/repeated-substring-pattern/description/
+https://leetcode.com/problems/repeated-substring-pattern/description/  
 Basic idea:  
 
 - First char of input string is first char of repeated substring  
