@@ -185,9 +185,8 @@ class Solution(object):
             st.append(n)
         
         return [d.get(x, -1) for x in findNums]
+```
 
-
-```python
 ### 415. Add Strings 
 https://leetcode.com/problems/add-strings/description/
 ```python
