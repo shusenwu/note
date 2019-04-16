@@ -139,7 +139,7 @@ https://www.jiuzhang.com/solution/sort-colors-ii/
 ```python
 class Solution:
     def sortColor(self, colors, k):
-        # sort colors from 1 to k  O(nlogk)
+        # sort colors from 1 to k  O(nlogk) 为啥不是nlogn?
         if not colors: return []
         self.rainBowSort(colors, 0, len(colors)-1, 1, k)
         return colors
