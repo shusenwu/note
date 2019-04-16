@@ -136,3 +136,28 @@ class Solution(object):
 ```
 ### Sort colors II
 https://www.jiuzhang.com/solution/sort-colors-ii/ 
+```python
+class Solution:
+    def sortColor(self, colors, k):
+        # sort colors from 1 to k  O(nlogk)
+        if not colors: return []
+        self.rainBowSort(colors, 0, len(colors)-1, 1, k)
+        return colors
+
+    def rainBowSort(self, colors, left, right, colorFrom, colorTo):
+        if colorFrom == colorTo: return
+        if left >= right: return
+        colorMid = (colorFrom + colorTo) / 2
+        l, r = left, right
+        while l <= r:  # left part <= mid  right part > mid
+            while l <= r and colors[l] <= colorMid:
+                l += 1
+            while l <= r and colors[r] > colorMid:
+                r -= 1
+            if l <= r:
+                colors[l], colors[r] = colors[r], colors[l]
+                l += 1
+                r -= 1
+        self.rainBowSort(colors, left, r, colorFrom, colorMid)
+        self.rainBowSort(colors, l, right, colorMid+1, colorTo)
+```
