@@ -1,3 +1,23 @@
+### 23. Merge k Sorted Lists
+https://leetcode.com/problems/merge-k-sorted-lists/description/
+```python
+class Solution(object):
+    def mergeKLists(self, lists):
+        dummy = head = ListNode(-1)
+        h = []
+        for node in lists:
+            if not node: continue
+            h.append([node.val, node])
+        heapq.heapify(h) 
+        while h:
+            v, n = heapq.heappop(h)
+            head.next = ListNode(v)
+            head = head.next
+            if n.next:
+                heapq.heappush(h, [n.next.val, n.next])
+        return dummy.next
+```
+
 ### Binary Tree Path Sum
   题目是node val 只有0 1 的binary tree， 从root 到 leaf 是一个path，可以对应一个十进制的数字，然后求出sum
   ```
