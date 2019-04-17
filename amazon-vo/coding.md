@@ -1,6 +1,6 @@
 ### Longest repeating substing
 https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/  
-e.g.
+e.g.  
 abcab -> string   
 12345 -> index   
 dp[i][j]记录的是character string[i-1]=string[j-1]的时候，end为i或者为j的最长的重复子串的长度。
