@@ -1,3 +1,69 @@
+### Longest repeating substing
+https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/  
+e.g.
+abcab -> string   
+12345 -> index   
+dp[i][j]记录的是character string[i-1]=string[j-1]的时候，end为i或者为j的最长的重复子串的长度。
+对于重复的a在index1, 4: dp[1][4] = dp[0][0]+1   
+对于重复的b在index2, 5: dp[2][5] = dp[1][4]+1 
+下面是non-overlap的
+```python
+def longestRepeatedSubstring(s):
+    n = len(s)
+    dp = [[0] * (n+1) for _ in xrange(n+1)]
+    res = ''
+    res_length = 0
+    index = 0
+    for i in xrange(1, n+1):
+        for j in xrange(i, n+1):
+            # dp[i-1][j-1] < j-i to remove overlapping
+            if s[i-1] == s[j-1] and dp[i-1][j-1] < j-i:
+                dp[i][j] = dp[i-1][j-1] + 1
+                if dp[i][j] > res_length:
+                    res_length = dp[i][j]
+                    index = max(i, index)
+            else:
+                dp[i][j] = 0
+    if res_length:
+        for i in xrange(index-res_length+1, index+1):
+            res += s[i-1]
+    return res
+```
+看到亚麻别人VO要求banana要求返回ana是Overlap的上面代码稍微修改下：
+```python
+def longestRepeatedSubstring(s):
+    n = len(s)
+    dp = [[0] * (n+1) for _ in xrange(n+1)]
+    res = ''
+    res_length = 0
+    index = 0
+    for i in xrange(1, n+1):
+        for j in xrange(i+1, n+1):
+            # dp[i-1][j-1] < j-i to remove overlapping
+            if s[i-1] == s[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+                if dp[i][j] > res_length:
+                    res_length = dp[i][j]
+                    index = max(i, index)
+            else:
+                dp[i][j] = 0
+    if res_length:
+        for i in xrange(index-res_length+1, index+1):
+            res += s[i-1]
+    return res
+```
+### 98. Validate Binary Search Tree
+https://leetcode.com/problems/validate-binary-search-tree/description/
+```python
+class Solution(object):
+    def isValidBST(self, root, largerThan=float('-inf'), smallerThan=float('inf')):
+        if not root:
+            return True
+        if root.val >= smallerThan or root.val <= largerThan:
+            return False
+        return self.isValidBST(root.left, largerThan, min(smallerThan, root.val)) and self.isValidBST(root.right, max(largerThan, root.val), smallerThan)
+```
+
 ### 23. Merge k Sorted Lists
 https://leetcode.com/problems/merge-k-sorted-lists/description/
 ```python
