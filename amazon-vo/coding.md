@@ -1,4 +1,6 @@
 ### tree maximum sum path
+### 3 sum
+https://leetcode.com/problems/3sum/ 
 
 ### 判断是不是2的N次方
 * 一个数如果是2的n次方，那么这个数二进制中只有一位是1，其余是0
