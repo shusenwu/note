@@ -1,7 +1,37 @@
 ### tree maximum sum path
 ### 3 sum
 https://leetcode.com/problems/3sum/ 
-
+```python
+class Solution(object):
+    def threeSum(self, nums):
+        nums.sort()
+        res = []
+        n = len(nums)
+        for i in xrange(n):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            j = i+1
+            k = n-1
+            while j < k:
+                s = nums[i] + nums[j] + nums[k]
+                if s > 0:
+                    k -= 1
+                    while 0 < k-1 and nums[k] == nums[k+1]:
+                        k -= 1
+                elif s < 0:
+                    j += 1
+                    while j+1 < n-1 and nums[j] == nums[j-1]:
+                        j += 1
+                else:
+                    res.append([nums[i], nums[j], nums[k]])
+                    j += 1
+                    while j+1 < n-1 and nums[j] == nums[j-1]:
+                        j += 1
+                    k -= 1
+                    while 0 < k-1 and nums[k] == nums[k+1]:
+                        k -= 1
+        return res
+```
 ### 判断是不是2的N次方
 * 一个数如果是2的n次方，那么这个数二进制中只有一位是1，其余是0
 * 如果该数减1，则其二进制与上面的完全不同，
