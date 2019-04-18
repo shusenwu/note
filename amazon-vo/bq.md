@@ -5,4 +5,5 @@ BQ問最近學了什麼technical skill，怎麼學的
 BQ tight deadline 
 十分鐘口述LRU
 what makes you most interested in a company.    
-hashmap是不是都是O（1）查找，解释原因。 然后说两种sort 算法，解释对比
+hashmap是不是都是O（1）查找，解释原因。 然后说两种sort 算法，解释对比  
+https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=516481&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311
