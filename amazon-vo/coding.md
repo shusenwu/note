@@ -1,5 +1,26 @@
 ### tree maximum sum path
 
+### 判断是不是2的N次方
+* 一个数如果是2的n次方，那么这个数二进制中只有一位是1，其余是0
+* 如果该数减1，则其二进制与上面的完全不同，
+* 利用这点，如果n是2的n次方，那么n&(n-1)必为0
+```python
+def isPower2(n):
+    if n < 1: return False
+    return (n-1) & n == 0
+```
+* 利用位移，从1开始，每次位移一位，看会不会等于这个数
+```python
+def isPower(n):
+    if n < 1: return False
+    i = 1
+    while i <= n:
+        if i == n:
+            return True
+        i <<= 1
+    return False
+```
+
 ### Longest repeating substing
 https://www.geeksforgeeks.org/longest-repeating-and-non-overlapping-substring/  
 e.g.  
