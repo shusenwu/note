@@ -1,4 +1,20 @@
-### tree maximum sum path
+### 124. Binary Tree Maximum Path Sum
+https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
+```python
+class Solution(object):
+    def maxPathSum(self, root):
+        # left max + right max + cur node
+        self.res = float('-inf')
+        def maxPath(root):
+            if not root:
+                return 0
+            left = max(0, maxPath(root.left))
+            right = max(0, maxPath(root.right))
+            self.res = max(self.res, left+right+root.val)
+            return max(left, right) + root.val  # 注意这里只能是 左边或者右边的path加当前节点
+        maxPath(root)
+        return self.res
+```
 ### 3 sum
 https://leetcode.com/problems/3sum/ 
 ```python
