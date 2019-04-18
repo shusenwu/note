@@ -15,6 +15,18 @@ class Solution(object):
         maxPath(root)
         return self.res
 ```
+### 112. Path Sum
+https://leetcode.com/problems/path-sum/description/
+```python
+class Solution(object):
+    def hasPathSum(self, root, sum):
+        if not root: return False
+        if not root.left and not root.right and sum == root.val:
+            return True
+        sum -= root.val
+        return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
+```
+
 ### 3 sum
 https://leetcode.com/problems/3sum/ 
 ```python
