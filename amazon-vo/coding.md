@@ -1,3 +1,15 @@
+### 49. Group Anagrams
+https://leetcode.com/problems/group-anagrams/description/
+```python
+class Solution(object):
+    def groupAnagrams(self, strs):
+        d = {}
+        for s in strs:
+            key = tuple(sorted(s))  # 注意这里有tuple
+            d[key] = d.get(key, []) + [s]
+        return d.values()
+```
+
 ### 146. LRU Cache
 https://blog.csdn.net/Sengo_GWU/article/details/82930179
 
