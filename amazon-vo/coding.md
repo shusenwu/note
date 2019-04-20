@@ -1,4 +1,18 @@
 ### two sum
+### find duplicate
+nums = [1, 1, 2, 3, 4, 5, 6, 7] 
+连续的排序数组里面有一个duplicate
+```python
+def findDuplicate(nums):
+    l, r = 0, len(nums)-1
+    while l < r:
+        mid = (l + r) / 2
+        if nums[mid] == nums[l] + mid:
+            l = mid + 1
+        else:
+            r = mid
+    return nums[l]
+```
 ### 380. Insert Delete GetRandom O(1)
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 ```python
