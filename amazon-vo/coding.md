@@ -4,26 +4,26 @@ https://leetcode.com/problems/insert-delete-getrandom-o1/
 ```python
 class RandomizedSet(object):
     def __init__(self):
-        self.d = {}
-        self.length = 0
-
+        self.nums, self.pos = [], {}
+        
     def insert(self, val):
-        if val not in self.d:
-            self.d[val] = True
-            self.length += 1
+        if val not in self.pos:
+            self.nums.append(val)
+            self.pos[val] = len(self.nums) - 1
             return True
         return False
+        
 
     def remove(self, val):
-        if val in self.d:
-            del self.d[val]
-            self.length -= 1
+        if val in self.pos:
+            idx, last = self.pos[val], self.nums[-1]
+            self.nums[idx], self.pos[last] = last, idx
+            self.nums.pop(); self.pos.pop(val, 0)
             return True
         return False
-    
+            
     def getRandom(self):
-        idx = random.randint(0, self.length-1)
-        return self.d.keys()[idx]
+        return self.nums[random.randint(0, len(self.nums) - 1)]
 ```
 
 
