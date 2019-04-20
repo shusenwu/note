@@ -1,3 +1,4 @@
+one time without manager decision and fail  
 就是如果项目时间特别紧，你会怎么做啊，要不要也帮帮你没完成的小老弟？还有就是如果要做决定的话你会考虑什么问题啊？我都是先说了自己怎么做，小哥问我有没有具体的实例  
 array arraylist linklist 区别.  
 图是什么，怎么存储，和树是什么区别  
