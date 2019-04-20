@@ -1,5 +1,41 @@
 ### two sum
 
+
+### ID generate
+```
+get() -> 1
+get() -> 2
+get() -> 3
+put(2)
+get() -> 2
+get() -> 4
+put(3)
+get() -> 3
+get() -> 5
+```
+```python
+import heapq
+class Generate:
+    def __init__(self):
+        self.cur = 1
+        self.buffer = []
+
+    def get(self):
+        if self.buffer and self.buffer[0] < self.cur:
+            res = heapq.heappop(self.buffer)
+        elif self.buffer and self.buffer[0] == self.cur:
+            self.cur += 1
+            res = heapq.heappop(self.buffer)
+        else:
+            res = self.cur
+            self.cur += 1
+        return res
+
+    def put(self, id):
+        heapq.heappush(self.buffer, id)
+        return True
+```
+
 ### 49. Group Anagrams
 https://leetcode.com/problems/group-anagrams/description/
 ```python
