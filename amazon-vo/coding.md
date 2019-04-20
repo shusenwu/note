@@ -1,5 +1,28 @@
 ### two sum
 
+### Convert a Binary Tree to Threaded binary tree
+https://www.geeksforgeeks.org/convert-binary-tree-threaded-binary-tree-set-2-efficient/
+```python
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = self.right = None
+        self.isThreaded = False
+
+def createThreaded(root):
+    # Base cases: Tree is empty or has single node
+    if not root: return None
+    if not root.left and not root.right:
+        return root
+    # find predecessor
+    if root.left:
+        l = createThreaded(root.left)  # Find predecessor of root (Rightmost
+        l.right = root  # Link a thread from predecessor
+        l.isThreaded = True
+    if not root.right:
+        return root
+    return createThreaded(root.right)
+```
 
 ### ID generate
 ```
