@@ -1,4 +1,31 @@
 ### two sum
+### 380. Insert Delete GetRandom O(1)
+https://leetcode.com/problems/insert-delete-getrandom-o1/
+```python
+class RandomizedSet(object):
+    def __init__(self):
+        self.d = {}
+        self.length = 0
+
+    def insert(self, val):
+        if val not in self.d:
+            self.d[val] = True
+            self.length += 1
+            return True
+        return False
+
+    def remove(self, val):
+        if val in self.d:
+            del self.d[val]
+            self.length -= 1
+            return True
+        return False
+    
+    def getRandom(self):
+        idx = random.randint(0, self.length-1)
+        return self.d.keys()[idx]
+```
+
 
 ### Convert a Binary Tree to Threaded binary tree
 https://www.geeksforgeeks.org/convert-binary-tree-threaded-binary-tree-set-2-efficient/
