@@ -1,5 +1,5 @@
-Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.
-
+Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
+自我介绍  
 one time without manager decision and fail  
 就是如果项目时间特别紧，你会怎么做啊，要不要也帮帮你没完成的小老弟？还有就是如果要做决定的话你会考虑什么问题啊？我都是先说了自己怎么做，小哥问我有没有具体的实例  
 array arraylist linklist 区别.  
