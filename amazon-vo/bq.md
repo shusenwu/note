@@ -1,4 +1,5 @@
 Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
+
 自我介绍  
 the most challenge project, how will you find resources when you cannot access to your metor?
 one time without manager decision and fail  
