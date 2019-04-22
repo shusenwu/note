@@ -4,6 +4,7 @@ Couldn’t finish tasks before deadline
 
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
+One time that your method was wrong  
 
 - What is your most interesting bug?
 - Tell me a time you make something innovative
