@@ -1,3 +1,15 @@
+
+Tell me a time you made a decision without your manager or mentor.
+What is your most interesting bug?
+Tell me a time you make something innovative
+Tell me a time you take a risk but fail? What could you do better if you can do it again? 
+Tell me a time you have a conflict with your teammate
+Tell me a time your teammate struggled, how do you help him/her?
+What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
+Exp of feedback to others/others to you.
+Can’t catch up DDL? What did you do?
+Why Amazon?
+
 Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
 小黄鸡的网站，采集器无法存储新的章节，但是章节内容存进了数据库。导致用户看到的文章都是没有内容的，后来甚至导致进程一直抛出异常崩溃。因为急着修复，没有很多时间排查问题。只能先把日志文件下载下来然后恢复数据盘的镜像，让网站工作。
 Sure, so, I built a novel website and somone bought it. Then I was responsilbe for the webiste maintaince. One day, like about 3 months
