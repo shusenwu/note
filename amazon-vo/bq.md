@@ -2,7 +2,9 @@
 Couldn’t finish tasks before deadline  
 小黄鸡网站，收到邮件有人想买它，要我展示给buyer看。但是后台管理员模块那时候做得很不完善，因为之前是自己在用，比如删除书籍，我都是直接。于是在demo之前就花了1天时间添加了一些fake functions，包括书籍管理等。然后第二天展示给买家。因为买家不懂得技术，所以以为功能很完善，就愉快决定购买这个网站。但是我在之后花了一周时间把后台管理员功能都完善了。因为我不能sacrifice the customer experience or the quality of the product。我可以 sacrifice our own time to try to finish the tasks. 但是不能让产品质量不好。
 
-- Tell me a time you made a decision without your manager or mentor.
+Tell me a time you made a decision without your manager or mentor.  
+one time without manager decision and fail  
+
 - What is your most interesting bug?
 - Tell me a time you make something innovative
 - Tell me a time you take a risk but fail? What could you do better if you can do it again? 
