@@ -10,12 +10,16 @@ One time that your method was wrong
 - Tell me a time you make something innovative
 - Tell me a time you take a risk but fail? What could you do better if you can do it again? 
 - Tell me a time you have a conflict with your teammate
-- Tell me a time your teammate struggled, how do you help him/her?
-- What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
+
+Tell me a time your teammate struggled, how do you help him/her?  
+It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
+During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
+
+- What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
 - Exp of feedback to others/others to you.
 - Can’t catch up DDL? What did you do?
 - Why Amazon?
-
+问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
 小黄鸡的网站，采集器无法存储新的章节，但是章节内容存进了数据库。导致用户看到的文章都是没有内容的，后来甚至导致进程一直抛出异常崩溃。因为急着修复，没有很多时间排查问题。只能先把日志文件下载下来然后恢复数据盘的镜像，让网站工作。  
 Sure, so, I built a novel website and somone bought it. Then I was responsilbe for the webiste maintaince. One day, like about 3 months
