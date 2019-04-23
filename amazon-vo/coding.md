@@ -2,6 +2,25 @@
 ### two sum
 ### reverse linked list
 ### binary tree top view
+```python
+def topView(root):
+    if not root:
+        return
+    q = [(root, 0)]
+    seen = {}
+    re = []
+    while q:
+        node, pos = q.pop(0)
+        if pos not in seen:
+            seen[pos] = node.val
+        if node.left:
+            q.append((node.left, pos-1))
+        if node.right:
+            q.append((node.right, pos+1))
+    for key in sorted(seen.keys()):
+        re.append(seen[key])
+    return re
+```
 ### 162. Find Peak Element
 https://leetcode.com/problems/find-peak-element/
 ```python
