@@ -44,7 +44,7 @@ One time that your method was wrong
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 还有就是如果要做决定的话你会考虑什么问题啊？  
 ___
-- how will you find resources when you cannot access to your metor?
+- how will you find resources when you cannot access to your metor?  
 It depends on what resources I need. If I need some tools or materials for the project, let's say I need a server to run the codes. I guess I can always find someone in the company and ask for the resource. If I need some help, let's say I need someone to help me debug my codes, I will google and do it by myself first. If I still can't solve it, I can ask my peers and other teammates for help. And I think making friends with teammates is important since it is easier to ask a friend for help.
 ___
 - Why Amazon?
