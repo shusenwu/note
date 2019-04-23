@@ -14,10 +14,12 @@ after selling the novel website, the buyer told me that all of the new chapters 
 - Can’t catch up DDL? What did you do?  
 Basically, if there is a manager or a mentor, I will tell him the situation and ask him for advices cause I do not have much work experience as a new grad. But I will prevent not to sacrifice customers' or users' experience and still make my codes with high quality. Would you want me to share you with some detail experience? It was about a Chinese novel website, I built that website and someone wanted to buy it.
 ___
+### help teammates
 - Tell me a time your teammate struggled, how do you help him/her?  
 It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
 During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
 ___
+### innovative
 - Tell me a time you make something innovative  
 It was about a project focused on student users called Jmubox which was designed and built by me. I was the team leader and I found some of my schoolmates to build it and run it together for about two years. In this project, I built an innovative function called emotional consultation. This function was to help students solve their emotional problems without going to campus mental health center. You know, many people like me are too shy to walk into the mental health enter. We cooperated with the campus mental health center so students can post their emotional questions on our system and teachers on campus mental health center will answer these questions. Though this way, we got 5 thousand student users. I am also very pround of this project not only because I was the team leader, but we also solved many students emotional problems.
 ___
