@@ -1,7 +1,11 @@
-做没做过什么challenging的project，因为ddl而compromise一些东西什么的经历   
+- 做没做过什么challenging的project，因为ddl而compromise一些东西什么的经历   
 Couldn’t finish tasks before deadline  
 小黄鸡网站，收到邮件有人想买它，要我展示给buyer看。但是后台管理员模块那时候做得很不完善，因为之前是自己在用，比如删除书籍，我都是直接。于是在demo之前就花了1天时间添加了一些fake functions，包括书籍管理等。然后第二天展示给买家。因为买家不懂得技术，所以以为功能很完善，就愉快决定购买这个网站。但是我在之后花了一周时间把后台管理员功能都完善了。因为我不能sacrifice the customer experience or the quality of the product。我可以 sacrifice our own time to try to finish the tasks. 但是不能让产品质量不好。
-
+___
+- Tell me a time your teammate struggled, how do you help him/her?  
+It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
+During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
+___
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
@@ -11,9 +15,6 @@ One time that your method was wrong
 - Tell me a time you take a risk but fail? What could you do better if you can do it again? 
 - Tell me a time you have a conflict with your teammate
 
-Tell me a time your teammate struggled, how do you help him/her?  
-It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
-During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
 
 - What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
 - Exp of feedback to others/others to you.
