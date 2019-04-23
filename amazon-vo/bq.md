@@ -12,7 +12,7 @@ ___
 It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
 During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
 ___
-
+- Can’t catch up DDL? What did you do?  
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
