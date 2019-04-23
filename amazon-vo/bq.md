@@ -29,7 +29,9 @@ ___
 - What is your most interesting bug?
 
 ___
-
+### Weakness
+对自己的代码太自信，然后不仔细检查就说自己做完了。
+___
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
