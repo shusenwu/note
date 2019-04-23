@@ -34,26 +34,25 @@ ___
 
 ___
 ### Weakness
+Exp of feedback to others/others to you.
 对自己的代码太自信，然后不仔细检查就说自己做完了。
 ___
+### Decision
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
-- Tell me a time you take a risk but fail? What could you do better if you can do it again? 
-
-- What is your most interesting bug?
-
-
-
-- What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
-- Exp of feedback to others/others to you.
-
+Tell me a time you take a risk but fail? What could you do better if you can do it again?   
+ 
+___
+- how will you find resources when you cannot access to your metor?
+It depends on what resources I need. If I need some tools or materials for the project, let's say I need a server to run the codes. I guess I can always find someone in the company and ask for the resource. If I need some help, let's say I need someone to help me debug my codes, I will google and do it by myself first. If I still can't solve it, I can ask my peers and other teammates for help. And I think making friends with teammates is important since it is easier to ask a friend for help.
+___
 - Why Amazon?
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 
 
 
-the most challenge project, how will you find resources when you cannot access to your metor?
+the most challenge project, 
 one time without manager decision and fail  
 就是如果项目时间特别紧，你会怎么做啊，要不要也帮帮你没完成的小老弟？还有就是如果要做决定的话你会考虑什么问题啊？我都是先说了自己怎么做，小哥问我有没有具体的实例  
 array arraylist linklist 区别.  
