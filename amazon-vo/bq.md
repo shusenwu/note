@@ -1,18 +1,21 @@
+## DDL
 - 做没做过什么challenging的project，因为ddl而compromise一些东西什么的经历   
 Couldn’t finish tasks before deadline  
 小黄鸡网站，收到邮件有人想买它，要我展示给buyer看。但是后台管理员模块那时候做得很不完善，因为之前是自己在用，比如删除书籍，我都是直接。于是在demo之前就花了1天时间添加了一些fake functions，包括书籍管理等。然后第二天展示给买家。因为买家不懂得技术，所以以为功能很完善，就愉快决定购买这个网站。但是我在之后花了一周时间把后台管理员功能都完善了。因为我不能sacrifice the customer experience or the quality of the product。我可以 sacrifice our own time to try to finish the tasks. 但是不能让产品质量不好。
 It was about two years ago, I built a Chinese novel website and someone wanted to buy it. (Did you want to see the website, I can share you the link) Before buying it, the buyer want me to show her the whole website including management system and writer system. But at that time, the management system was not well built. Like for deleting a book, I can delete directly on the database so I didnot implement those functions on the management system. You know, she was the customer, I could not hold her for a long time to wait me to give her a demo. So I used one day to implement some fake functions on the management system and showed her the demo at the second day. And I also promised her that I will finished all those functions in a short days. The result was good, she was happy to buy the Chinese novel website and I also implemented those functions later with high quality. I also learned I can't sacrifice the customer experience or the quality of the product even there is a tight deadline.
-___
+ 
 - Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
 小黄鸡的网站，采集器无法存储新的章节，但是章节内容存进了数据库。导致用户看到的文章都是没有内容的，后来甚至导致进程一直抛出异常崩溃。因为急着修复，没有很多时间排查问题。只能先把日志文件下载下来然后恢复数据盘的镜像，让网站工作。  
 Sure, so, I built a novel website and somone bought it. Then I was responsilbe for the webiste maintaince. One day, like about 3 months
 after selling the novel website, the buyer told me that all of the new chapters were wrong because there was no word in them which means those new chapters were empty. And the buyer asked me to fix the problem in a few hours cause it really hurt the users'  experience. This was a very tight deadline. So I have to fix it as fast as possible. I checked the system logs and found that the new chapters of novels collected by the web crawler could not be stored on the disk. But I could not find the reasons. It was so weird because when I checked the size of the available space on the disk, I found there still had more than 100 gigabytes. It confused me and I did not have much time to do all the tests or check all system logs, service logs, envirment logs and all kinds of logs. So, I decided to recover the website system first. To make sure the website would run normally, I recovered the system from the weekly backup image. After that, I got time to check the logs carefully and also google the solution. So, it was because the disk was run out of inodes. For a linux system, each file or folder will be assigned an inode to store the information about it. Once the system running out of inodes, it cannot create new files or folders on the disk even the space is enough. Since the novel websites had millions of chapters, it would need millions of inodes. But when format a disk, by default, the system won't assigned so many inodes. From the experince, I learned the importance of the user experience and also learned many knowledges about linux system.
+ 
+- Can’t catch up DDL? What did you do?  
 ___
 - Tell me a time your teammate struggled, how do you help him/her?  
 It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
 During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
 ___
-- Can’t catch up DDL? What did you do?  
+
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
