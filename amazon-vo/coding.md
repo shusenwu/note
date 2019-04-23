@@ -1,6 +1,22 @@
 ### 停车场OOD
 ### two sum
 ### reverse linked list
+### 151. Reverse Words in a String
+```python
+class Solution(object):
+    def reverseWords(self, s):
+        s = s[::-1]
+        word = words = ''
+        for i, c in enumerate(s):
+            if c != ' ' and word != '' and i > 0  and s[i-1] == ' ':
+                words += word + ' '
+                word = c
+            elif c != ' ':
+                word = c + word
+        words += word
+        return words
+```
+
 ### 273. Integer to English Words
 https://blog.csdn.net/Sengo_GWU/article/details/81989359 
 ### 794. Valid Tic-Tac-Toe State
