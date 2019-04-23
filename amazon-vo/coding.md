@@ -1,6 +1,38 @@
 ### 停车场OOD
 ### two sum
 ### reverse linked list
+### 794. Valid Tic-Tac-Toe State
+```python
+class Solution(object):
+    def validTicTacToe(self, board):
+        r, c = [0]*3, [0]*3
+        dia, anti_dia = 0, 0
+        count = 0
+        for i in xrange(3):
+            for j in xrange(3):
+                offset = 0
+                if board[i][j] == 'X':
+                    offset = 1
+                    count += 1
+                elif board[i][j] == 'O':
+                    offset = -1
+                    count -= 1
+                r[i] += offset
+                c[j] += offset
+                if i == j:
+                    dia += offset
+                if i + j == 2:
+                    anti_dia += offset
+        if 3 in (r+c+[dia]+[anti_dia]) and (-3 in (r+c+[dia]+[anti_dia]) or count != 1):
+            return False
+        
+        if count < 0 or count > 1:
+            return False
+        
+        if -3 in (r+c+[dia]+[anti_dia]) and count != 0:
+            return False
+        return True
+```
 ### binary tree top view
 ```python
 def topView(root):
