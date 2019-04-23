@@ -28,7 +28,7 @@ ___
 小黄鸡的inodes 和 xueyiheng的Message lost
 - What is your most interesting bug?
 
-
+___
 
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
