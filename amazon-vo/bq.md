@@ -17,8 +17,8 @@ ___
 - Tell me a time your teammate struggled, how do you help him/her?  
 It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 
 During the process, I often discussed with them about the logics. And I found one of the interns was quiet and seldom expressed his ideas. So I asked him privately that why he didnot discuss with us and share us his process. And he told me that he was stuck in the codes and didnot know how to do. He also mentioned that he was too shy to ask his mentor so many questions. You know, I had my own assignments with short deadlines which means I did not have much free time. But I also did not want him to get behind. Thus, I tried to help him through 3 ways. First, I read the requiremnts of his part and share my idea how to do it. Second, I shared my codes with him so that he can learn and write his own codes. Third and finally, I helped him to debug when he could not solve by himself. He eventually catch up and liked to discuss with us. We also became friends during the process.  
-- Tell me a time you have a conflict with your teammate
-It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 另外两个人简称A和B。A负责一些基础的API which will be used by B. 但是A写的API总是有bug，导致B那边会经常出错并且影响B的进度。B就经常大声的指责A。有一次我就私下跟B说不要老是责怪A in public, 会让A很难堪。但是B完全disagree with me. 于是我就找到A，安慰他，并且帮助他debug.此外，我还将这件事告诉了HR。最后B离开了公司，A的代码也写得越来越好。
+- Tell me a time you have a conflict with your teammate  
+It was during my internship, I was assigned to do some modules for an online course system along with another two student interns. 另外两个人简称A和B。A负责一些基础的API which will be used by B. 但是A写的API总是有bug，导致B那边会经常出错并且影响B的进度。B就经常大声的指责A。有一次我就私下跟B说不要老是责怪A in public, 会让A很难堪，我们应该帮助A解决问题。但是B完全disagree with me，还是经常责怪A. 于是我就找到A，安慰他，并且帮助他debug.此外，我还将这件事告诉了HR。最后B离开了公司，A的代码也写得越来越好。
 ___
 ### innovative
 - Tell me a time you make something innovative  
