@@ -2,6 +2,7 @@
 ### two sum
 ### reverse linked list
 ### 794. Valid Tic-Tac-Toe State
+https://leetcode.com/problems/valid-tic-tac-toe-state/submissions/  
 ```python
 class Solution(object):
     def validTicTacToe(self, board):
