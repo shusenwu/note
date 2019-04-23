@@ -1,6 +1,27 @@
 ### 停车场OOD
 ### two sum
 ### reverse linked list
+### 103. Binary Tree Zigzag Level Order Traversal
+```python
+class Solution(object):
+    def zigzagLevelOrder(self, root):
+        if not root: return []
+        level = [root]
+        re = []
+        flag = 1
+        while level:
+            Next = []
+            temp = []
+            while level:
+                node = level.pop(0)
+                temp.append(node.val)
+                if node.left: Next.append(node.left)
+                if node.right: Next.append(node.right)
+            level = Next
+            re.append(temp[::flag])
+            flag *= -1
+        return re
+```
 ### 503. Next Greater Element II
 https://leetcode.com/problems/next-greater-element-ii/  
 circular:
