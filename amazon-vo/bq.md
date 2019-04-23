@@ -24,6 +24,12 @@ ___
 - Tell me a time you make something innovative  
 It was about a project focused on student users called Jmubox which was designed and built by me. I was the team leader and I found some of my schoolmates to build it and run it together for about two years. In this project, I built an innovative function called emotional consultation. This function was to help students solve their emotional problems without going to campus mental health center. You know, many people like me are too shy to walk into the mental health enter. We cooperated with the campus mental health center so students can post their emotional questions on our system and teachers on campus mental health center will answer these questions. Though this way, we got 5 thousand student users. I am also very pround of this project not only because I was the team leader, but we also solved many students emotional problems.
 ___
+### Bug
+小黄鸡的inodes 和 xueyiheng的Message lost
+- What is your most interesting bug?
+
+
+
 Tell me a time you made a decision without your manager or mentor.  
 one time without manager decision and fail  
 One time that your method was wrong  
