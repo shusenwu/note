@@ -30,12 +30,12 @@ One time that your method was wrong
 - Tell me a time you take a risk but fail? What could you do better if you can do it again? 
 
 - What is your most interesting bug?
-- Tell me a time you have a conflict with your teammate
+
 
 
 - What is the most challenging project you have done? What did you learn from it？ Why would you prefer using this tech stack over different tech stack?
 - Exp of feedback to others/others to you.
-- Can’t catch up DDL? What did you do?
+
 - Why Amazon?
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 
@@ -58,7 +58,7 @@ hashmap是不是都是O（1）查找，解释原因。 然后说两种sort 算�
 - https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=514181&extra=page%3D2%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3089%5D%5Bvalue%5D%5B2%5D%3D2%26searchoption%5B3089%5D%5Btype%5D%3Dcheckbox%26searchoption%5B3046%5D%5Bvalue%5D%3D5%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D1%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline
 
 ### most interesting project
-### conflict with team members
+ 
 ### Tell me about a time when you were wrong.
 
 ### most pround project
