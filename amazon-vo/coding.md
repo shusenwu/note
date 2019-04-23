@@ -1,6 +1,39 @@
 ### 停车场OOD
 ### two sum
 ### reverse linked list
+### 503. Next Greater Element II
+https://leetcode.com/problems/next-greater-element-ii/  
+circular:
+```python
+class Solution(object):
+    def nextGreaterElements(self, nums):
+        re = []
+        length = len(nums)
+        for i, n in enumerate(nums):
+            for idx in xrange(i+1, length+i):
+                idx = idx % length
+                if nums[idx] > n:
+                    re.append(nums[idx])
+                    break
+            else:
+                re.append(-1)
+        return re
+```
+无circular:
+```python
+def nextGreater(nums):
+    # [1, 2, 1] -> [2, -1, -1]
+    stack = []
+    for i, n in enumerate(nums):
+        while stack and n > stack[-1][1]:
+            nums[stack[-1][0]] = n
+            stack.pop()
+        stack.append([i, n])
+    while stack:
+        idx, _ = stack.pop()
+        nums[idx] = -1
+    return nums
+```
 ### 151. Reverse Words in a String
 ```python
 class Solution(object):
