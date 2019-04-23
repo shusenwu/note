@@ -1,6 +1,57 @@
 ### 停车场OOD
 ### two sum
 ### reverse linked list
+287. Find the Duplicate Number
+```python
+class Solution(object):
+    def findDuplicate(self, nums):
+        if len(nums) > 1:
+            slow = nums[0]
+            fast = nums[nums[0]]
+            while slow != fast:
+                slow = nums[slow]
+                fast = nums[nums[fast]]
+            
+            fast = 0
+            while slow != fast:
+                slow = nums[slow]
+                fast = nums[fast]
+            return fast
+        return -1
+```
+```python
+        l, r = 1, len(nums) - 1
+        while l < r:
+            mid = (l+r) / 2
+            count = 0
+            for n in nums:
+                if n <= mid:
+                    count += 1
+            if count > mid:
+                r = mid
+            else:
+                l = mid + 1
+        return l
+```
+
+### 41. First Missing Positive
+```python
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        nums.append(0)  # because the missing positive interger will be in the range from [1, n+1]
+        n = len(nums)
+        for i in xrange(n):  # [7, 8, 9, 0] => [0, 0, 0, 0]
+            if nums[i] < 0 or nums[i] >= n:  
+                nums[i] = 0
+        
+        for i in xrange(n):  # use the index to store the frequence of the num
+            nums[nums[i]%n] += n  # 这里要取余，因为之前可能被加了n
+
+        for i in xrange(1, n):
+            if nums[i] / n == 0:
+                return i
+        return n
+```
 ### 103. Binary Tree Zigzag Level Order Traversal
 ```python
 class Solution(object):
