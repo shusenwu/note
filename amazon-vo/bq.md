@@ -42,7 +42,7 @@ Tell me a time you made a decision without your manager or mentor.
 one time without manager decision and fail  
 One time that your method was wrong  
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
- 
+还有就是如果要做决定的话你会考虑什么问题啊？  
 ___
 - how will you find resources when you cannot access to your metor?
 It depends on what resources I need. If I need some tools or materials for the project, let's say I need a server to run the codes. I guess I can always find someone in the company and ask for the resource. If I need some help, let's say I need someone to help me debug my codes, I will google and do it by myself first. If I still can't solve it, I can ask my peers and other teammates for help. And I think making friends with teammates is important since it is easier to ask a friend for help.
@@ -54,7 +54,7 @@ ___
 
 the most challenge project, 
 one time without manager decision and fail  
-就是如果项目时间特别紧，你会怎么做啊，要不要也帮帮你没完成的小老弟？还有就是如果要做决定的话你会考虑什么问题啊？我都是先说了自己怎么做，小哥问我有没有具体的实例  
+我都是先说了自己怎么做，小哥问我有没有具体的实例  
 array arraylist linklist 区别.  
 图是什么，怎么存储，和树是什么区别  
 他们都问了有关array、linked list和hashmap的基本概念、操作和时间复杂度，尤其印度小哥问的非常详细，背后的实现机理都要解释，
@@ -87,7 +87,6 @@ I did the online course system during the internship. I was responsible for some
 - Difficulty  
 A problem I met is about message loss. When I send some messages to the solr system using activeMQ, some of the messages will lost. After viewing the error log and google this question, I found the answer. So, after I sending the messages, I will close the connection after waiting for 15 seconds. Those messages I have sent will store on the buffer of the receiver’s system. The receiver can still read the messages from the buffer after the connection is closed. But if the receiver tries to send messages back, since the connection is already closed by me, the system will throw an socketException. And after that, the receiver cannot read the messages from buffer anymore. That is why some messages are lost. And the solution is simple, I choose to use transaction to commit the messages, and the commit function will wait until the receiver closes the connection.
 
- 
 
 ### Why Amazon
 ### step out and help someone
