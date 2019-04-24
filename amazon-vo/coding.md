@@ -2,7 +2,9 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list
-287. Find the Duplicate Number
+### 114. Flatten Binary Tree to Linked List
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/281072/Python-with-explain-idea-is-simple 
+### 287. Find the Duplicate Number
 ```python
 class Solution(object):
     def findDuplicate(self, nums):
