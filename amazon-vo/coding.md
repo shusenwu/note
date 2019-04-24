@@ -38,7 +38,29 @@ class Solution(object):
                 l = mid + 1
         return l
 ```
-
+### 472. Concatenated Words
+```python
+class Solution(object):
+    def findAllConcatenatedWordsInADict(self, words):
+        words = set(words)
+        res = []
+        res2 = []
+        for w in words:
+            if not w: continue
+            stack = [[0, []]]  # how far we can make up
+            seen = {0}  # 注意是set
+            while stack:
+                cur, ws = stack.pop()
+                if cur == len(w):
+                    res.append(w)
+                    res2.append(ws)
+                    break  # 
+                for far in xrange(cur+1, len(w)+1): 
+                    if far not in seen and w[cur: far] in words and not (cur == 0 and far == len(w)):
+                        stack.append([far, ws+[w[cur: far]]])
+                        seen.add(far)
+        return res
+```
 ### 41. First Missing Positive
 ```python
 class Solution(object):
