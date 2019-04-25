@@ -2,6 +2,8 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 295. Find Median from Data Stream
+https://leetcode.com/problems/find-median-from-data-stream/  
 ### N个骰子，N面，求组合target
 比如 2个色子，每个色子3面，target 4， 则有 {{1,3}, {2,2}} =2 种情况。1，3 和 3，1 是重复的
 ```python
