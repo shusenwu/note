@@ -3,6 +3,7 @@
 ### two sum
 ### reverse linked list  
 ### 863. All Nodes Distance K in Binary Tree
+https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/discuss/281224/Python-without-using-graph  
 ```python
 class Solution(object):
     def distanceK(self, root, target, K):
