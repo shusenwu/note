@@ -2,6 +2,49 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 863. All Nodes Distance K in Binary Tree
+```python
+class Solution(object):
+    def distanceK(self, root, target, K):
+        self.res = []
+        self.findBelow(target, K)
+        self.findAbove(root, target, K)
+        return self.res
+    
+    def findBelow(self, node, disK):
+        if not node or disK < 0:
+            return
+        
+        if disK == 0:
+            self.res.append(node.val)
+        if node.left:
+            self.findBelow(node.left, disK-1)
+        if node.right:
+            self.findBelow(node.right, disK-1)
+        
+    
+    def findAbove(self, root, target, disK):
+        if not root: return float('-inf')
+        if root == target:
+            return 0
+        
+        leftDis = self.findAbove(root.left, target, disK)  # left Node's distance to target
+        rightDis = self.findAbove(root.right, target, disK)
+        
+        # 就在target上方的
+        if disK in (leftDis+1, rightDis+1):
+            self.res.append(root.val)
+        
+        curDis = float('-inf')
+        if leftDis >= 0:  # the target will only appear on only on side
+            curDis = leftDis+1  # cur node's distance to target
+            self.findBelow(root.right, disK-curDis-1)
+        elif rightDis >= 0:
+            curDis = rightDis+1
+            self.findBelow(root.left, disK-curDis-1)
+        
+        return curDis
+```
 ### 472. Concatenated Words
 https://leetcode.com/problems/concatenated-words/  
 ```python
