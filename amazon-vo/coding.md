@@ -2,6 +2,22 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### N个骰子，N面，求组合target
+比如 2个色子，每个色子3面，target 4， 则有 {{1,3}, {2,2}} =2 种情况。1，3 和 3，1 是重复的
+```python
+def NSum(n, m, target):  # n个塞骰子， m面[1, 2, .. m]
+    res = set()
+    q = [[n, [], 0]]
+    while q:
+        steps, cur, Sum = q.pop(0)
+        if steps == 0 and Sum == target:
+            res.add(tuple(sorted(cur)))
+        if steps > 0 and Sum < target:
+            steps -= 1
+            for i in xrange(1, target-Sum+1):
+                q.append([steps, cur+[i], Sum+i])
+    return [list(e) for e in res]
+```
 ### 863. All Nodes Distance K in Binary Tree
 https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/discuss/281224/Python-without-using-graph  
 ```python
