@@ -51,7 +51,7 @@ ___
 - Why Amazon?
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 ——————
-
+信息不够的事情
 array arraylist linklist 区别.  
 图是什么，怎么存储，和树是什么区别  
 adjacency list, adjacency matrix, list of edges,  
