@@ -2,6 +2,25 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 397. Integer Replacement
+https://leetcode.com/problems/integer-replacement/  
+```python
+class Solution(object):
+    def integerReplacement(self, n):
+        q = [(0, n)]
+        while q:
+            step, val = q.pop(0)
+            if val == 1:
+                return step
+            step += 1
+            if val % 2 == 0:
+                q.append((step, val/2))
+            else:
+                q.append((step, val+1))
+                q.append((step, val-1))
+```
+https://leetcode.com/problems/integer-replacement/discuss/88057/Python-top-down-approach.-Memoization-saves-hundreds-of-ms-(345ms-greater-36ms). 
+用
 ### 295. Find Median from Data Stream
 https://leetcode.com/problems/find-median-from-data-stream/  
 ### N个骰子，N面，求组合target
