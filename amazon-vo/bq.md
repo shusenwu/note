@@ -13,9 +13,13 @@ I built a Chinese novel website and someone wanted to buy it. (Did you want to s
 - Tell me about a time when you worked against tight deadlines and didn’t have time to consider all options before making a decision.  
 Sure, so, I built a novel website and somone bought it. Then I was responsilbe for the webiste maintaince. One day, like about 3 months
 after selling the novel website, the buyer told me that all of the new chapters were wrong because there was no word in them which means those new chapters were empty. And the buyer asked me to fix the problem in a few hours cause it really hurt the users'  experience. This was a very tight deadline. So I have to fix it as fast as possible. I checked the system logs and found that the new chapters of novels collected by the web crawler could not be stored on the disk. But I could not find the reasons. It was so weird because when I checked the size of the available space on the disk, I found there still had more than 100 gigabytes. It confused me and I did not have much time to do all the tests or check all system logs, service logs, envirment logs and all kinds of logs. So, I decided to recover the website system first. To make sure the website would run normally, I recovered the system from the weekly backup image. After that, I got time to check the logs carefully and also google the solution. So, it was because the disk was run out of inodes. For a linux system, each file or folder will be assigned an inode to store the information about it. Once the system running out of inodes, it cannot create new files or folders on the disk even the space is enough. Since the novel websites had millions of chapters, it would need millions of inodes. But when format a disk, by default, the system won't assigned so many inodes. From the experince, I learned the importance of the user experience and also learned many knowledges about linux system.
-- miss deadline
 - Can’t catch up DDL? What did you do?  
 Basically, if there is a manager or a mentor, I will tell him the situation and ask him for advices cause I do not have much work experience as a new grad. But I will prevent not to sacrifice customers' or users' experience and still make my codes with high quality. Would you want me to share you with some detail experience? It was about a Chinese novel website, I built that website and someone wanted to buy it.
+
+- miss deadline  
+I was once assigned an one-person project to build a system to seperate cold-hot tables based on database. I believed I could finished it in five days in addition to the workdload I already had. So I told the manager that I could finished it in one week, but actually I miscalculated how long it would take me to write it. When the last day the project was due, I realized I would not finished it in time. 
+
+- Tight Schedule
 ___
 ### teammates
 - Tell me a time your teammate struggled, how do you help him/her?  
@@ -53,7 +57,8 @@ ___
 ——————
 信息不够的事情
 array arraylist linklist 区别.  
-图是什么，怎么存储，和树是什么区别  
+图是什么，怎么存储，和树是什么区别    
+自发地学习什么工作Scope之外的东西。  
 adjacency list, adjacency matrix, list of edges,  
 他们都问了有关array、linked list和hashmap的基本概念、操作和时间复杂度，尤其印度小哥问的非常详细，背后的实现机理都要解释，
 还有树的三种遍历的定义、BFS和DFS等。  
