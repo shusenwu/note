@@ -47,8 +47,8 @@ ___
 Tell me a time you made a decision without your manager or mentor.    
 实习，决定帮助队友，即使自己也很忙。  
 One time without manager decision and fail  
-One time that your method was wrong   
-
+One time that your method was wrong     
+one time change your decision later?    
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 还有就是如果要做决定的话你会考虑什么问题啊？  
 快速决定  
