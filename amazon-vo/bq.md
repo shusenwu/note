@@ -44,12 +44,14 @@ Exp of feedback to others/others to you.
 对自己的代码太自信，然后不仔细检查就说自己做完了。
 ___
 ### Decision
-Tell me a time you made a decision without your manager or mentor.  
-one time without manager decision and fail  
+Tell me a time you made a decision without your manager or mentor.    
+实习，决定帮助队友，即使自己也很忙。
+One time without manager decision and fail  
 One time that your method was wrong  
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 还有就是如果要做决定的话你会考虑什么问题啊？  
 快速决定  
+小黄鸡系统崩溃，是要马上恢复系统，还是先test and find the answer再恢复。
 ___
 - how will you find resources when you cannot access to your metor?  
 It depends on what resources I need. If I need some tools or materials for the project, let's say I need a server to run the codes. I guess I can always find someone in the company and ask for the resource. If I need some help, let's say I need someone to help me debug my codes, I will google and do it by myself first. If I still can't solve it, I can ask my peers and other teammates for help. And I think making friends with teammates is important since it is easier to ask a friend for help.
