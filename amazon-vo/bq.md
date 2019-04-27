@@ -45,9 +45,10 @@ Exp of feedback to others/others to you.
 ___
 ### Decision
 Tell me a time you made a decision without your manager or mentor.    
-实习，决定帮助队友，即使自己也很忙。
+实习，决定帮助队友，即使自己也很忙。  
 One time without manager decision and fail  
-One time that your method was wrong  
+One time that your method was wrong   
+
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 还有就是如果要做决定的话你会考虑什么问题啊？  
 快速决定  
@@ -57,8 +58,10 @@ ___
 It depends on what resources I need. If I need some tools or materials for the project, let's say I need a server to run the codes. I guess I can always find someone in the company and ask for the resource. If I need some help, let's say I need someone to help me debug my codes, I will google and do it by myself first. If I still can't solve it, I can ask my peers and other teammates for help. And I think making friends with teammates is important since it is easier to ask a friend for help.
 ___
 - Why Amazon?
-问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 ——————
+问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
+
+___
 信息不够的事情
 array arraylist linklist 区别.  
 图是什么，怎么存储，和树是什么区别    
@@ -94,6 +97,5 @@ I did the online course system during the internship. I was responsible for some
 - Difficulty  
 A problem I met is about message loss. When I send some messages to the solr system using activeMQ, some of the messages will lost. After viewing the error log and google this question, I found the answer. So, after I sending the messages, I will close the connection after waiting for 15 seconds. Those messages I have sent will store on the buffer of the receiver’s system. The receiver can still read the messages from the buffer after the connection is closed. But if the receiver tries to send messages back, since the connection is already closed by me, the system will throw an socketException. And after that, the receiver cannot read the messages from buffer anymore. That is why some messages are lost. And the solution is simple, I choose to use transaction to commit the messages, and the commit function will wait until the receiver closes the connection.
 
-
-### Why Amazon
-### step out and help someone
+ 
+ 
