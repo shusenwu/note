@@ -17,9 +17,11 @@ after selling the novel website, the buyer told me that all of the new chapters 
 Basically, if there is a manager or a mentor, I will tell him the situation and ask him for advices cause I do not have much work experience as a new grad. But I will prevent not to sacrifice customers' or users' experience and still make my codes with high quality. Would you want me to share you with some detail experience? It was about a Chinese novel website, I built that website and someone wanted to buy it.
 
 - miss deadline  
-I was once assigned an one-person project to build a system to seperate cold-hot tables based on database. I believed I could finished it in five days in addition to the workdload I already had. So I told the manager that I could finished it in one week, but actually I miscalculated how long it would take me to write it. When the last day the project was due, I realized I would not finished it in time. 
+I was once assigned an one-person project to build a system to seperate cold-hot tables based on database. I believed I could finished it in five days in addition to the workdload I already had. So I told the manager that I could finished it in 5 weekdays, but actually I miscalculated how long it would take me to write it. When the last day the project was due, I realized I would not finished it in time. 
+So I apologized to the manager and explained what happened. I also asked two more days to finished it and the manager granted. From this experience, I learned that I need to be honest with myself about the workload I can handle each day. I also learned that I need to include a time buffer to ensure I can meet the deadlines in time even if some unforeseen events happen. Besides, if I could not estimate the time from the start, I should discuss with my mentor or manager first and then share my timeline with them to make sure the project is going well as expected. 
 
 - Tight Schedule
+
 ___
 ### teammates
 - Tell me a time your teammate struggled, how do you help him/her?  
