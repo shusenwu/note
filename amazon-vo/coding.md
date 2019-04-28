@@ -2,6 +2,26 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 1029. Two City Scheduling
+https://leetcode.com/problems/two-city-scheduling/  
+```python
+class Solution(object):
+    def twoCitySchedCost(self, costs):
+        # dp[i][j]  first (i+j) people in which i people to city A j people to city B
+        N = len(costs) / 2
+        dp = [[0] * (N+1) for _ in xrange(N+1)]
+        
+        for i in xrange(1, N+1):
+            dp[i][0] = dp[i-1][0] + costs[i-1][0]
+        
+        for j in xrange(1, N+1):
+            dp[0][j] = dp[0][j-1] + costs[j-1][1]
+        
+        for i in xrange(1, N+1):
+            for j in xrange(1, N+1):
+                dp[i][j] = min(dp[i-1][j] + costs[i+j-1][0], dp[i][j-1] + costs[i+j-1][1])
+        return dp[N][N]
+```
 ### 397. Integer Replacement
 https://leetcode.com/problems/integer-replacement/  
 ```python
