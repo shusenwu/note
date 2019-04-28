@@ -47,9 +47,8 @@ Exp of feedback to others/others to you.
 对自己的代码太自信，然后不仔细检查就说自己做完了。
 ___
 ### Decision
-Tell me a time you made a decision without your manager or mentor.    
-实习，决定帮助队友，即使自己也很忙。  
 One time without manager decision and fail  
+有个人想要找我开发一个小说站，但是我不是专业的UI design,也找不到人来负责做这个设计。因为我会PS，所以我就决定自己来做。结果对方不满意这个设计。
 One time that your method was wrong     
 one time change your decision later?    
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
@@ -65,6 +64,7 @@ ___
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
 
 ___
+
 自我介绍 有意思的项目 为什么用这个算法 你的数据量多大 跑了多久 你有没有遇到什么问题 你是怎么发现解决的 你改进之后提升了多少  你队友和你意见不一样的地方 你是怎么说服他们的 你有没有队友偷懒你只能自己做的经历  
 信息不够的事情
 array arraylist linklist 区别.  
