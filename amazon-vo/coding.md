@@ -22,6 +22,20 @@ class Solution(object):
                 dp[i][j] = min(dp[i-1][j] + costs[i+j-1][0], dp[i][j-1] + costs[i+j-1][1])
         return dp[N][N]
 ```
+```python
+# saving 
+class Solution(object):
+    def twoCitySchedCost(self, costs):
+        costs.sort(key = lambda cost: cost[1]-cost[0])
+        N = len(costs) / 2
+        res = 0
+        for i in xrange(len(costs)):
+            if i < N:
+                res += costs[i][1]
+            else:
+                res += costs[i][0]
+        return res
+```
 ### 397. Integer Replacement
 https://leetcode.com/problems/integer-replacement/  
 ```python
