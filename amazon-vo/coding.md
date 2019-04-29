@@ -2,6 +2,8 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 31. Next Permutation
+https://leetcode.com/problems/next-permutation/  
 ### 1029. Two City Scheduling
 https://leetcode.com/problems/two-city-scheduling/  
 ```python
