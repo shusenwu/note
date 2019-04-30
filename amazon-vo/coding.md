@@ -745,7 +745,7 @@ class TicTacToe(object):
         if -self.n in (self.row[row], self.col[col], self.diag, self.anti_diag):
             return 2
         return 0
-      
+```    
 ### 164. Maximum Gap
 https://leetcode.com/problems/maximum-gap/description/ 
 下面这种直接bucket sort的 testcase [1,10000000] 超时
