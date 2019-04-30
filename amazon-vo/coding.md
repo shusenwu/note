@@ -2,6 +2,24 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list  
+### 12. Integer to Roman
+https://leetcode.com/problems/integer-to-roman/ 
+```python
+class Solution(object):
+    def intToRoman(self, num):
+        nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+        
+        i = 0
+        res = ''
+        while num:
+            if num - nums[i] >= 0:
+                num -= nums[i]
+                res += romans[i]
+            else:
+                i += 1
+        return res
+```
 ### 31. Next Permutation
 https://leetcode.com/problems/next-permutation/  
 ### 1029. Two City Scheduling
