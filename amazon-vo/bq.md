@@ -36,6 +36,13 @@ It was about a project focused on student users called Jmubox which was designed
 ___
 ### Fail
 It was about two years ago before my graduate study. A lady contacted me and asked me to design and build a Chinese novel website for her. For the first step, I spent about one week to use the photoshop to design the user interface including webpages, logos and some small decorations. But when I presented it with confidence, she was unhappy and told me that it needed significant work. At that time, I was also very disappointed, but I knew that I need to please the client by coming up with a new design. So I ask her for suggestions and what exactly she was looking for. She told me that those webpages were boys' style while she wanted the website focused on girls' novel. So she wanted a girl's style website UI design. Besides, the dominant color was blue while she loved yellow. Moreover, She also wanted a very cute mascot as the logo of the website. Even though I am not a professional UI designer, I am a software engineer, I tried to modified the UI desigh based on her ideas. I adjusted the color scheme to yellow and made the style become more cute. I also found a very cute dynamic chook picture as the mascot and put it into the logo. During the process, I discussed many times with her about the design and modified again and again. And lady was completely satisfied with the website at the end. From the experience, I learned that I should have gotten a full understanding of what my client needed before jumping into the project.
+
+___
+### Mistake
+### One time that your method was wrong  
+没有及时沟通，修改问题。  
+During my first internship, when I met some questions, I was too shy to ask for clarification. At first, I thought keep silence was a good way to solve questions independent. For example, in the online course project, I need to store course publishment time to the database. But in the requirement document, it did not metioned which time format I should use. So, I hesitated for a second then I chose the normal datatime format. However, in this project, all other teammates conveted the timedate to a 13 digits format string and then stored into the database. Cause my datetime format was not compatible with the others, I had to modify my codes. Since then, I always ask for clarification if necessary. From this experience, I have learned that it is far better to ask for clarification and solve an issue right away than to unsure. And I know that Amazon emphasizes teamwork and constant communication with other teammates is very important. So I think my ability to ask questions of my peers would help me in the future work especially when I am new to the position.
+
 ___
 ### Bug
 小黄鸡的inodes 和 xueyiheng的Message lost
@@ -49,7 +56,7 @@ ___
 ### Decision
 One time without manager decision and fail  
 有个人想要找我开发一个小说站，但是我不是专业的UI design,也找不到人来负责做这个设计。因为我会PS，所以我就决定自己来做。结果对方不满意这个设计。
-One time that your method was wrong     
+   
 one time change your decision later?    
 Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 还有就是如果要做决定的话你会考虑什么问题啊？  
