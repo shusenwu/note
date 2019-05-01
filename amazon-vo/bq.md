@@ -86,7 +86,8 @@ adjacency list, adjacency matrix, list of edges,
 第一个BQ有点常规，问目前在做啥project。第二个BQ有点不常规，问你一个坚持的长期的goal是什么，以及你为什么要坚持   
 BQ問最近學了什麼technical skill，怎麼學的   
  先问了树和图，什么时候一个图是一棵树，让我写下来，我说没有环的图就是树。接下来，问题： 如何判断一个有向图是不是有环  
-十分鐘口述LRU
+十分鐘口述LRU  
+Ownership of the project  
 what makes you most interested in a company.    
 What happens when you type in www.Amazon.com? DNS related  
 What happens when your request is https /tls instead of http?  
