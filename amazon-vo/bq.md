@@ -75,6 +75,7 @@ ___
 
 ___
 ### Risk
+Speed is important.
 - Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 -  Have you ever taken calculated risk and what if you failed with the risk  
 ___
