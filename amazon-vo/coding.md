@@ -3,6 +3,31 @@
 ### two sum
 ### reverse linked list
 ### 140. Word Break II
+https://leetcode.com/problems/word-break-ii/  
+```python
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        self.wordDict = set(wordDict)
+        return self.helper(s, {})
+    
+    def helper(self, s, memo):  # DFS
+        if not s:
+            return []
+        if s in memo: 
+            return memo[s]
+        
+        res = []
+        for word in self.wordDict:
+            if not s.startswith(word): continue
+            if len(word) == len(s):
+                res.append(word)
+            else:
+                restOfWords = self.helper(s[len(word):], memo)
+                for rest in restOfWords:
+                    res.append(word + ' ' + rest)
+        memo[s] = res
+        return res
+```
 ### 12. Integer to Roman
 https://leetcode.com/problems/integer-to-roman/ 
 ```python
