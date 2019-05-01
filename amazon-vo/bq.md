@@ -74,7 +74,7 @@ ___
 -  Have you ever taken calculated risk and what if you failed with the risk  
 ___
 ### Ownership of the project
-
+上面帮助队友
 ___
 ###  Learn new technology
 ___
