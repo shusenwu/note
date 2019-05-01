@@ -69,10 +69,13 @@ ___
 - Why Amazon?
 ___
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
-
 ___
 ### Risk
 -  Have you ever taken calculated risk and what if you failed with the risk  
+___
+### Ownership of the project
+___
+###  Learn new technology
 ___
 Out of expectation  
 自我介绍 有意思的项目 为什么用这个算法 你的数据量多大 跑了多久 你有没有遇到什么问题 你是怎么发现解决的 你改进之后提升了多少  你队友和你意见不一样的地方 你是怎么说服他们的 你有没有队友偷懒你只能自己做的经历  
