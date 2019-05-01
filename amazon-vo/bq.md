@@ -57,7 +57,7 @@ One time without manager decision and fail
 有个人想要找我开发一个小说站，但是我不是专业的UI design,也找不到人来负责做这个设计。因为我会PS，所以我就决定自己来做。结果对方不满意这个设计。
    
 one time change your decision later?    
-Tell me a time you take a risk but fail? What could you do better if you can do it again?   
+
 还有就是如果要做决定的话你会考虑什么问题啊？  
 快速决定  
 小黄鸡系统崩溃，是要马上恢复系统，还是先test and find the answer再恢复。
@@ -71,6 +71,7 @@ ___
 
 ___
 ### Risk
+- Tell me a time you take a risk but fail? What could you do better if you can do it again?   
 -  Have you ever taken calculated risk and what if you failed with the risk  
 ___
 ### Ownership of the project
