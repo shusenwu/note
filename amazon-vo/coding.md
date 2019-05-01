@@ -119,6 +119,22 @@ def NSum(n, m, target):  # n个塞骰子， m面[1, 2, .. m]
                 q.append([steps, cur+[i], Sum+i])
     return [list(e) for e in res]
 ```
+### dice dp 同上题，但是允许重复的，比如1， 3, 和3， 1 只需要返回多少种组合
+https://www.geeksforgeeks.org/dice-throw-dp-30/
+```python
+def findSum(n, m, target):
+    # dp[n][num] = sum(dp[n-1][num-m])
+    dp = [[0] * (target+1) for _ in xrange(n+1)]
+    # only one dice
+    for num in range(1, min(target+1, m+1)):
+        dp[1][num] = 1
+
+    for i in xrange(2, n+1):
+        for j in xrange(1, target+1):
+            for k in xrange(1, min(m+1, j)):
+                dp[i][j] += dp[i-1][j-k]
+    return dp[-1][-1]
+```
 ### 863. All Nodes Distance K in Binary Tree
 https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/discuss/281224/Python-without-using-graph  
 ```python
