@@ -42,7 +42,6 @@ ___
 ### One time that your method was wrong  
 没有及时沟通，修改问题。  
 During my first internship, when I met some questions, I was too shy to ask for clarification. At first, I thought keep silence was a good way to solve questions independent. For example, in the online course project, I need to store course publishment time to the database. But in the requirement document, it did not metioned which time format I should use. So, I hesitated for a second then I chose the normal datatime format. However, in this project, all other teammates conveted the timedate to a 13 digits format string and then stored into the database. Cause my datetime format was not compatible with the others, I had to modify my codes. Since then, I always ask for clarification if necessary. From this experience, I have learned that it is far better to ask for clarification and solve an issue right away than to unsure. And I know that Amazon emphasizes teamwork and constant communication with other teammates is very important. So I think my ability to ask questions of my peers would help me in the future work especially when I am new to the position.
-
 ___
 ### Bug
 小黄鸡的inodes 和 xueyiheng的Message lost
@@ -69,11 +68,13 @@ ___
 - Why Amazon?
 ___
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
+
 ___
 ### Risk
 -  Have you ever taken calculated risk and what if you failed with the risk  
 ___
 ### Ownership of the project
+
 ___
 ###  Learn new technology
 ___
@@ -90,7 +91,7 @@ adjacency list, adjacency matrix, list of edges,
 BQ問最近學了什麼technical skill，怎麼學的   
  先问了树和图，什么时候一个图是一棵树，让我写下来，我说没有环的图就是树。接下来，问题： 如何判断一个有向图是不是有环  
 十分鐘口述LRU  
-Ownership of the project  
+
 what makes you most interested in a company.    
 What happens when you type in www.Amazon.com? DNS related  
 What happens when your request is https /tls instead of http?  
