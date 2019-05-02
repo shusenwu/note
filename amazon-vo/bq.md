@@ -98,7 +98,8 @@ adjacency list, adjacency matrix, list of edges,
 BQ問最近學了什麼technical skill，怎麼學的   
  先问了树和图，什么时候一个图是一棵树，让我写下来，我说没有环的图就是树。接下来，问题： 如何判断一个有向图是不是有环  
 十分鐘口述LRU  
-
+资源匮乏，怎么完成工作的    
+有没有之前做过的东西，觉得可以做的更好些？  
 what makes you most interested in a company.    
 What happens when you type in www.Amazon.com? DNS related  
 What happens when your request is https /tls instead of http?  
