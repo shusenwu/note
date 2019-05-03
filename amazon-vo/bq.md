@@ -91,6 +91,8 @@ Out of expectation
 ___
 信息不够的事情
 ___
+### what makes you most interested in a company.  
+___
 ### array, arraylist, linklist, set 
 - In java, array is a fixed size data structure while ArrayList is not. Array is more efficient than ArrayList.  
 - Linkedlist is a linear data structure. The elements are not stored in contiguous locations. We linked elements by using pointers.  
@@ -109,7 +111,7 @@ ___
 十分鐘口述LRU  
 资源匮乏，怎么完成工作的    
 有没有之前做过的东西，觉得可以做的更好些？  
-what makes you most interested in a company.    
+  
 What happens when you type in www.Amazon.com? DNS related  
 What happens when your request is https /tls instead of http?  
   
@@ -120,7 +122,7 @@ heap: insertion is often done by adding the new element at the end of the heap i
 
 ### most interesting project
  
-### Tell me about a time when you were wrong.
+
 
 ### most pround project
 #### Jmubox    
