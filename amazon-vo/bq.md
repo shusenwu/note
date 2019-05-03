@@ -114,8 +114,15 @@ ___
   
 What happens when you type in www.Amazon.com? DNS related  
 What happens when your request is https /tls instead of http?  
-  
-hashmap是不是都是O（1）查找，解释原因。 然后说两种sort 算法，解释对比  
+___
+### hashmap是不是都是O（1）查找，解释原因。 
+No.   
+[linkedList Node, linkedList Node A, ..., LinkedList]   Hashcode = hash(key) 链表部分如有N个同样的collision，就要O（n）
+                       |
+                   Linked Node B     
+___
+### 说两种sort 算法，解释对比  
+___
 - https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=516481&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26sortid%3D311  
 - https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=514181&extra=page%3D2%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3089%5D%5Bvalue%5D%5B2%5D%3D2%26searchoption%5B3089%5D%5Btype%5D%3Dcheckbox%26searchoption%5B3046%5D%5Bvalue%5D%3D5%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D1%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline   
 heap: insertion is often done by adding the new element at the end of the heap in the first available free space. This will generally violate the heap property, and so the elements are then sifted up until the heap property has been reestablished.   
