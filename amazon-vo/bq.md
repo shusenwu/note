@@ -120,6 +120,8 @@ No.
 [linkedList Node, linkedList Node A, ..., LinkedList]   Hashcode = hash(key) 链表部分如有N个同样的collision，就要O（n）
                        |
                    Linked Node B     
+### 如何让字典有序
+https://allenwind.github.io/2017/09/16/%E6%9C%89%E5%BA%8F%E5%AD%97%E5%85%B8%E7%9A%84%E5%AE%9E%E7%8E%B0/  
 ___
 ### 说两种sort 算法，解释对比  
 ___
