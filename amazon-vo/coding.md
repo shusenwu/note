@@ -45,7 +45,25 @@ def copyRandomList(self, head):
         n = n.next
     return dic[head]
 ```
-
+We make use of (or modify) the input string as a stack and use a point top to point the top element of the stack.
+The input string is converted into a stack as time progress. 
+Like the stack method, if there is a match, we point top to the previous place.
+If the top is small than 0 or it is not mached, we want to put the element into the stack, so we increse top and put the element to s[top]
+```python
+class Solution(object):
+    def isValid(self, s):
+        s = list(s)
+        dic = {'(': ')', '[': ']', '{': '}'}
+        isMatch = lambda a, b: a in dic and dic[a] == b
+        top = -1
+        for i in xrange(len(s)):
+            if top < 0 or not isMatch(s[top], s[i]):
+                top += 1
+                s[top] = s[i]
+            else:
+                top -= 1
+        return top == -1
+```
 ### 140. Word Break II
 https://leetcode.com/problems/word-break-ii/  
 ```python
