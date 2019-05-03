@@ -92,25 +92,20 @@ ___
 信息不够的事情
 ___
 ### array, arraylist, linklist, set 
-In java, array is a fixed size data structure while ArrayList is not. Array is more efficient than ArrayList.  
-Linkedlist is a linear data structure. The elements are not stored in contiguous locations. We linked elements by using pointers.  
-Hashset is based on hashmap. It put the element as the key into the hashmap. When the two keys are the same, the hashmap will update the value rather than create a new one.  
+- In java, array is a fixed size data structure while ArrayList is not. Array is more efficient than ArrayList.  
+- Linkedlist is a linear data structure. The elements are not stored in contiguous locations. We linked elements by using pointers.  
+- Hashset is based on hashmap. It put the element as the key into the hashmap. When the two keys are the same, the hashmap will update the value rather than create a new one.  
 ___
 ### 他们都问了有关array、linked list和hashmap的基本概念、操作和时间复杂度，尤其印度小哥问的非常详细，背后的实现机理都要解释  
-Array O(1) for appending an element to the end. O(n) for inserting because you need to shift the elements after the place where you insert.  
-Linked List: The time complexity for the Inserting at the end depends if you have the location of the last node, if you do, it would be O(1) other wise you will have to search through the linked list and the time complexity would jump to O(n)  
-Hashmap O(1)  Structure: is an array consisting of linkedList. We will use a hashcode to search the element on the array. If two keys have the same corresponding hashcode, new value will be put into the tail of the linkedlist. 
+- Array O(1) for appending an element to the end. O(n) for inserting because you need to shift the elements after the place where you insert.  
+- Linked List: The time complexity for the Inserting at the end depends if you have the location of the last node, if you do, it would -be O(1) other wise you will have to search through the linked list and the time complexity would jump to O(n)  
+- Hashmap O(1)  Structure: is an array consisting of linkedList. We will use a hashcode to search the element on the array. If two keys have the same corresponding hashcode, new value will be put into the tail of the linkedlist. 
 ___
 ### 图是什么，怎么存储，和树是什么区别     
-adjacency list, adjacency matrix, list of edges,  map to list
-Formally, a graph is an object consisting of a vertex set and an edge set. In machine leaning, I think people usually use adjacency matrix to present a graph while in normal algorithm questions, I think using adjacency list or a map to lists is a good way to present a graph. Of course, there are many other ways to present a graph, you can also design a class to present it.  
-Tree is also consisting of a set of vertexes. But in tree data structure, there is no loops. Besides, there is only one path between any two vertices. A tree can also be present as a graph. But a graph may not be present as a tree.
+- adjacency list, adjacency matrix, list of edges,  map to list
+- Formally, a graph is an object consisting of a vertex set and an edge set. In machine leaning, I think people usually use adjacency matrix to present a graph while in normal algorithm questions, I think using adjacency list or a map to lists is a good way to present a graph. Of course, there are many other ways to present a graph, you can also design a class to present it.  
+- Tree is also consisting of a set of vertexes. But in tree data structure, there is no loops. Besides, there is only one path between any two vertices. A tree can also be present as a graph. But a graph may not be present as a tree.
 ___
-
-还有树的三种遍历的定义、BFS和DFS等。  
-第一个BQ有点常规，问目前在做啥project。第二个BQ有点不常规，问你一个坚持的长期的goal是什么，以及你为什么要坚持   
-BQ問最近學了什麼technical skill，怎麼學的   
- 先问了树和图，什么时候一个图是一棵树，让我写下来，我说没有环的图就是树。接下来，问题： 如何判断一个有向图是不是有环  
 十分鐘口述LRU  
 资源匮乏，怎么完成工作的    
 有没有之前做过的东西，觉得可以做的更好些？  
