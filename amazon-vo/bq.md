@@ -88,6 +88,7 @@ ___
 I started to learn Bootstrap from last week. Bootstrap is a very popular front-end framework. But I am a back-end guy not focus on front-end. The reason why I learned it is because I want to teach my girlfriend to built a personal blog website from front-end to back-end design. We want to present the blogs we wrote on github to our personal blog website because github does not look like a blog website. We don't need to design a writer system. Since we just need to write blog on github by using markdown and after that we put the blog's link to our system. Our website will then present the blog with a more beautiful user interface. The way I learned Bootstrap was by reading the Bootstrap tutorial documents from W3school. It has many examples about Bootstraps' tags and classes. And I just read and tried to code these examples out one by one to see the results. I think the best way to learn it is using it. So, when after I reading most parts of the document on W3school, I will use it to built the blog website and that is also my original plan. Tought using it, I think I will not only practice it but also learn more new knowledges about it. Another concern is about getting into problems. I think there are many sources I can turn to for help. For example, I can ask my friends who focus on front-end for help. I can also check on the Internet by searching blogs or asking questions on Stack Overflow. 
 ___
 Out of expectation  
+###  超出supervisor预期的工作  
 ___
 信息不够的事情
 ___
