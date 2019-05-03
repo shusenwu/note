@@ -2,6 +2,46 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list
+### min stack
+```python
+class MinStack(object):
+    def __init__(self):
+        self.q = []  # (curNum, curMin)
+        
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        curMin = self.getMin()
+        if curMin is None or x < curMin:  # isNone 注意
+            curMin = x
+        self.q.append((x, curMin))
+        
+    def pop(self):
+        """
+        :rtype: None
+        """
+        self.q.pop()
+        
+
+    def top(self):
+        """
+        :rtype: int
+        """
+        if not self.q:
+            return None
+        return self.q[-1][0]
+        
+
+    def getMin(self):
+        """
+        :rtype: int
+        """
+        if not self.q:
+            return None
+        return self.q[-1][-1]
+```
 ### 20. Valid Parentheses
 https://leetcode.com/problems/valid-parentheses/  
 ```python
