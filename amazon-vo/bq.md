@@ -84,6 +84,7 @@ ___
 ___
 ###  Learn new technology
 你有没有自学过什么东西  
+Recently, I started to learn Bootstrap from last week. Bootstrap is a very popular front-end framework. But I am a back-end guy not focus on front-end. The reason why I learned it is because I want to teach my girlfriend to built a personal blog from front-end to back-end design. The way I learn it is reading the Bootstrap tutorial document from W3school. There are many examples about Bootstraps' tags and classes. And I just read and tried to code it out one by one to see the results. I think the best way to learn it is using it. So, after I reading most parts of the document on W3school, I will use it to built the blog website and that is also my original plan. 
 ___
 Out of expectation  
 自我介绍 有意思的项目 为什么用这个算法 你的数据量多大 跑了多久 你有没有遇到什么问题 你是怎么发现解决的 你改进之后提升了多少  你队友和你意见不一样的地方 你是怎么说服他们的 你有没有队友偷懒你只能自己做的经历  
