@@ -2,6 +2,35 @@
 ###  string是否是回文
 ### two sum
 ### reverse linked list
+### 20. Valid Parentheses
+https://leetcode.com/problems/valid-parentheses/  
+```python
+class Solution(object):
+    def isValid(self, s):
+        stack = []
+        for c in s:
+            print c
+            if c == '(':
+                stack.append(')')
+            elif c == '{':
+                stack.append('}')
+            elif c == '[':
+                stack.append(']')
+            else:
+                if not stack or stack.pop() != c:
+                    return False
+        return stack == []
+```
+```python
+class Solution(object):
+    def isValid(self, s):
+        length = len(s)
+        while length > 0 and length % 2 == 0:
+            s = s.replace('()', '').replace('[]', '').replace('{}', '')
+            # break if the lenght was not altered
+            length = len(s) if len(s) < length else 0
+        return len(s) == 0
+```
 ### 138. Copy List with Random Pointer
 O（n）
 ```python
