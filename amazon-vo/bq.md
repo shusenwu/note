@@ -84,16 +84,29 @@ ___
 ___
 ###  Learn new technology
 你有没有自学过什么东西  
+自发地学习什么工作Scope之外的东西。   
 I started to learn Bootstrap from last week. Bootstrap is a very popular front-end framework. But I am a back-end guy not focus on front-end. The reason why I learned it is because I want to teach my girlfriend to built a personal blog website from front-end to back-end design. We want to present the blogs we wrote on github to our personal blog website because github does not look like a blog website. We don't need to design a writer system. Since we just need to write blog on github by using markdown and after that we put the blog's link to our system. Our website will then present the blog with a more beautiful user interface. The way I learned Bootstrap was by reading the Bootstrap tutorial documents from W3school. It has many examples about Bootstraps' tags and classes. And I just read and tried to code these examples out one by one to see the results. I think the best way to learn it is using it. So, when after I reading most parts of the document on W3school, I will use it to built the blog website and that is also my original plan. Tought using it, I think I will not only practice it but also learn more new knowledges about it. Another concern is about getting into problems. I think there are many sources I can turn to for help. For example, I can ask my friends who focus on front-end for help. I can also check on the Internet by searching blogs or asking questions on Stack Overflow. 
 ___
 Out of expectation  
-自我介绍 有意思的项目 为什么用这个算法 你的数据量多大 跑了多久 你有没有遇到什么问题 你是怎么发现解决的 你改进之后提升了多少  你队友和你意见不一样的地方 你是怎么说服他们的 你有没有队友偷懒你只能自己做的经历  
+___
 信息不够的事情
-array arraylist linklist 区别.  
-图是什么，怎么存储，和树是什么区别    
-自发地学习什么工作Scope之外的东西。  
-adjacency list, adjacency matrix, list of edges,  
-他们都问了有关array、linked list和hashmap的基本概念、操作和时间复杂度，尤其印度小哥问的非常详细，背后的实现机理都要解释，
+___
+### array, arraylist, linklist, set 
+In java, array is a fixed size data structure while ArrayList is not. Array is more efficient than ArrayList.  
+Linkedlist is a linear data structure. The elements are not stored in contiguous locations. We linked elements by using pointers.  
+Hashset is based on hashmap. It put the element as the key into the hashmap. When the two keys are the same, the hashmap will update the value rather than create a new one.  
+___
+### 他们都问了有关array、linked list和hashmap的基本概念、操作和时间复杂度，尤其印度小哥问的非常详细，背后的实现机理都要解释  
+Array O(1) for appending an element to the end. O(n) for inserting because you need to shift the elements after the place where you insert.  
+Linked List: The time complexity for the Inserting at the end depends if you have the location of the last node, if you do, it would be O(1) other wise you will have to search through the linked list and the time complexity would jump to O(n)  
+Hashmap O(1)  Structure: is an array consisting of linkedList. We will use a hashcode to search the element on the array. If two keys have the same corresponding hashcode, new value will be put into the tail of the linkedlist. 
+___
+### 图是什么，怎么存储，和树是什么区别     
+adjacency list, adjacency matrix, list of edges,  map to list
+Formally, a graph is an object consisting of a vertex set and an edge set. In machine leaning, I think people usually use adjacency matrix to present a graph while in normal algorithm questions, I think using adjacency list or a map to lists is a good way to present a graph. Of course, there are many other ways to present a graph, you can also design a class to present it.  
+Tree is also consisting of a set of vertexes. But in tree data structure, there is no loops. Besides, there is only one path between any two vertices. A tree can also be present as a graph. But a graph may not be present as a tree.
+___
+
 还有树的三种遍历的定义、BFS和DFS等。  
 第一个BQ有点常规，问目前在做啥project。第二个BQ有点不常规，问你一个坚持的长期的goal是什么，以及你为什么要坚持   
 BQ問最近學了什麼technical skill，怎麼學的   
