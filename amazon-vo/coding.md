@@ -905,14 +905,15 @@ class Solution(object):
         bucket = [b for b in bucket if b]
         return max(bucket[i]-bucket[i-1] for i in range(1, len(bucket)))
 ```
-改进:
+改进:  
+We could do that just by setting the buckets to be smaller than t = (max - min)/(n-1)t=(max−min)/(n−1) (as described above). Since the gaps (between elements) within the same bucket would only be less than t, we could deduce that the maximal gap would indeed occur only between two adjacent buckets.
 ```python
 class Solution(object):
     def maximumGap(self, num):
         if len(num) < 2 or min(num) == max(num):
             return 0
         a, b = min(num), max(num)
-        size = (b-a)//(len(num)-1) or 1  # 一个bucket可以装多少个
+        size = (b-a)//(len(num)-1) or 1  # 一个bucket可以装多少个 
         bucket = [[None, None] for _ in range((b-a)//size+1)]  # 需要几个bucket = 总的数/一个bucket的容量 
         for n in num:
             b = bucket[(n-a)//size]
