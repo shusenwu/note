@@ -1,8 +1,20 @@
 ### 停车场OOD
 ###  string是否是回文
 ### two sum
+本地  
 ### reverse linked list
-### min stack
+```python
+class Solution(object):
+    def reverseList(self, head):
+        cur = head
+        pre = None
+        while cur:
+            Next = cur.next
+            cur.next = pre
+            pre = cur
+            cur = Next
+        return pre
+```
 ### 142. Linked List Cycle II  
 https://blog.csdn.net/sengo_gwu/article/details/82522644  
 ```python
@@ -28,6 +40,7 @@ class Solution(object):
                 return slow
             slow2 = slow2.next
 ```
+### min stack
 ```python
 class MinStack(object):
     def __init__(self):
