@@ -3,6 +3,31 @@
 ### two sum
 ### reverse linked list
 ### min stack
+### 142. Linked List Cycle II  
+https://blog.csdn.net/sengo_gwu/article/details/82522644  
+```python
+
+class Solution(object):
+    def detectCycle(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        fast = slow = slow2 = head
+        
+        while fast and fast.next and fast.next.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                break
+        else:
+            return None
+        
+        while 1:
+            if slow == slow2:
+                return slow
+            slow2 = slow2.next
+```
 ```python
 class MinStack(object):
     def __init__(self):
@@ -735,30 +760,25 @@ dp[i][j]记录的是character string[i-1]=string[j-1]的时候，end为i或者�
 def longestRepeatedSubstring(s):
     n = len(s)
     dp = [[0] * (n+1) for _ in xrange(n+1)]
-    res = ''
     res_length = 0
     index = 0
     for i in xrange(1, n+1):
-        for j in xrange(i, n+1):
+        for j in xrange(i+1, n+1):
             # dp[i-1][j-1] < j-i to remove overlapping
             if s[i-1] == s[j-1] and dp[i-1][j-1] < j-i:
                 dp[i][j] = dp[i-1][j-1] + 1
                 if dp[i][j] > res_length:
                     res_length = dp[i][j]
-                    index = max(i, index)
+                    index = max(i, index)  # index = i 就可以了吧
             else:
                 dp[i][j] = 0
-    if res_length:
-        for i in xrange(index-res_length+1, index+1):
-            res += s[i-1]
-    return res
+    return s[index-res_length: index]
 ```
 看到亚麻别人VO要求banana要求返回ana是Overlap的上面代码稍微修改下：
 ```python
 def longestRepeatedSubstring(s):
     n = len(s)
     dp = [[0] * (n+1) for _ in xrange(n+1)]
-    res = ''
     res_length = 0
     index = 0
     for i in xrange(1, n+1):
@@ -768,13 +788,10 @@ def longestRepeatedSubstring(s):
                 dp[i][j] = dp[i-1][j-1] + 1
                 if dp[i][j] > res_length:
                     res_length = dp[i][j]
-                    index = max(i, index)
+                    index = max(i, index)  
             else:
                 dp[i][j] = 0
-    if res_length:
-        for i in xrange(index-res_length+1, index+1):
-            res += s[i-1]
-    return res
+    return s[index-res_length: index]
 ```
 ### 98. Validate Binary Search Tree
 https://leetcode.com/problems/validate-binary-search-tree/description/
