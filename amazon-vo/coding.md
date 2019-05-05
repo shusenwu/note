@@ -2,6 +2,37 @@
 ### 停车场OOD
 ###  string是否是回文
 ### two sum
+### 297. Serialize and Deserialize Binary Tree
+```python
+class Codec:
+    def serialize(self, root):
+        preorder = ''
+        if not root:
+            return preorder + ',None'
+        preorder += ',' + str(root.val)
+        preorder += self.serialize(root.left)
+        preorder += self.serialize(root.right)
+        return preorder
+    def deserialize(self, data):
+        data = data[1:].split(',')
+        pos = -1
+        for i in xrange(len(data)):
+            if data[i] == 'None':
+                data[i] = None
+            else:
+                data[i] = int(data[i])
+        
+        root, _ = self.buildTree(data, pos)
+        return root
+    def buildTree(self, data, pos):
+        pos += 1
+        if pos >= len(data) or data[pos] == None:
+            return None, pos
+        root = TreeNode(data[pos])
+        root.left, pos = self.buildTree(data, pos)
+        root.right, pos = self.buildTree(data, pos)
+        return root, pos
+```
 ### 652. Find Duplicate Subtrees
 ```python
 class Solution(object):
