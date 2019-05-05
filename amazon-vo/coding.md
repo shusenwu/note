@@ -1,6 +1,31 @@
+
 ### 停车场OOD
 ###  string是否是回文
 ### two sum
+### Union find
+```python
+
+        parents = range(n)
+        rank = [0] * n
+ 
+        def find(edge):
+            if parents[edge] != edge:
+                parents[edge] = find(parents[edge])
+            return parents[edge]  
+        def find(a):
+            if parents[a] != a:
+                return find(parents[a])
+            return a    
+        def union(x, y):
+            x, y = find(x), find(y)
+            if x != y:
+                if rank[x] >= rank[y]:
+                    parents[y] = x
+                    rank[x] += rank[x] == rank[y]
+                else:
+                    parents[x] = y
+```
+
 本地  
 ### reverse linked list
 ```python
