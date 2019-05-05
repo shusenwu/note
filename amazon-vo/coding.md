@@ -1297,6 +1297,7 @@ Search for all possible divisor of str.length, starting for length/2
 If i is a divisor of length, repeat the substring from 0 to i the number of times i is contained in s.length
 If the repeated substring is equals to the input str return true
 ```
+```python
 class Solution(object):
     def repeatedSubstringPattern(self, s):
         length = len(s)
