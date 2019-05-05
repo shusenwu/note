@@ -362,6 +362,7 @@ https://leetcode.com/problems/next-permutation/
 ### 114. Flatten Binary Tree to Linked List
 https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/281072/Python-with-explain-idea-is-simple 
 ### 287. Find the Duplicate Number
+https://leetcode.com/problems/find-the-duplicate-number/
 ```python
 class Solution(object):
     def findDuplicate(self, nums):
