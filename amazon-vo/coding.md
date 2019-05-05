@@ -240,7 +240,20 @@ class Solution(object):
                 q.append((step, val-1))
 ```
 https://leetcode.com/problems/integer-replacement/discuss/88057/Python-top-down-approach.-Memoization-saves-hundreds-of-ms-(345ms-greater-36ms). 
-用
+```python
+        memo = {1:0}
+        return self.recRep(n, memo)
+        
+    def recRep(self, n, memo):
+        if n in memo:
+            return memo[n]
+        if n % 2:
+            memo[n] = 1 + min(self.recRep(n+1, memo), self.recRep(n-1, memo))
+            return memo[n]
+        else:
+            memo[n] = 1 + self.recRep(n/2, memo)
+            return memo[n]
+```
 ### 295. Find Median from Data Stream
 https://leetcode.com/problems/find-median-from-data-stream/  
 ### N个骰子，N面，求组合target
