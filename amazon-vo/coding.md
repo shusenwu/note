@@ -2,6 +2,49 @@
 ### 停车场OOD
 ###  string是否是回文
 ### two sum
+### Word Ladder
+https://leetcode.com/problems/word-ladder/
+```python
+class Solution(object):
+    def ladderLength(self, beginWord, endWord, wordList):
+        wordList = set(wordList)
+        chars = 'abcdefghijklmnopqrstuvwxyz'
+        q = [(beginWord, 1)]
+        while q:
+            w, step = q.pop(0)
+            if w == endWord:
+                return step
+            for i in xrange(len(w)):
+                for c in chars:
+                    new_w = w[:i] + c + w[i+1:]
+                    if new_w in wordList:
+                        q.append((new_w, step+1))
+                        wordList.remove(new_w)
+        return 0
+```
+### Word Ladder2
+```python
+class Solution(object):
+    def findLadders(self, beginWord, endWord, wordList):
+        wordList = set(wordList)
+        layer = {}
+        layer[beginWord] = [[beginWord]]
+        res = []
+        while layer:
+            nextLayer = collections.defaultdict(list)
+            for word in layer:
+                if word == endWord:
+                    return layer[word]
+                else:
+                    for i in xrange(len(word)):
+                        for c in 'abcdefghijklmnopqrstuvwxyz':
+                            newWord = word[:i] + c + word[i+1:]
+                            if newWord in wordList:
+                                nextLayer[newWord] += [l + [newWord] for l in layer[word]]
+            wordList -= set(nextLayer.keys())
+            layer = nextLayer
+        return res
+```
 ### Union find
 ```python
 
