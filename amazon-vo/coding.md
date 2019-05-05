@@ -705,6 +705,75 @@ class Solution(object):
 
 ### 146. LRU Cache
 https://blog.csdn.net/Sengo_GWU/article/details/82930179
+```PYTHON
+class LRUCache(object):
+    def __init__(self, capacity):
+        self.dic = collections.OrderedDict()
+        self.remain = capacity
+    def get(self, key):
+        if key not in self.dic:
+            return -1
+        v = self.dic.pop(key)
+        self.dic[key] = v
+        return v
+    def put(self, key, value):
+        if key in self.dic:
+            self.dic.pop(key)
+        else:
+            if self.remain > 0:
+                self.remain -= 1
+            else:
+                self.dic.popitem(last=False)
+        self.dic[key] = value
+```
+```PYTHON
+
+class Node:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.pre = None
+        self.next = None
+        
+class LRUCache(object):
+    def __init__(self, capacity):
+        self.dic = {}
+        self.capacity = capacity
+        self.head = Node(0, 0)
+        self.tail = Node(0, 0)
+        self.head.next = self.tail
+        self.tail.pre = self.head
+    def get(self, key):
+        if key in self.dic:
+            node = self.dic[key]
+            self._remove(node)
+            self._add(node)
+            return node.value
+        else:
+            return -1
+    def put(self, key, value):
+        if key in self.dic:
+            self._remove(self.dic[key])
+        node = Node(key, value)
+        self._add(node)
+        self.dic[key] = node
+        if len(self.dic) > self.capacity:
+            n = self.head.next
+            self._remove(n)
+            del self.dic[n.key]
+    def _remove(self, node):
+        preNode = node.pre
+        nextNode = node.next
+        preNode.next = nextNode
+        nextNode.pre = preNode
+    def _add(self, node):
+        preNode = self.tail.pre
+        preNode.next = node
+        node.pre = preNode
+        node.next = self.tail
+        self.tail.pre = node
+```
+
 
 ### 124. Binary Tree Maximum Path Sum
 https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
