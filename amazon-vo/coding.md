@@ -39,7 +39,7 @@ class Solution(object):
     def findDuplicateSubtrees(self, root):
         def preOrder(root):
             if not root: return "null"
-            struct = "%s,%s,%s" % ( preOrder(root.left), str(root.val), preOrder(root.right))
+            struct = "%s,%s,%s" % (str(root.val), preOrder(root.left), preOrder(root.right))
             nodes[struct].append(root)
             return struct
         
