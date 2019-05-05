@@ -2,6 +2,20 @@
 ### 停车场OOD
 ###  string是否是回文
 ### two sum
+### 652. Find Duplicate Subtrees
+```python
+class Solution(object):
+    def findDuplicateSubtrees(self, root):
+        def preOrder(root):
+            if not root: return "null"
+            struct = "%s,%s,%s" % ( preOrder(root.left), str(root.val), preOrder(root.right))
+            nodes[struct].append(root)
+            return struct
+        
+        nodes = collections.defaultdict(list)
+        preOrder(root)
+        return [nodes[struct][0] for struct in nodes if len(nodes[struct]) > 1]
+```
 ### Word Ladder
 https://leetcode.com/problems/word-ladder/
 ```python
