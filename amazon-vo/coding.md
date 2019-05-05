@@ -109,20 +109,6 @@ class Solution(object):
             length = len(s) if len(s) < length else 0
         return len(s) == 0
 ```
-### 138. Copy List with Random Pointer
-O（n）
-```python
-def copyRandomList(self, head):
-    dic = collections.defaultdict(lambda: RandomListNode(0))
-    dic[None] = None
-    n = head
-    while n:
-        dic[n].label = n.label
-        dic[n].next = dic[n.next]
-        dic[n].random = dic[n.random]
-        n = n.next
-    return dic[head]
-```
 We make use of (or modify) the input string as a stack and use a point top to point the top element of the stack.
 The input string is converted into a stack as time progress. 
 Like the stack method, if there is a match, we point top to the previous place.
@@ -142,6 +128,21 @@ class Solution(object):
                 top -= 1
         return top == -1
 ```
+### 138. Copy List with Random Pointer
+O（n）
+```python
+def copyRandomList(self, head):
+    dic = collections.defaultdict(lambda: RandomListNode(0))
+    dic[None] = None
+    n = head
+    while n:
+        dic[n].label = n.label
+        dic[n].next = dic[n.next]
+        dic[n].random = dic[n.random]
+        n = n.next
+    return dic[head]
+```
+
 ### 140. Word Break II
 https://leetcode.com/problems/word-break-ii/  
 ```python
