@@ -73,7 +73,8 @@ ___
 - Why Amazon?
 ___
 问你一个坚持的长期的goal是什么，以及你为什么要坚持。  
-
+Well, my long term goal for the two years graduate study was to get a high GPA. My GPA by now is 3.93. The reason why I insist on getting a high GPA is because my parents paid my tuition fee and I want use my GPA to prove I work hard to my parents. So for the two years study, I always sat in the front row of the classroom. My trick to get high GPA is to ask questions on every class frequently. Even though I do not have any questions, I will try to find one and ask. Because asking questions will help me focus more on the class.
+Besides, it is far better to ask for clarification and solve an issue right away than to unsure. And I know that Amazon emphasizes teamwork. And constant communication with other teammates is very important. So I think my ability to ask questions would help me in the future work especially when I am new to the position.
 ___
 ### Risk
 Speed is important.
