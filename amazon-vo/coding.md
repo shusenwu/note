@@ -967,7 +967,6 @@ class Solution(object):
         self.graph = collections.defaultdict(list)
         self.visited = collections.defaultdict(int)
         self.res = ''
-
         for i, w1 in enumerate(words[:-1]):
             w2 = words[i+1]
             for c1, c2 in zip(w1, w2):
@@ -980,8 +979,6 @@ class Solution(object):
             if not self.dfs(node):
                 return ''
         return self.res
-        
-    
     def dfs(self, node):
         if self.visited[node] == -1:  # visiting
             return False
@@ -994,6 +991,36 @@ class Solution(object):
         
         self.visited[node] = 1
         self.res += node
+        return True
+```
+```python
+
+        self.graph = collections.defaultdict(list)
+        self.res = []
+        for c, p in prerequisites:
+            self.graph[c].append(p)
+        
+        self.visited = [0 for x in xrange(numCourses)]
+        for node in xrange(numCourses):
+            if not self.DFS(node):
+                return []
+        
+        return self.res
+        
+    
+    def DFS(self, node):
+        if self.visited[node] == -1:  # visiting
+            return False
+        if self.visited[node] == 1:  # visited and add to res
+            return True 
+        self.visited[node] = -1  # mark as visiting
+        
+        for x in self.graph[node]:
+            if not self.DFS(x):
+                return False
+            
+        self.visited[node] = 1
+        self.res.append(node)
         return True
 ```
 ### 348. Design Tic-Tac-Toe
