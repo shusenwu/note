@@ -459,6 +459,20 @@ class Solution(object):
                 re.append(-1)
         return re
 ```
+上面的超时
+```python
+class Solution(object):
+    def nextGreaterElements(self, nums):
+        res = [0] * len(nums)
+        stack = []
+        for i in xrange(len(nums)*2-1, -1, -1):
+            ids = i % len(nums)
+            while stack and nums[stack[-1]] <= nums[ids]:
+                stack.pop()
+            res[ids] = -1 if not stack else nums[stack[-1]]
+            stack.append(ids)
+        return res
+```
 无circular:
 ```python
 def nextGreater(nums):
