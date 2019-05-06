@@ -34,6 +34,7 @@ class Codec:
         return root, pos
 ```
 ### 652. Find Duplicate Subtrees
+https://leetcode.com/problems/find-duplicate-subtrees/
 ```python
 class Solution(object):
     def findDuplicateSubtrees(self, root):
