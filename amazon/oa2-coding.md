@@ -390,7 +390,8 @@ class Solution(object):
 
 ("Acity","Ccity",2}  
 
-补充一句，test case一共有6个
+补充一句，test case一共有6个  
+https://en.wikipedia.org/wiki/Kruskal%27s_algorithm  
 写了一遍没有测试用例试也是感觉很虚
 ```python
 class Solution:
