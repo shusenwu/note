@@ -68,6 +68,24 @@ class Solution(object):
                         wordList.remove(new_w)
         return 0
 ```
+```python
+        # return path
+        def dfs(cur, end, path, wordsList):
+            if cur == end:
+                return path
+            
+            for i in xrange(len(cur)):
+                for c in chars:
+                    new_w = cur[:i] + c + cur[i+1:]
+                    if new_w in wordList:
+                        wordList.remove(new_w)
+                        re = dfs(new_w, end, path + [new_w], wordList)
+                        if re:
+                            return re
+                        wordList.add(new_w)
+        
+        return dfs(beginWord, endWord, [beginWord], wordList)
+```
 ### Word Ladder2
 ```python
 class Solution(object):
