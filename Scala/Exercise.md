@@ -71,3 +71,29 @@ object Exercise2 {
 }
 
 ```
+
+EXERCISE 2.2
+==
+Implement isSorted, which checks whether an Array[A] is sorted according to a
+given comparison function:
+```scala
+object Exercise3 {
+  def main(args: Array[String]): Unit = {
+    val ordered = (a: Int, b: Int) => a > b
+    val arr = Array(1, 5, 6, 7)
+    val arr2 = Array(5, 4, 2)
+
+    println(isSorted(arr, ordered))
+    println(isSorted(arr2, ordered))
+  }
+
+  def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = {
+    var i = 1
+    while (i < as.length){
+      if(ordered(as(i), as(i-1))) i = as.length + 1
+      else i += 1
+    }
+    if (i == as.length) true else false
+  }
+}
+```
