@@ -106,3 +106,18 @@ sugar for object creation:
 val lessThan = new Function2[Int, Int, Boolean] {
 def apply(a: Int, b: Int) = a < b
 }
+
+## Return type B => C
+
+```scala
+  object Exercise2 {
+  def main(args: Array[String]): Unit = {
+    val f = (a: Int, b: String) => 'c'
+    val re = partial1[Int, String, Char](1, f)
+    print(re("ab"))
+  }
+
+    def partial1[A,B,C](a: A, f: (A,B) => C): B => C =
+      b => f(a, b)
+}
+```
