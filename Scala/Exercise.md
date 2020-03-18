@@ -98,3 +98,11 @@ object Exercise3 {
   }
 }
 ```
+When we define a function literal, what is actually being defined in Scala is an object
+with a method called apply. Scala has a special rule for this method name, so that
+objects that have an apply method can be called as if they were themselves methods.
+When we define a function literal like (a, b) => a < b, this is really syntactic
+sugar for object creation:
+val lessThan = new Function2[Int, Int, Boolean] {
+def apply(a: Int, b: Int) = a < b
+}
