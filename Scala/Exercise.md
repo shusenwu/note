@@ -107,7 +107,8 @@ val lessThan = new Function2[Int, Int, Boolean] {
 def apply(a: Int, b: Int) = a < b
 }
 
-## Return type B => C
+## Return type B => C 
+return a function input type B return Type C,  like convert B to C
 
 ```scala
   object Exercise2 {
@@ -121,3 +122,6 @@ def apply(a: Int, b: Int) = a < b
       b => f(a, b)
 }
 ```
+
+
+
