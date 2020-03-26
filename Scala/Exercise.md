@@ -150,3 +150,12 @@ Remember, a pure function must not change data in place or perform other
 side effects. Therefore, functional data structures are by definition immutable. 
 Doesn’t this mean we end up doing a lot of extra copying of the data? Perhaps
 surprisingly, the answer is no```
+```
+
+```SCALA
+// : _* is a special instance of type ascription which tells the compiler to treat a single argument of a sequence type as a variable argument sequence, i.e. varargs.
+def apply[A](as: A*): List[A] =
+if (as.isEmpty) Nil
+else Cons(as.head, apply(as.tail: _*))
+```
+
