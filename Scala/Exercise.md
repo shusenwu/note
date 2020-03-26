@@ -143,3 +143,10 @@ def curry[A,B,C](f: (A, B) => C): A => (B => C)
 }
 ```
 令人发指。。
+
+```
+functional programs don’t update variables or modify mutable data structures. 
+Remember, a pure function must not change data in place or perform other
+side effects. Therefore, functional data structures are by definition immutable. 
+Doesn’t this mean we end up doing a lot of extra copying of the data? Perhaps
+surprisingly, the answer is no```
