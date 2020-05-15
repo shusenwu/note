@@ -88,7 +88,12 @@ public enum CarType{
   };
 }
 
+class VehicleType(Enum):
+  CAR, TRUCK, ELECTRIC, VAN, MOTORBIKE = 1, 2, 3, 4, 5
 
+
+class ParkingSpotType(Enum):
+  HANDICAPPED, COMPACT, LARGE, MOTORBIKE, ELECTRIC = 1, 2, 3, 4, 5
 
 
 //dao namespace
