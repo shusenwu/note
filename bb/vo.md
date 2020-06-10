@@ -378,3 +378,35 @@ class Malasong(object):
                 if len(res) == k:
                     return res
 ```
+[173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+```python
+class BSTIterator(object):
+    def __init__(self, root):
+        """
+        :type root: TreeNode
+        """
+        self.stack = []
+        self.push(root)
+        
+
+    def hasNext(self):
+        """
+        :rtype: bool
+        """
+        return self.stack != []
+    
+
+    def next(self):
+        """
+        :rtype: int
+        """
+        tempNode = self.stack.pop()
+        self.push(tempNode.right)
+        return tempNode.val
+        
+        
+    def push(self, node):
+        while node:
+            self.stack.append(node)
+            node = node.left
+```
