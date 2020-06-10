@@ -240,4 +240,5 @@ class Solution(object):
 
         return dfs(i, j, k)
 ```
-[20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+[20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 
+Stack 或者 replace函数，都在做题submission历史里面。
