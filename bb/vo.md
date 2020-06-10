@@ -410,3 +410,32 @@ class BSTIterator(object):
             self.stack.append(node)
             node = node.left
 ```
+
+给一串字母 连着取一串只有两种字母的字串 问最长可以取到的字串长度。
+two pointer
+
+```python
+def findLongest(s):
+    re = left = right = 0
+    cache = {}  # key: c value: number of this char
+    for i, c in enumerate(s):
+        if c not in cache and len(cache) == 2:
+            while len(cache) == 2:
+                # remove left
+                left_c = s[left]
+                cache[left_c] -= 1
+                if cache[left_c] == 0:
+                    cache.pop(left_c)
+                left += 1
+            cache[c] = 1
+        else:
+            cache[c] = cache.get(c, 0) + 1
+            right = i
+            re = max(re, right - left + 1)
+    return re
+
+
+if __name__ == '__main__':
+    s = 'aaabbcaadddddd'
+    print(findLongest(s))
+```
