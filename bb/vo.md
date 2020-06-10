@@ -313,10 +313,10 @@ if __name__ == '__main__':
 BFS
 
 马拉松
-### 一个马拉松比赛，假设路上有10个marker，然后你需要设计几个函数 Top(k)  
-### 返回跑在前面的k个人的id， Update（runnerId，markerId）每次跑到某个marker的时候 call这个函数。  
-### Hashmap + linkedlist （虽然这里我觉得好像和LRU没太大的关系。别人的面经）  
-### k can is given at runtime.
+一个马拉松比赛，假设路上有10个marker，然后你需要设计几个函数 Top(k)    
+返回跑在前面的k个人的id， Update（runnerId，markerId）每次跑到某个marker的时候 call这个函数。    
+Hashmap + linkedlist （虽然这里我觉得好像和LRU没太大的关系。别人的面经）    
+k can is given at runtime.  
 ```python
 
 class Node(object):
