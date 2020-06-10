@@ -1,6 +1,11 @@
 
 [1396. Design Underground System](https://leetcode.com/problems/design-underground-system/)
 
+[1382. Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)  
+2中做法，
+一种Inorder的[解法](https://leetcode.com/problems/balance-a-binary-search-tree/discuss/539735/Clean-Python-3-inorder-%2B-rebuild-tree-O(N))
+旋转的解法 https://leetcode.com/submissions/detail/346539349/
+
 [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 https://leetcode.com/submissions/detail/351109154/
 ```python
