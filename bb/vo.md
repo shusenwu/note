@@ -216,3 +216,27 @@ public class Solution {
     }
 }
 ```
+
+ 
+在一个N的西洋棋盘, 一个骑士走K步，有几种走法
+参考https://leetcode.com/problems/knight-probability-in-chessboard/
+
+```python3
+class Solution(object):
+    def knightSteps(self, N, i, j, k):  # N 的棋盘， 起始位置i,j， 走K步
+        moves = ((-1, -2), (-2, -1), (-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2))
+        memo = {}  # 如果剩下K = 100的时候都走到同一个位置， 那么不需要重复计算剩下的走法
+
+        def dfs(x, y, k):
+            if k == 0:
+                return 1
+            sum_p = 0
+            for dx, dy in moves:
+                i, j = x + dx, y + dy
+                if 0 <= i < N and 0 <= j < N:
+                    sum_p += dfs(i, j, k-1)
+            memo[(x, y, k)] = sum_p
+            return sum_p
+
+        return dfs(i, j, k)
+```
