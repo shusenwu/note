@@ -311,3 +311,70 @@ if __name__ == '__main__':
 ```
 第二题： 给你各个机场间的航线，让你返回从一始发地到目的地的所有路线（不仅仅是最短的）
 BFS
+
+马拉松
+### 一个马拉松比赛，假设路上有10个marker，然后你需要设计几个函数 Top(k)  
+### 返回跑在前面的k个人的id， Update（runnerId，markerId）每次跑到某个marker的时候 call这个函数。  
+### Hashmap + linkedlist （虽然这里我觉得好像和LRU没太大的关系。别人的面经）  
+### k can is given at runtime.
+```python
+
+class Node(object):
+    def __init__(self, val, pre=None, next=None):
+        self.val = val
+        self.next = next
+        self.pre = pre
+
+
+class Malasong(object):
+
+    def __init__(self, runners):  # runners 假设是list  [1, 5, 7] 编号的人
+        # 10 marker
+        # 1 2 3 4 5 这个人跑到了下个marker就删掉上一个地方的这个人 所以删掉1234
+        # key marker1 value: [1 2 3 4] 删掉23
+        # [2 3] 删掉3
+        # [3]
+        head = pre = Node(-1)
+        self.num_2_node = {}
+        self.total_runnre = len(runners)
+
+        for runner in runners:  # 生成初始化的linkedlist
+            cur = Node(runner)
+            cur.pre = pre
+            pre.next = cur
+            pre = cur
+            self.num_2_node[runner] = cur
+
+        self.marker_2_linkedList = {}
+        self.marker_2_linkedList[-1] = (head, head)  # 开跑前也当做一个marker 存head, tail
+
+        for i in range(10):
+            head = Node(-1)
+            self.marker_2_linkedList[i] = (head, head)
+
+    def Update(self, rid, markerId):
+        # 去上个marker删掉，加到这个marker
+        node = self.num_2_node[rid]
+        pre = node.pre
+        next = node.next
+        pre.next = next  # 删掉了
+
+        head, tail = self.marker_2_linkedList[markerId]
+        tail.next = node
+        node.pre = tail
+        node.next = None
+        self.marker_2_linkedList[markerId] = (head, node)
+
+    def topK(self, k):
+        if k > self.total_runnre or k < 0:
+            return "error"
+
+        res = []
+        # find from the last marker
+        for i in range(9, -1, -1):
+            head, _ = self.marker_2_linkedList[i]
+            while head.next:
+                res.append(head.next.val)
+                if len(res) == k:
+                    return res
+```
