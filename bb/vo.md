@@ -443,3 +443,56 @@ if __name__ == '__main__':
     print(findLongest(s))
 ```
 [LRU Cache](https://leetcode.com/problems/lru-cache/)
+
+
+给你两个不同容量的杯子，和无尽的水，能有几种容量的水被量出来  
+5 7  
+max water: 5+7 = 12  
+7-5 = 2    
+5-（7-5）=3  
+
+```python
+class Solution(object):
+    def findAllLiters(self, a, b):
+        self.res = set()
+        self.res.add(a)
+        self.res.add(b)
+        self.res.add(abs(a-b))
+        visited = set()
+        needVisit = [a, b]
+
+        while needVisit:
+            num = needVisit.pop(0)
+            if num in visited:
+                continue
+            else:
+                visited.add(num)
+
+            new_find1 = self._findGap(a, b, num)
+            new_find2 = self._findGap(b, a, num)
+            if new_find1: needVisit.append(new_find1)
+            if new_find2: needVisit.append(new_find2)
+
+        self.res.add(a+b)
+        return self.res
+
+    def _findGap(self, a, b, num):
+        temp_b = 0
+        if b - num > 0:
+            temp_b = b - num
+
+            while temp_b > 0:  # 要一直减 如果 b 远大于a
+                temp_b -= a
+            temp_b += a
+
+        if temp_b != 0 and a - temp_b > 0:
+            new_num = a - temp_b
+            self.res.add(new_num)
+            print(self.res)
+            return new_num
+
+
+if __name__ == '__main__':
+    s = Solution()
+    print(s.findAllLiters(5, 18))
+``` 
