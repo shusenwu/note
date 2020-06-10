@@ -242,3 +242,37 @@ class Solution(object):
 ```
 [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 
 Stack 或者 replace函数，都在做题submission历史里面。
+
+
+判断算式是否包括多余的括号 如((a) + b), ((a + b))都是包含多余的
+((a+b)+c) false
+(a) ture base case
+
+```python3
+class Solution(object):
+    def checkRedundant(self, s):
+        stack = []
+
+        for c in s:
+            if c != ')':  # 不是右括号
+                stack.append(c)
+            else:  # 是右括号的，一直pop到左括号
+                evaluation = c
+                while True:
+                    ch = stack.pop()
+                    evaluation = ch + evaluation
+                    if ch == '(':
+                        break
+                if len(evaluation) == 3:
+                    return False
+                else:
+                    stack.append('a')
+        return True
+
+if __name__ == '__main__':
+    s = Solution()
+    s1 = '(a)'
+    s2 = '((a+b))'
+    s3 = '((a+b)+c)'
+    print(s.checkRedundant(s3))
+```
