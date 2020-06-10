@@ -442,3 +442,4 @@ if __name__ == '__main__':
     s = 'aaabbcaadddddd'
     print(findLongest(s))
 ```
+[LRU Cache](https://leetcode.com/problems/lru-cache/)
