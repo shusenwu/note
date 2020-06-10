@@ -181,7 +181,7 @@ class Solution(object):
         for i in xrange(len(nums)):
             s += nums[i]
             
-            while s >= k:
+            while s >= k:  # Each element can be visited atmost twice, O(n)
                 s -= nums[left]
                 res = min(res, i-left+1)
                 left += 1
@@ -194,9 +194,9 @@ O(NLogN) - search if a window of size k exists that satisfy the condition
 public class Solution {
     public int minSubArrayLen(int s, int[] nums) {
         int i = 1, j = nums.length, min = 0;
-        while (i <= j) {
+        while (i <= j) {    // O(log(n))
             int mid = (i + j) / 2;
-            if (windowExist(mid, nums, s)) {
+            if (windowExist(mid, nums, s)) {  
                 j = mid - 1;
                 min = mid;
             } else i = mid + 1;
@@ -207,7 +207,7 @@ public class Solution {
 
     private boolean windowExist(int size, int[] nums, int s) {
         int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {  // O(N)
             if (i >= size) sum -= nums[i - size];
             sum += nums[i];
             if (sum >= s) return true;
