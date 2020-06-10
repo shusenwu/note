@@ -241,12 +241,12 @@ class Solution(object):
         return dfs(i, j, k)
 ```
 [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) 
-Stack 或者 replace函数，都在做题submission历史里面。
-
-
-判断算式是否包括多余的括号 如((a) + b), ((a + b))都是包含多余的
-((a+b)+c) false
-(a) ture base case
+Stack 或者 replace函数，都在做题submission历史里面。  
+  
+  
+判断算式是否包括多余的括号 如((a) + b), ((a + b))都是包含多余的  
+((a+b)+c) false  
+(a) ture base case  
 
 ```python3
 class Solution(object):
