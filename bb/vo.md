@@ -240,3 +240,4 @@ class Solution(object):
 
         return dfs(i, j, k)
 ```
+[20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
