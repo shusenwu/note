@@ -276,3 +276,36 @@ if __name__ == '__main__':
     s3 = '((a+b)+c)'
     print(s.checkRedundant(s3))
 ```
+
+一个未排序数组，让你返回若以数组中的数为三角形三边可以组成多少个三角形  
+a + b > c
+b + c > a
+c + a > b
+排序数组 
+a < b < c
+只要判断
+a + b > c
+```python3
+def triangle(nums):
+    nums = sorted(nums)
+    res = []
+    for i, a in enumerate(nums):
+        for j, b in enumerate(nums):
+            if j <= i:  # 跳过前面重复的
+                continue
+
+            for k, c in enumerate(nums):
+                if k <= j:  # 跳过前面重复的
+                    continue
+
+                if a + b > c:
+                    res.append([a, b, c])
+                else:
+                    break  # 如果不满足上面的if了，后面的不用再去循环了，肯定也不满足了
+    return res
+
+
+if __name__ == '__main__':
+    nums = [1, 5, 2, 3, 7, 9]
+    print(triangle(nums))
+```
