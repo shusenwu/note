@@ -156,3 +156,10 @@ class Solution(object):
     }
 }
 ```
+[200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
+[98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+https://leetcode.com/submissions/detail/223142427/
+
+[56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+[1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
