@@ -163,3 +163,56 @@ https://leetcode.com/submissions/detail/223142427/
 [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 [1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
+
+[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+```python
+class Solution(object):
+    def minSubArrayLen(self, k, nums):
+        """
+        :type s: int
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        
+        s = 0
+        res = float('inf')
+        left = 0
+        for i in xrange(len(nums)):
+            s += nums[i]
+            
+            while s >= k:
+                s -= nums[left]
+                res = min(res, i-left+1)
+                left += 1
+                
+        return res if res != float('inf') else 0
+```
+```java
+O(NLogN) - search if a window of size k exists that satisfy the condition
+
+public class Solution {
+    public int minSubArrayLen(int s, int[] nums) {
+        int i = 1, j = nums.length, min = 0;
+        while (i <= j) {
+            int mid = (i + j) / 2;
+            if (windowExist(mid, nums, s)) {
+                j = mid - 1;
+                min = mid;
+            } else i = mid + 1;
+        }
+        return min;
+    }
+
+
+    private boolean windowExist(int size, int[] nums, int s) {
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i >= size) sum -= nums[i - size];
+            sum += nums[i];
+            if (sum >= s) return true;
+        }
+        return false;
+    }
+}
+```
