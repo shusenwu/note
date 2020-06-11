@@ -1,3 +1,5 @@
+给一个target数字。然后从1开始，最少几个operation能到target value。有两种operations（x2 或者 /3）。比如说 1 * 2 * 2 * 2 * 2 / 3 * 2 = 10。注意 /3之后要floor。这道题我用的bfs。然后用一个hashmap记录已经visit过的。  
+
 https://1o24bbs.com/t/topic/2690
 
 [3. Longest Substring Without Repeating Characters ](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
