@@ -1,3 +1,52 @@
+给一个array， 里面只有1 和0， 求找出 连续最多1 的个数  
+【00011110110000111111】
+https://leetcode.com/problems/max-consecutive-ones/
+```python
+class Solution(object):
+    def findMaxConsecutiveOnes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        for i in range(1, len(nums)):
+            if nums[i]:
+                nums[i] += nums[i - 1]
+        return max(nums)
+```
+follow up 把一个0 变为1， 找最长的1的长度。  
+
+```python
+# idea:
+# 第一维https://leetcode.com/problems/max-consecutive-ones/
+# 第二维存的是 如果加上虚拟的0的情况
+class Solution(object):
+    def findLongest(self, nums):
+        for i in range(0, len(nums)):
+            if i == 0 and nums[i] == 0:
+                nums[i] = 0, 1
+            else:
+                nums[i] = (nums[i], 0)
+        print(nums)
+        for i in range(1, len(nums)):
+
+            if nums[i][0]:
+                nums[i] = (nums[i][0]+nums[i-1][0], 0)
+        print(nums)
+
+        for i in range(1, len(nums)):
+            if nums[i][0] == 0:
+                nums[i] = (nums[i][0], nums[i-1][0] + 1)
+            else:
+                nums[i] = (nums[i][0],  nums[i-1][1] + 1)
+
+        print(nums)
+        return max(max(num) for num in nums)
+
+if __name__ == '__main__':
+    nums = [0, 0, 1, 1]
+    s = Solution()
+    print(s.findLongest(nums))
+```
 
 [1396. Design Underground System](https://leetcode.com/problems/design-underground-system/)  
 
