@@ -1,5 +1,13 @@
 给一个target数字。然后从1开始，最少几个operation能到target value。有两种operations（x2 或者 /3）。比如说 1 * 2 * 2 * 2 * 2 / 3 * 2 = 10。注意 /3之后要floor。这道题我用的bfs。然后用一个hashmap记录已经visit过的。  
 
+
+设计一个class。有两个function。 append(value) -> void, get_indexs -> indexs.  
+比如说[120, 150, 125, 130] -> 相对应的index就是[3, -1, 3, -1]. 找出最后一个比你大的数字的index。  
+这个时候如果append(126). 那么你见过的所有的数字就是[120,150,125,130,126]。 相对应的index就是[4, -1, 4, -1, -1].  
+上来我就写了一个linear的solution。但是可以比linear更快。interviewer很多hint砸在我脸上之后。我懂了。  
+trick就是要用一个bst寻找所有比新加的value小的数字, 这样比value大的数字就都不用看了。  
+
+
 https://1o24bbs.com/t/topic/2690
 
 [3. Longest Substring Without Repeating Characters ](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
