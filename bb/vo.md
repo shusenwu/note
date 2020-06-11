@@ -1,4 +1,7 @@
-[451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
+在一个长得像V的数组，就是先递减再递增的数组里面找一个数。找到最小值后在两边binary search.   
+https://knaidu.gitbooks.io/problem-solving/searching/Increasing-Decreasing%20Array.html   
+  
+[451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)  
 
 [140. Word Break II](https://leetcode.com/submissions/detail/225997402/)
 改变版本， 只返回任意一种组合：
