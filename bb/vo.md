@@ -1,3 +1,7 @@
+
+[Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+回朔和Iterative 2种解法
+
 给一个array， 里面只有1 和0， 求找出 连续最多1 的个数  
 【00011110110000111111】
 https://leetcode.com/problems/max-consecutive-ones/
