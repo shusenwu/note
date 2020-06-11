@@ -1,3 +1,5 @@
+[3. Longest Substring Without Repeating Characters ](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
 在一个长得像V的数组，就是先递减再递增的数组里面找一个数。找到最小值后在两边binary search.   
 https://knaidu.gitbooks.io/problem-solving/searching/Increasing-Decreasing%20Array.html   
   
