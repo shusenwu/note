@@ -1,3 +1,28 @@
+[140. Word Break II](https://leetcode.com/submissions/detail/225997402/)
+改变版本， 只返回任意一种组合：
+```python
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: List[str]
+        """
+        wordDict = set(wordDict)
+        
+        def dfs(s):
+            for word in wordDict:
+                if not s.startswith(word): continue
+                if len(word) == len(s):
+                    return [word]
+                else:
+                    restOfWords = dfs(s[len(word):])
+                    if restOfWords:
+                        return [word] + restOfWords
+        return dfs(s)
+```
+
+
 [273. Integer to English Words](https://leetcode.com/problems/integer-to-english-words/)
 
 [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
