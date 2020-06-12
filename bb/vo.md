@@ -1,3 +1,35 @@
+[694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)
+```python
+
+class Solution(object):
+    def numDistinctIslands(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        
+        def dfs(i, j, shape, dirc):
+            if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] != 1:
+                return
+            grid[i][j] = 0
+            shape.append(dirc)
+            dfs(i-1, j, shape, 'u')
+            dfs(i+1, j, shape, 'd')
+            dfs(i, j-1, shape, 'l')
+            dfs(i, j+1, shape, 'r')
+            shape.append('b')  # back  没有back 就失败了
+            return shape
+        
+        re = set()
+        for i in xrange(len(grid)):
+            for j in xrange(len(grid[0])):
+                if grid[i][j]:
+                    shape = dfs(i, j, [], 'o')
+                    re.add(''.join(shape))
+       
+        return len(re)
+ ```
+
 1。design 一个超市的purchase record。因为没准备这种类型问题，一开始有点发懵，加上一上来俩硬度人有点虚就慌了一下。但后来通过交流知道要干什么了也design出来了。
 
 [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)  
