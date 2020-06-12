@@ -1,6 +1,12 @@
-[314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+1。design 一个超市的purchase record。因为没准备这种类型问题，一开始有点发懵，加上一上来俩硬度人有点虚就慌了一下。但后来通过交流知道要干什么了也design出来了。
 
-[320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)
+[117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)  
+[116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)  
+
+
+[314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)  
+
+[320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)  
 ```
 Input: "word"
 Output:
