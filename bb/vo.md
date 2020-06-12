@@ -1,3 +1,26 @@
+[320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)
+```
+Input: "word"
+Output:
+["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]
+```
+```python
+class Solution:
+    def generateAbbreviations(self, word: str) -> List[str]:
+        self.res = []
+        self.helper(0, '', 0, word)
+        return self.res
+    
+    def helper(self, pos, cur_s, count, word):
+            if pos == len(word):
+                if count > 0:
+                    cur_s += str(count)
+                self.res.append(cur_s)
+            else:
+                self.helper(pos+1, cur_s, count+1, word)  # case 1 count+1
+                self.helper(pos+1, cur_s + (str(count) if count > 0 else '') + word[pos], 0, word)
+```
+
 [430. Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
 
 给一个target数字。然后从1开始，最少几个operation能到target value。有两种operations（x2 或者 /3）。比如说 1 * 2 * 2 * 2 * 2 / 3 * 2 = 10。注意 /3之后要floor。这道题我用的bfs。然后用一个hashmap记录已经visit过的。   
