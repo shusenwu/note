@@ -1,4 +1,7 @@
-[1123. Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/discuss/334577/JavaC%2B%2BPython-Two-Recursive-Solution)  
+[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)  
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence.   
+
+[1123. Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/discuss/334577/JavaC%2B%2BPython-Two-Recursive-Solution)    
   
 [694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)  
 ```python
