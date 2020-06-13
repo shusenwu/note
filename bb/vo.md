@@ -1,3 +1,4 @@
+[121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)  
 [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)   
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.   
