@@ -1,3 +1,57 @@
+[Find minimum number of coins that make a given value](https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/)  
+```python
+
+'''
+If T == 0, then 0 coins required.
+If T > 0
+   minCoins(coins[0..m-1], T) = min {1 + minCoins(T-coin[i])} 
+                               where i varies from 0 to m-1 
+                               and coin[i] <= T
+'''
+def minCoinToTarget(coins, T):
+    if T == 0:
+        return 0
+
+    res = float('inf')
+    for i in range(len(coins)):
+        if coins[i] <= T:
+            pre_counts = minCoinToTarget(coins, T-coins[i])
+            if pre_counts != float('inf'):  # find the min one
+                res = min(res, pre_counts + 1)
+
+    return res if res != float('inf') else -1
+
+coins = [9, 6, 5, 1]
+print(minCoinToTarget(coins, 11))
+
+'''
+dp
+'''
+
+def minCoins(coins, T):
+    dp = [0 for _ in range(T + 1)]
+
+    dp[0] = 0  # base case when T = 0
+
+    for i in range(1, T+1):
+        dp[i] = float('inf')
+
+    # Compute minimum coins required
+    # for all values from 1 to V
+    for t in range(1, T+1):
+        for i in range(len(coins)):
+            if coins[i] <= t:
+                pre_count = dp[t-coins[i]]
+                if pre_count != float('inf'):
+                    dp[t] = min(dp[t], pre_count+1)
+
+    return dp[-1]
+
+
+coins = [9, 6, 5, 1]
+print(minCoins(coins, 11))
+```
+
 [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)  
 [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)  
 [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)   
