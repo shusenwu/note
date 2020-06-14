@@ -1,3 +1,4 @@
+[422. Valid Word Square](https://leetcode.com/problems/valid-word-square/)   
 1. 晚了10分钟，只做了一题。外星人字典变种。    
 输入：给一个字典如 a, b, c, d, ch, dd, e, r ..., 一个word list 如 ddr, dea, ab, chc    
 思路 第一步： 269. Alien Dictionary https://blog.csdn.net/Sengo_GWU/article/details/81966972   拓扑排序输出各个字母的顺序  
