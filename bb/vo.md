@@ -1,3 +1,26 @@
+[面试题 16.10. 生存人数living-people-lcci](https://leetcode-cn.com/problems/living-people-lcci/)
+```java
+class Solution {
+    public int maxAliveYear(int[] birth, int[] death) {
+        int[] count = new int[102];
+        for (int j = 0; j < birth.length; j++) {
+            count[birth[j] - 1900] += 1;
+            count[death[j] - 1899] -= 1;
+        }
+        int maxIndex = 0;
+        int maxCount = -1;
+        for (int i = 1; i < 102; i++) {
+            count[i] = count[i] + count[i - 1];
+            if (count[i] > maxCount) {
+                maxCount = count[i];
+                maxIndex = i;
+            }
+        }
+        return maxIndex + 1900;
+    }
+}
+```
+
 [Stable Marriage Problem](https://www.geeksforgeeks.org/stable-marriage-problem/)   
 [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)  
 [445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)    
