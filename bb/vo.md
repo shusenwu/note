@@ -1,4 +1,5 @@
-[445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)  
+[8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)  
+[445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)    
 
 [422. Valid Word Square](https://leetcode.com/problems/valid-word-square/)   
 1. 晚了10分钟，只做了一题。外星人字典变种。    
