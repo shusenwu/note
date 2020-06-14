@@ -1,3 +1,14 @@
+1. 晚了10分钟，只做了一题。外星人字典变种。    
+输入：给一个字典如 a, b, c, d, ch, dd, e, r ..., 一个word list 如 ddr, dea, ab, chc    
+思路 第一步： 269. Alien Dictionary https://blog.csdn.net/Sengo_GWU/article/details/81966972   拓扑排序输出各个字母的顺序  
+第二部： 比如字母的顺序是【d, e, g ...】给他们一个数字顺序【1， 2， 3】.  
+第三部： 把word list的里面的word 根据第二步的结果转化为数字比如 112 223之类的  
+第四部，排序  
+
+重点是字典里的"字母"可能是长度为2的
+输出：sorted word list： ab, dea, chc, ddr
+解法：自己设计输入的数据结构。字典可以为<string, int> map。把word拆成int tuple，然后sort tuple。不难，一开始很容易想复杂了。
+
 [在浏览器输入 URL 回车之后发生了什么](https://juejin.im/post/5d5e795ff265da03e275f29e)  
 
 [365. Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/)倒水问题    
