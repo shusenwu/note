@@ -1,4 +1,5 @@
-[99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)  
+[Josephus problem](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)  
+[99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)     
 
 [面试题 16.10. 生存人数living-people-lcci](https://leetcode-cn.com/problems/living-people-lcci/)
 ```java
