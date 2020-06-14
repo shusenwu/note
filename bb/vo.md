@@ -422,7 +422,8 @@ https://leetcode.com/submissions/detail/223142427/
 
 [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
-[1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
+[1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)  
+[387. First Unique Character in a String](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)  
 
 [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 ```python
