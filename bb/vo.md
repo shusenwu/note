@@ -1,3 +1,5 @@
+[ Kth Missing Element In Sorted Array](https://strstr.io/Leetcode1060-Missing-Element-in-Sorted-Array/)    
+
 [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
 
 [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)   
