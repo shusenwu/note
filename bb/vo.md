@@ -1,5 +1,11 @@
+[797. All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)  
+
+  
 [1209. Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)   
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/discuss/393149/JavaPython-3-O(n)-codes-using-Stack-w-brief-explanation-and-analysis.
+  
 [Josephus problem](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)  
+  
 [99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)     
 
 [面试题 16.10. 生存人数living-people-lcci](https://leetcode-cn.com/problems/living-people-lcci/)
