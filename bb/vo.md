@@ -1,3 +1,5 @@
+[1244. Design A Leaderboard](https://leetcode.com/problems/design-a-leaderboard/)   
+
 [https://leetcode.com/problems/island-perimeter/](https://leetcode.com/problems/island-perimeter/)   
 
 [797. All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)  
