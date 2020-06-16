@@ -1,3 +1,113 @@
+[Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
+idea:    
+1. 假设x,y是repeating 和 missing的数字，得到x, y的xor 
+```
+res = arr[0]^arr[1]^arr[2].....arr[n-1]
+res = res^1^2^3^......^n
+```   
+2. 我们知道xor异或是不相等的位为1，所以我们找上一步res中的任意一位1的位，在这一位x,y是不相同的。  
+3. 通过set_bit = res ^ ~(res-1)取最右侧非零的位，其他位都会变成0。通过此bit来区分x,y
+4. 把所有number 分为2个集合，此bit 为1的为一个集合，此bit为0的为一个集合。
+5.  异或2个集合，
+```        for (i = 0; i < n; i++) { 
+            if ((arr[i] & set_bit_no) != 0) 
+                /* arr[i] belongs to first set */
+                x = x ^ arr[i]; 
+  
+            else
+                /* arr[i] belongs to second set*/
+                y = y ^ arr[i]; 
+        }
+```
+6. 再异或一次1~n ，加上5的异或，出现1次的num 会被异或2次抵消掉。 剩下x,y分别  
+       for (i = 1; i <= n; i++) { 
+            if ((i & set_bit_no) != 0) 
+                /* i belongs to first set */
+                x = x ^ i; 
+  
+            else
+                /* i belongs to second set*/
+                y = y ^ i; 
+        } 
+
+```JAVA
+import java.io.*; 
+  
+class GFG { 
+    static int x, y; 
+  
+    static void getTwoElements(int arr[], int n) 
+    { 
+        /* Will hold xor of all elements 
+       and numbers from 1 to n  */
+        int xor1; 
+  
+        /* Will have only single set bit of xor1 */
+        int set_bit_no; 
+  
+        int i; 
+        x = 0; 
+        y = 0; 
+  
+        xor1 = arr[0]; 
+  
+        /* Get the xor of all array elements  */
+        for (i = 1; i < n; i++) 
+            xor1 = xor1 ^ arr[i]; 
+  
+        /* XOR the previous result with numbers from  
+       1 to n*/
+        for (i = 1; i <= n; i++) 
+            xor1 = xor1 ^ i; 
+  
+        /* Get the rightmost set bit in set_bit_no */
+        set_bit_no = xor1 & ~(xor1 - 1); 
+  
+        /* Now divide elements into two sets by comparing 
+    rightmost set bit of xor1 with the bit at the same  
+    position in each element. Also, get XORs of two 
+    sets. The two XORs are the output elements. The  
+    following two for loops serve the purpose */
+        for (i = 0; i < n; i++) { 
+            if ((arr[i] & set_bit_no) != 0) 
+                /* arr[i] belongs to first set */
+                x = x ^ arr[i]; 
+  
+            else
+                /* arr[i] belongs to second set*/
+                y = y ^ arr[i]; 
+        } 
+        for (i = 1; i <= n; i++) { 
+            if ((i & set_bit_no) != 0) 
+                /* i belongs to first set */
+                x = x ^ i; 
+  
+            else
+                /* i belongs to second set*/
+                y = y ^ i; 
+        } 
+  
+        /* *x and *y hold the desired output elements */
+    } 
+    /* Driver program to test above function */
+    public static void main(String[] args) 
+    { 
+        int arr[] = { 1, 3, 4, 5, 1, 6, 2 }; 
+  
+        int n = arr.length; 
+        getTwoElements(arr, n); 
+        System.out.println(" The missing element is  "
+                           + x + "and the "
+                           + "repeating number is "
+                           + y); 
+    } 
+} 
+  
+// This code is contributed by Gitanjali. 
+```
+
+
+
 [ Kth Missing Element In Sorted Array](https://strstr.io/Leetcode1060-Missing-Element-in-Sorted-Array/)    
 
 [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
