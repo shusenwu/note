@@ -9,7 +9,8 @@ res = res^1^2^3^......^n
 3. 通过set_bit = res ^ ~(res-1)取最右侧非零的位，其他位都会变成0。通过此bit来区分x,y
 4. 把所有number 分为2个集合，此bit 为1的为一个集合，此bit为0的为一个集合。
 5.  异或2个集合，
-```        for (i = 0; i < n; i++) { 
+```        
+           for (i = 0; i < n; i++) { 
             if ((arr[i] & set_bit_no) != 0) 
                 /* arr[i] belongs to first set */
                 x = x ^ arr[i]; 
@@ -20,6 +21,7 @@ res = res^1^2^3^......^n
         }
 ```
 6. 再异或一次1~n ，加上5的异或，出现1次的num 会被异或2次抵消掉。 剩下x,y分别  
+```
        for (i = 1; i <= n; i++) { 
             if ((i & set_bit_no) != 0) 
                 /* i belongs to first set */
@@ -29,7 +31,7 @@ res = res^1^2^3^......^n
                 /* i belongs to second set*/
                 y = y ^ i; 
         } 
-
+```
 ```JAVA
 import java.io.*; 
   
