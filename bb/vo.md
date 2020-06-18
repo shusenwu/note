@@ -1,3 +1,34 @@
+[81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)  
+```python
+class Solution(object):
+    def search(self, nums, target):
+        if not nums:
+            return False
+        l, r = 0, len(nums)-1
+        while l < r:
+            mid = l + (r-l)//2
+            if nums[mid] == target:
+                return True
+             # the right half is ordered
+            if nums[mid] < nums[r]:
+                # target is in right half
+                if nums[mid] < target <= nums[r]:
+                    l = mid + 1
+                else:
+                    r = mid - 1
+            #  # the left half is ordered
+            elif nums[mid] > nums[r]:
+                # target is in the left half
+                if nums[l] <= target < nums[mid]:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            else:  # we don't know which part is ordered, e.g, mid=0 right=0 [2 5 6 0 0 1 2] or [1 2 0 0 2 5 6]
+                r -= 1
+        return nums[l] == target
+```
+
+
 [Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
 idea:    
 1. 假设x,y是repeating 和 missing的数字，得到x, y的xor 
