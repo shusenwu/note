@@ -396,6 +396,33 @@ https://1o24bbs.com/t/topic/2690
 https://knaidu.gitbooks.io/problem-solving/searching/Increasing-Decreasing%20Array.html   
   
 [451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)  
+```python
+class Solution(object):
+    def frequencySort(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        result = ''
+        bucket = [None for i in range(len(s) + 1)]  # store freq to list of char
+        char_2_count = {}
+        
+        for char in s:
+            char_2_count[char] = char_2_count.get(char, 0) + 1
+            
+        for key, value in char_2_count.items():
+            if bucket[value] is None:
+                bucket[value] = []
+            
+            bucket[value].append(key)
+            
+        for i in reversed(range(len(bucket))):
+            if bucket[i] is not None:
+                for char in bucket[i]:
+                    result += char * i
+                    
+        return result
+```
 
 [140. Word Break II](https://leetcode.com/submissions/detail/225997402/)
 改变版本， 只返回任意一种组合：
