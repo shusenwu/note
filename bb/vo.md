@@ -390,7 +390,7 @@ class Solution(object):
 
 
 [314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)  
-[987. Vertical Order Traversal of a Binary Tree] (https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
+[987. Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)  
 
 [320. Generalized Abbreviation](https://leetcode.com/problems/generalized-abbreviation/)  
 ```
