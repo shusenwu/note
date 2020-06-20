@@ -1,3 +1,21 @@
+[621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)  
+```python
+class Solution(object):
+    def leastInterval(self, tasks, n):
+        """
+        :type tasks: List[str]
+        :type n: int
+        :rtype: int
+        https://leetcode.com/problems/task-scheduler/discuss/104500/Java-O(n)-time-O(1)-space-1-pass-no-sorting-solution-with-detailed-explanation
+        """
+        counter = collections.Counter(tasks)
+        task_list = [[value, key] for key, value in counter.items()]
+        task_list.sort(reverse=True)
+        most = task_list[0][0]
+        sameLength = sum([1 for value, key in task_list if value == most])
+        return max((most-1) * (n+1) + sameLength, len(tasks))
+        
+```  
 [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)   
 ```python
 class Solution(object):
