@@ -1,3 +1,29 @@
+[63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)   
+```python
+class Solution(object):
+    def uniquePathsWithObstacles(self, O):
+        """
+        :type obstacleGrid: List[List[int]]
+        :rtype: int
+        """
+        if not O: return 0
+        r, c = len(O), len(O[0])
+        
+        for i in range(r):
+            for j in range(c):
+                if O[i][j] == 1:
+                    O[i][j] = 0
+                elif i == 0 and j == 0:
+                    O[i][j] = 1
+                elif i == 0:
+                    O[i][j] = O[i][j-1] * 1  # For row 0, if there are no paths to left cell, then its 0,else 1
+                elif j == 0:
+                    O[i][j] = O[i-1][j] * 1   # For col 0, if there are no paths to upper cell, then its 0,else 1
+                else:
+                    O[i][j] = O[i-1][j] + O[i][j-1]
+ 
+        return O[r-1][c-1]
+``` 
 [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://blog.csdn.net/Sengo_GWU/article/details/81879502)   
 [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)  
 ```python
