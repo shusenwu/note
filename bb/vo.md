@@ -667,6 +667,14 @@ class Solution(object):
 
         return node.val + maxChild
  ```
+ [443. String Compression](https://leetcode.com/problems/string-compression/)  
+ ```
+ Input:
+["a","a","b","b","c","c","c"]
+
+Output:
+Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
+```
  
  [394. Decode String](https://leetcode.com/problems/decode-string/)
 ```python
