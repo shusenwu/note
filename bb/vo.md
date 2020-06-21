@@ -1,3 +1,14 @@
+两个Byte类型的数组，分别为A和B。现给出target sum，问是否能从A和B中各找出一个数使得它们的和为target。  
+比如：  
+A=[1,5,3,6]  
+B=[5,2,8,4]   
+target=11  
+返回true，因为存在3（in A) + 8 (in B) = 11  
+楼主第一反应就是hashmap，简单直接。要求复杂度分析：Time -> O(n)    Space -> O(n)  
+然后面试官要求优化空间复杂度，楼主第二反应就是将A和B排序，然后two pointer找是否存在。Time -> O(nlogn)    Space -> O(1)  
+然后面试官要求继续优化，楼主思索片刻，发现是Byte数组，那么只要建立一个长为2^8的array来记录A中哪些数字存在，然后遍历B即可。Time -> O(n)    Space -> O(1)  
+
+
 [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  
 ```python
 class Solution(object):
