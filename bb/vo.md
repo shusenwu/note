@@ -1,3 +1,5 @@
+[1274. Number of Ships in a Rectangle](https://leetcode.com/problems/number-of-ships-in-a-rectangle/)   
+
 两个Byte类型的数组，分别为A和B。现给出target sum，问是否能从A和B中各找出一个数使得它们的和为target。  
 比如：  
 A=[1,5,3,6]  
