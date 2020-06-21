@@ -1,3 +1,29 @@
+[138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)  
+```python
+class Solution(object):
+    def copyRandomList(self, head):
+        """
+        :type head: Node
+        :rtype: Node
+        """
+        if not head: return 
+        dic = {}
+        dummy1 = dummy2 = head
+        while dummy1:
+            if dummy1 not in dic:
+                n = Node(dummy1.val, None, None)
+                dic[dummy1] = n
+            dummy1 = dummy1.next
+        
+        while dummy2:
+            n = dic[dummy2]
+            n.next = dic[dummy2.next] if dummy2.next else None
+            n.random = dic[dummy2.random] if dummy2.random else None
+            dummy2 = dummy2.next
+      
+        return dic[head]
+```
+  
 [329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)  
 
 [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)  
