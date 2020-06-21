@@ -1,3 +1,30 @@
+[42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  
+```python
+class Solution(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        if not height or len(height) < 3:
+            return 0
+        
+        left, right = 0, len(height) - 1
+        leftMax, rightMax = height[left], height[right]
+        volumn = 0
+        
+        while left < right:
+            leftMax = max(leftMax, height[left])
+            rightMax = max(rightMax, height[right])
+            if leftMax <= rightMax:
+                volumn += leftMax - height[left]
+                left += 1
+            else:
+                volumn += rightMax - height[right]
+                right -= 1
+        return volumn
+ ```
+ 
 [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)  
 ```python
 class Solution(object):
