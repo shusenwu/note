@@ -1,3 +1,5 @@
+[1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)  
+
 [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  
 ```python
 class Solution(object):
