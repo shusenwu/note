@@ -659,6 +659,9 @@ if __name__ == '__main__':
 ```
 
 [1396. Design Underground System](https://leetcode.com/problems/design-underground-system/)  
+1. 会不会有人坐地铁转圈玩，从同一个车站进出？
+2. 如何处理人还在地铁里的时候再次出现刷卡进入的情况？
+
 
 [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)    
 
