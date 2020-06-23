@@ -1,3 +1,37 @@
+[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  
+```python
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        
+        d = {}  # map from num to frequence
+        q = {}  # map from freq to numbers 
+        for n in nums:
+            if d.get(n) is None:
+                d[n] = 1
+            else:
+                d[n] += 1
+                
+        for n, c in d.items():
+            if q.get(c) is None:
+                q[c] = [n]
+            else:
+                q[c].append(n)
+                
+        res = [] 
+        for i in xrange(len(nums), 0, -1):
+            if k < 0:
+                break
+            elif q.get(i):
+                res += [q[i][s] for s in xrange(min(k, len(q[i])))]
+                k -= len(q[i])
+        return res
+ ```
+
 [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)  
  
 
