@@ -352,7 +352,15 @@ class GFG {
   
 [1209. Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)   
 https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/discuss/393149/JavaPython-3-O(n)-codes-using-Stack-w-brief-explanation-and-analysis.
-  
+```
+Input: s = "deeedbbcccbdaa", k = 3
+Output: "aa"
+Explanation: 
+First delete "eee" and "ccc", get "ddbbbdaa"
+Then delete "bbb", get "dddaa"
+Finally delete "ddd", get "aa"
+```
+
 [Josephus problem](https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/)  
   
 [99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)     
