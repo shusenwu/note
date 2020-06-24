@@ -343,7 +343,6 @@ class GFG {
 
 [703. Kth Largest Element in a Stream](https://leetcode.com/submissions/detail/189780304/)    
 
-[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
   
 [1244. Design A Leaderboard](https://leetcode.com/problems/design-a-leaderboard/)   
 
@@ -963,7 +962,8 @@ if __name__ == '__main__':
     s2 = '((a+b))'
     s3 = '((a+b)+c)'
     print(s.checkRedundant(s3))
-```
+```  
+[611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)  
 
 一个未排序数组，让你返回若以数组中的数为三角形三边可以组成多少个三角形  
 a + b > c
