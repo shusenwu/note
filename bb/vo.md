@@ -223,7 +223,7 @@ class Solution(object):
 ```
 
 
-[Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
+[1060. Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
 idea:    
 1. 假设x,y是repeating 和 missing的数字，得到x, y的xor 
 ```
