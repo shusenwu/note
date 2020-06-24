@@ -223,7 +223,7 @@ class Solution(object):
 ```
 
 
-[1060. Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
+[Find the repeating and the missing](https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/) 
 idea:    
 1. 假设x,y是repeating 和 missing的数字，得到x, y的xor 
 ```
@@ -335,7 +335,7 @@ class GFG {
 
 
 
-[ Kth Missing Element In Sorted Array](https://strstr.io/Leetcode1060-Missing-Element-in-Sorted-Array/)    
+[1060. Kth Missing Element In Sorted Array](https://strstr.io/Leetcode1060-Missing-Element-in-Sorted-Array/)    
 
 [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)  
 
