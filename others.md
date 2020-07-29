@@ -79,7 +79,7 @@ def minSteps(piles):
 print(minSteps([1,2,5]))
 ```
 findMostFrequent  
-```
+```python
 import collections
 def findMostFrequent(s):
     d = collections.OrderedDict()
