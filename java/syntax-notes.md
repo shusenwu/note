@@ -25,6 +25,7 @@ Math.max();
 
 // String  
 s.toCharArray()
+s.length();
 
 // String buffer
 StringBuilder sb = new StringBuilder();
@@ -55,9 +56,16 @@ stack.peek();
 
 Deque stack = new ArrayDeque<>(s.length());
 //Stack and ArrayDeque are implemented with resizable array, and every time it is full, 
-all of the elements will be copied to a new allocated array, which is costly if this process 
-is invoked repeatedly and thus leads to TLE on large test cases. Specifying an initial **capacity** 
-can prevent this from happening.
+// all of the elements will be copied to a new allocated array, which is costly if this process 
+// is invoked repeatedly and thus leads to TLE on large test cases. Specifying an initial **capacity** 
+// can prevent this from happening.
 
 
+
+//Set
+Set<String> fwd = new HashSet<String>();
+fwd.add(beginWord);
+fwd.isEmpty();
+fwd.remove(beginWord);
+for(String str : fwd)
 ```
