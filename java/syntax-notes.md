@@ -36,15 +36,12 @@ sb.toString();
 HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 map.containsKey(s.charAt(i));
 
-
-
 // Queue 
 Queue<Character> queue = new LinkedList<>();
 queue.contains(c);
 queue.poll();
 queue.offer(c);
 queue.size();
-
 
 // Stack
 Stack<Integer> stack = new Stack<Integer>();
@@ -53,13 +50,11 @@ stack.isEmpty();
 stack.pop();
 stack.peek();
 
-
 Deque stack = new ArrayDeque<>(s.length());
 //Stack and ArrayDeque are implemented with resizable array, and every time it is full, 
 // all of the elements will be copied to a new allocated array, which is costly if this process 
 // is invoked repeatedly and thus leads to TLE on large test cases. Specifying an initial **capacity** 
 // can prevent this from happening.
-
 
 
 //Set
@@ -68,4 +63,13 @@ fwd.add(beginWord);
 fwd.isEmpty();
 fwd.remove(beginWord);
 for(String str : fwd)
+
+// Single linked list
+public class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}  // 这个和下面都是构造方法
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+}
 ```
