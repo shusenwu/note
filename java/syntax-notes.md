@@ -94,6 +94,11 @@ PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comp
             return 1;
     }
 });
+
+PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
+                 (a,b) -> a.getValue()==b.getValue() ? b.getKey().compareTo(a.getKey()) : a.getValue()-b.getValue()
+        );
+        
 queue.add(node);
 queue.poll();
 ```
