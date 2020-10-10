@@ -7,6 +7,14 @@ Java 算法常用语法整理
 int[] A = new int[256];
 A.length; 
 
+// 排序
+int[][] intervals
+Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
+
+List<Interval> intervals
+intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
+
+
 List<String> ans = new ArrayList<>();
 ans.add();
 
