@@ -50,7 +50,7 @@ queue.contains(c);
 queue.poll();
 queue.offer(c);
 queue.size();
-
+queue.peek();
 // Stack
 Stack<Integer> stack = new Stack<Integer>();
 stack.push(j); 
