@@ -1,4 +1,4 @@
-Java 算法常用语法整理
+Java Notes
 ==
 
 
@@ -43,6 +43,14 @@ sb.toString();
 // Map
 HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 map.containsKey(s.charAt(i));
+
+public static void main(String[] args) {
+    Map<Person, Integer> map = new TreeMap<>(new Comparator<Person>() {
+        public int compare(Person p1, Person p2) {
+            return p1.name.compareTo(p2.name);
+        }
+    });
+ 
 
 // Queue 
 Queue<Character> queue = new LinkedList<>();
