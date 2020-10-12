@@ -3,7 +3,7 @@ Java Notes
 
 
 ```java
-// Array
+// Array  List
 int[] A = new int[256];
 A.length; 
 
@@ -17,6 +17,11 @@ intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
 
 List<String> ans = new ArrayList<>();
 ans.add();
+
+// List to Array
+List<Integer> list = List.of(1, 2, 3);
+Integer[] arr = new Integer[b2.size()];
+arr = list.toArray(arr);
 
 // max value
 Integer.MAX_VALUE
