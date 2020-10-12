@@ -137,3 +137,10 @@ deque.peekLast()
 
 Java 8 Steam  
 https://www.runoob.com/java/java8-streams.html  
+
+```java
+	    List<Integer> intList = Arrays.asList(1, 2, 3);
+    String result = intList.stream()
+      .map(n -> String.valueOf(n))
+      .collect(Collectors.joining("-", "{", "}"));
+```
