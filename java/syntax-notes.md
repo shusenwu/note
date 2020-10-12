@@ -23,6 +23,11 @@ List<Integer> list = List.of(1, 2, 3);
 Integer[] arr = new Integer[b2.size()];
 arr = list.toArray(arr);
 
+
+// 快速填充array
+int[] a2 = new int[5];
+Arrays.fill(a2, 1);
+        
 // max value
 Integer.MAX_VALUE
 Integer.MIN_VALUE
