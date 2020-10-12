@@ -123,4 +123,14 @@ Queue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
         
 queue.add(node);
 queue.poll();
+
+// Dequeue
+https://www.liaoxuefeng.com/wiki/1252599548343744/1265122668445536 
+Deque<String> deque = new LinkedList<>();
+deque.offerLast("A"); // A
+deque.offerLast("B"); // B -> A
+deque.offerFirst("C"); // B -> A -> C
+deque.peekFirst()
+deque.peekLast()
+
 ```
