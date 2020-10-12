@@ -9,7 +9,7 @@ Java Notes
 // Array  List
 int[] A = new int[256];
 A.length; 
-int[] number = new int[]{1, 2, 3, 5, 8}; // 不要指定长度
+int[] number = new int[]{1, 2, 3, 5, 8}; // 不要指定长度 初始化array
 // 排序
 int[][] intervals
 Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
@@ -21,6 +21,10 @@ intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
 List<String> ans = new ArrayList<>();
 ans.add();
 
+// 初始化list
+List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
+int result = list.stream().reduce(1, (subTotal, element) -> subTotal + element);
+System.out.println(result);
 
 // List to Array
 List<Integer> list = List.of(1, 2, 3);
