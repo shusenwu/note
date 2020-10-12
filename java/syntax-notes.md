@@ -74,11 +74,11 @@ queue.offer(c);
 queue.size();
 queue.peek();
 // Stack
-        Deque<String> stack = new LinkedList<String>();
-        stack.push("a");
-        stack.peek();
-        stack.pop();
-        stack.isEmpty();
+Deque<String> stack = new LinkedList<String>();
+stack.push("a");
+stack.peek();
+stack.pop();
+stack.isEmpty();
 
 Deque stack = new ArrayDeque<>(s.length());
 //Stack and ArrayDeque are implemented with resizable array, and every time it is full, 
