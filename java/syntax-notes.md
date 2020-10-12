@@ -134,3 +134,6 @@ deque.peekFirst()
 deque.peekLast()
 
 ```
+
+Java 8 Steam  
+https://www.runoob.com/java/java8-streams.html  
