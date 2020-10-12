@@ -29,7 +29,7 @@ Short.MAX_VALUE
 Short.MIN_VALUE
 
 Math.max();
-
+int max = Collections.max(Arrays.asList(num)); 
 
 // String  
 s.toCharArray()
@@ -91,7 +91,7 @@ public class ListNode {
 
 // Priority Queue
 
-PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comparator<ListNode>(){
+Queue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comparator<ListNode>(){
     @Override
     public int compare(ListNode o1,ListNode o2){
         if (o1.val<o2.val)
@@ -103,7 +103,7 @@ PriorityQueue<ListNode> queue= new PriorityQueue<ListNode>(lists.size(),new Comp
     }
 });
 
-PriorityQueue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
+Queue<Map.Entry<String, Integer>> pq = new PriorityQueue<>(
                  (a,b) -> a.getValue()==b.getValue() ? b.getKey().compareTo(a.getKey()) : a.getValue()-b.getValue()
         );
         
