@@ -64,7 +64,7 @@ sb.toString();
 // Map
 HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 map.containsKey(s.charAt(i));
-
+map.getOrDefault(key, defaultValue);
 public static void main(String[] args) {
     Map<Person, Integer> map = new TreeMap<>(new Comparator<Person>() {
         public int compare(Person p1, Person p2) {
