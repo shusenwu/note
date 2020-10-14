@@ -157,3 +157,6 @@ String result = intList.stream().map(n -> String.valueOf(n)).collect(Collectors.
 // output: {1-2-3}
 
 ```
+
+### write a singleton class   
+Java 单例类  https://www.cnblogs.com/dyh-air/articles/9151190.html  
