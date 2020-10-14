@@ -26,6 +26,12 @@ List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3));
 int result = list.stream().reduce(1, (subTotal, element) -> subTotal + element);
 System.out.println(result);
 
+// Remove duplicate
+List<Integer> listWithDuplicates = Lists.newArrayList(1, 1, 2, 2, 3, 3);
+List<Integer> listWithoutDuplicates = listWithDuplicates.stream()
+ .distinct()
+ .collect(Collectors.toList());
+
 // List to Array
 List<Integer> list = List.of(1, 2, 3);
 Integer[] arr = new Integer[b2.size()];
