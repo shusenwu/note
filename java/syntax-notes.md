@@ -16,7 +16,7 @@ Arrays.sort(intervals, (i1, i2) -> Integer.compare(i1[0], i2[0]));
 
 List<Interval> intervals
 intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
-
+bookList.sort(Comparator.comparing(book -> -book.getWordCount()).thenComparing(Book::getPublishDate));
 
 List<String> ans = new ArrayList<>();
 ans.add();
