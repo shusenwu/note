@@ -62,7 +62,7 @@ class Solution(object):
               if d[c] == 1:
                     return i
         return -1
-    ```    
+```
         
 Coding. Auto complete system, 用trie实现， follow 是如何delete word from trie 和 achieve concurrency.  
 
