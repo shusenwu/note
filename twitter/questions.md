@@ -62,11 +62,14 @@ class Solution(object):
               if d[c] == 1:
                     return i
         return -1
-        
+    ```    
         
 Coding. Auto complete system, 用trie实现， follow 是如何delete word from trie 和 achieve concurrency.  
 
-```
+https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/   
+
+3. Reverse words in place.
+https://leetcode.com/problems/reverse-words-in-a-string-ii/   
 # BQ  
 经理和一个小姐姐，和你一起回顾人生经历，你觉得你的过往mentor、manager会怎么评价你，如果你再有机会实习、工作之前的内容，哪些方面会做的不一样。每次经历都要重复这几个问题。  
  Behavior，从简历上每一段经历开始讲起(even internship and grad school)， why did you do this, how do you like it, what did you learn, what's your feedback, what's your weakness   
