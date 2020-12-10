@@ -30,7 +30,7 @@ system design, kv store， 要实现3个method, set, get, delete。着重讨论�
 
 # Algorithm  
 AutoComplete  
-
+https://blog.csdn.net/Sengo_GWU/article/details/82948834  
 212. Word Search II   https://leetcode.com/problems/word-search-ii/  
 
 add(), delete(), remove(), O(1)  
@@ -70,6 +70,37 @@ https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-tr
 
 3. Reverse words in place.
 https://leetcode.com/problems/reverse-words-in-a-string-ii/   
+```python
+class Solution(object):
+    def reverseWords(self, s):
+        """
+        :type s: List[str]
+        :rtype: None Do not return anything, modify s in-place instead.
+        """
+        i, j = 0, len(s)-1
+        def reverse(i, j, s):
+            while i < j:
+                s[i], s[j] = s[j], s[i]
+                i += 1
+                j -= 1
+            return s
+        reverse(0, len(s)-1, s)
+        
+        start = 0    
+        for i in range(len(s)):
+            if s[i] == ' ':
+                reverse(start, i-1, s)
+                start = i+1
+            elif i == len(s)-1:
+                reverse(start, i, s)
+        '''i = len(s) - 1
+        while s[i] != ' ' and i > 0:
+            i -= 1 
+        if i > 0:
+            s = reverse(i, len(s)-1, s)
+        return s
+        '''
+  ```
 # BQ  
 经理和一个小姐姐，和你一起回顾人生经历，你觉得你的过往mentor、manager会怎么评价你，如果你再有机会实习、工作之前的内容，哪些方面会做的不一样。每次经历都要重复这几个问题。  
  Behavior，从简历上每一段经历开始讲起(even internship and grad school)， why did you do this, how do you like it, what did you learn, what's your feedback, what's your weakness   
