@@ -17,10 +17,18 @@ tic-tac-toe
 3.high-level design，假设1亿名玩家同时在线  
 4.新增的服务器有哪些API  
 5.各个high-level component的具体实现和细节问题，问的非常随机和分散。  
-
-event counter 
-实现一个eventCounter， 感觉地里也有人发过， 实际要求实现的功能有三个，不同的counting的功能 。
-实现这个class的几个功能。记录一个event（id 和timestamp）， 读取一段时间里每个小时的event数量。 还有另外一个功能也是读取event的，具体的要求忘记了
+  
+题目还挺简单的，实现一个EventCounter，有如下API  
+void record(string eventName, long timeStamp);  
+vector<long> getEventCountPerMinute(string eventName, long start, long end);  
+第二个API要求比较奇怪，她要求返回每分钟的count，假如start是9:00，end是9:02，返回的数组是[2,1,0]，其中0表示那个时刻没有event。  
+我选择了用HashMap存储，直接就是计数器。编译之后自己写一些test case测试一下。然后分析了一下复杂度。  
+关于timeStamp本来是epoch time的，应该要转化成每个分钟，但是她说这部分在面试过程就先不考虑了，假设提供的timeStamp都是整分钟的时刻。  
+Follow up 1：如果数据量特别大，内存放不下怎么办？  
+我就说可以存数据库，然后做cache提高速度。其实我system design很菜，也不知道回答的好不好。  
+Follow up 2：增加getEventCountPerHour, getEventCountPerDay两个接口，如何修改我的实现。  
+我直接在HashMap外面又按照time grain套了一层HashMap，这个方法比较偷懒，因为是follow up我感觉先写一个正确的版本出来，直接做了修改和测试，重新分析一下复杂度。  
+这里我也不知道是否可以有更快的方法来做。希望朋友们可以提点一下。    
 
 设计一个twitter用户上传文件的系统。  
 
