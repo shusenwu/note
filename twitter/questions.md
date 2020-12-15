@@ -115,7 +115,7 @@ class MyHashMap:
 https://www.geeksforgeeks.org/boggle-set-2-using-trie/  
 
 
-2. First Non-repeating char in a string, followup, in a stream. 2nd, the shortest path between two nodes on graph. 
+2. First Non-repeating char in a string, followup, in a stream. 
 https://leetcode.com/problems/first-unique-character-in-a-string/   
 ```PYTHON
 class Solution(object):
@@ -137,6 +137,9 @@ class Solution(object):
                     return i
         return -1
 ```
+        
+2nd, the shortest path between two nodes on graph.   
+dijkstra https://blog.csdn.net/Sengo_GWU/article/details/81878804  
         
 Coding. Auto complete system, 用trie实现， follow 是如何delete word from trie 和 achieve concurrency.  
 
