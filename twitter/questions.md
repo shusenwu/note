@@ -150,6 +150,7 @@ class Solution(object):
 dijkstra https://blog.csdn.net/Sengo_GWU/article/details/81878804  
         
 Coding. Auto complete system, 用trie实现， follow 是如何delete word from trie 和 achieve concurrency.  
+https://blog.csdn.net/Sengo_GWU/article/details/82948834  
 
 https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/   
 
