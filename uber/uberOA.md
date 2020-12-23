@@ -100,3 +100,35 @@ A = [12, 121, 2, 12], x = 1212
 121， 2 => 1212
 所以最终输出3。
 ```
+
+``` 
+https://oss.1point3acres.cn/forum/202012/14/074659sw7lb1wuubbk1uwu.png!c 
+https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=696384&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3089%5D%5Bvalue%5D%5B5%5D%3D5%26searchoption%5B3089%5D%5Btype%5D%3Dcheckbox%26searchoption%5B3046%5D%5Bvalue%5D%3D22%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline  
+Q4
+Question 4
+You are given a square matrix of characters a which size is n x n. Your task is to create a list of strings from the diagonals of a, where each string has a length of n, and then sort this created list.
+We'll consider all diagonals that are parallel to the main diagonal, where each diagonal is considered to start at its upper point and end at its lower point. Since these diagonals will have different lengths, we'll traverse each one cyclically (ie: go back to the start of the diagonal after reaching the end) until we reach n characters.
+Sort the resulting strings in lexicographical order, and return an array of 2n - 1 integers, representing the diagonals' 1-based indices in their sorted order. In the case of lexicographically equal strings, their indices should be kept in the original order.
+Here's an example of how to count the diagonals for a 5 x 5 matrix (the number on the diagram corresponds to the diagonal index):
+5 6 7 8 94 5 6 7 83 4 5 6 72 3 4 5 61 2 3 4 5
+Example
+• Fora = [["b", "b"],     ["c", "a"]]the output should be diagonalsArranging(a) = [2, 3, 1].
+       
+This matrix has n = 2 and contains 3 diagonals:
+  ○ The diagonal with index 1 is ["c"] and its corresponding cyclic string is "cc";
+  ○ The diagonal with index 2 is ["b", "a"] and its corresponding cyclic string is "ba";
+  ○ The diagonal with index 3 is ["b"] and its corresponding cyclic string is "bb".The lexicographical ordering of the matrix diagonals looks like ["ba", "bb", "cc"], so the answer is [2, 3, 1].
+• Fora = [["a", "c", "a", "b", "b"],      ["c", "b", "a", "c", "b"],      ["a", "a", "e", "c", "b"],      ["b", "b", "d", "a", "g"],      ["a", "b", "e", "b", "a"]]the output should be diagonalsArranging(a) = [1, 5, 3, 7, 2, 8, 9, 6, 4].
+       
+This matrix has n = 5 and contains 9 diagonals:
+  ○ The diagonal with index 1 is ["a"] and its corresponding cyclic string is "aaaaa",
+  ○ The diagonal with index 2 is ["b", "b"] and its corresponding cyclic string is "bbbbbb",
+  ○ The diagonal with index 3 is ["a", "b", "e"] and its corresponding cyclic string is "abeab",
+  ○ The diagonal with index 4 is ["c", "a", "d", "b"] and its corresponding cyclic string is "cadbc",
+  ○ The diagonal with index 5 is ["a", "b", "e", "a", "a"] and its corresponding cyclic string is "abeaa",
+  ○ The diagonal with index 6 is ["c", "a", "c", "g"] and its corresponding cyclic string is "cacgc",
+  ○ The diagonal with index 7 is ["a", "c", "b"] and its corresponding cyclic string is "acbac",
+  ○ The diagonal with index 8 is ["b", "b"] and its corresponding cyclic string is "bbbbb",
+  ○ The diagonal with index 9 is ["b"] and its corresponding cyclic string is "bbbbb".The lexicographical ordering of the matrix diagonals looks like ["aaaaa", "abeaa", "abeab", "acbac", "bbbbb", "bbbbb", "bbbbb", "cacgc", "cadbc"], so the answer is [1, 5, 3, 7, 2, 8, 9, 6, 4].Note that the cyclic string "bbbbb" occurs 3 times, and the indices corresponding to this cyclic string appear in ascending order in the output: [2, 8, 9].
+Input/Output
+```
