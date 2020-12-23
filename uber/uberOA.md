@@ -145,3 +145,18 @@ Input/Output
 ```
 https://leetcode.com/problems/check-array-formation-through-concatenation/  
 ```
+
+```
+4. 给两个a=[3, -19, 1], b=[9,100, 0], 以及lower 和upper 值， 求有过少个pair 满足lower<= a[i]**2 + b[j]**2 <= upper. 我写出了个 O(nlogn)的，过了。O(N^2)会超时 
+A = sorted([ a_i**2 for a_i in a])
+B = sorted([ b_i**2 for b_i in b])
+count = 0
+For a_val in A:
+    lower_remain = lower - a_val
+    upper_remain = upper- a_val
+    left = bisect.bisect_left(B, lower_remain) # binary search 找在B中所在的index
+    right = bisect.bisect_right(B, upper_remain) # binary search 找在B中所在的index
+    count += right - left
+return count
+
+```
