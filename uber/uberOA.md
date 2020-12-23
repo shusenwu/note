@@ -56,6 +56,10 @@ Example
   ○ The remaining string contains only two letters D and nothing else, so in two more iterations we get the output equal "DLDD"
  ```
 
+```
+2. 给两个input: List<string> s1, s2, 问list中的每个string在s2的substring中最多出现几次。 比如s1 ="ab", s2="ababcbabc", s1在substring "abab"里出现两次，就要返回2。另一个例子比如s1 = "abab", s2="abababab",也需要返回2.
+```
+
 # Q3
 ```
 3. borderSort  
