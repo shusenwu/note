@@ -1,4 +1,5 @@
- ```
+# Q1
+```
 1. mergingLetters  
 ex:
 input: "abc", "12345", output: "a1b2c345"  
@@ -22,10 +23,13 @@ Input/Output
 • [input] integer nAn integer.Guaranteed constraints:0 ≤ n ≤ 1000.
 • [output] integerThe overall count of occurrences of digits 0, 2 and 4 in the integers from 0 to n inclusive.
 ```
+
+# Q2
 ```
 2. countWaysToSplit  
 给定字符串s，求分解成a, b, c三个substrings的所有可能性的个数，要求 a+ b != b + c != c + a。    
 ```
+
 
 ```
 Q2: remove lowest peak from positive int array, input: [1,6,2,4,3] , output remove in order: [4,3,6,2,1], peak means a[i] > its left/right neighbors(if there are)  
@@ -52,7 +56,7 @@ Example
   ○ The remaining string contains only two letters D and nothing else, so in two more iterations we get the output equal "DLDD"
  ```
 
-
+# Q3
 ```
 3. borderSort  
 给定n x n的方阵，要求剥洋葱似的一层层分别排序重新填回这个方阵。比如说  
@@ -96,7 +100,7 @@ Input/Output
 3. 给一个 square matrix， 按照两个对角线，顺时针翻转K 次，每次都是90度，输出翻转后的矩阵，对角线上的数字不用动。类似这个https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp  
 ```
 
-
+# Q4
 ```
 4. combineTheGivenNumber  
 给定整数数组A和整数x，找出所有（i, j）的个数，要求满足  i != j，A.concat(A[j]) == x 或者  A[j].concat(A) == x，如果这俩都满足就算两次。举个栗子：
