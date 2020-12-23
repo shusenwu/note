@@ -93,6 +93,11 @@ Input/Output
 ```
 
 ```
+3. 给一个 square matrix， 按照两个对角线，顺时针翻转K 次，每次都是90度，输出翻转后的矩阵，对角线上的数字不用动。类似这个https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp  
+```
+
+
+```
 4. combineTheGivenNumber  
 给定整数数组A和整数x，找出所有（i, j）的个数，要求满足  i != j，A.concat(A[j]) == x 或者  A[j].concat(A) == x，如果这俩都满足就算两次。举个栗子：
 A = [12, 121, 2, 12], x = 1212
