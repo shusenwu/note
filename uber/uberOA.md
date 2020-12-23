@@ -60,7 +60,8 @@ Example
 2. 给两个input: List<string> s1, s2, 问list中的每个string在s2的substring中最多出现几次。 比如s1 ="ab", s2="ababcbabc", s1在substring "abab"里出现两次，就要返回2。另一个例子比如s1 = "abab", s2="abababab",也需要返回2.
 ```
 
-# Q3
+# Q3  
+
 ```
 3. borderSort  
 给定n x n的方阵，要求剥洋葱似的一层层分别排序重新填回这个方阵。比如说  
@@ -104,6 +105,9 @@ Input/Output
 3. 给一个 square matrix， 按照两个对角线，顺时针翻转K 次，每次都是90度，输出翻转后的矩阵，对角线上的数字不用动。类似这个https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp  
 ```
 
+```
+3. 类似俄罗斯方块，给一个2d grid, 上面有一些grid表示某一个俄罗斯方块的形状，输出俄罗斯方块落到2d grid底部的grid。 在这个2d grid中可能会有以下obstacle导致俄罗斯方块被卡住不能掉到最底下。
+``` 
 # Q4
 ```
 4. combineTheGivenNumber  
