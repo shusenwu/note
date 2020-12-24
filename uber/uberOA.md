@@ -129,6 +129,20 @@ Input/Output
 3. 矩阵题，一个矩阵，想像成大盒子，里有小木块，空，障碍三种元素。现在将整个矩阵顺时针旋转90度，则小木块会随着重力下降，小木块会落到障碍上，或者其他小木块上。输出旋转完的矩阵。
 ``` 
 
+```
+第三题 给一个数组，数组内只有0， 1两个数字分别代表内存occupy和not occupy
+           再给一连串operation (alloc or erase),
+
+           alloc 会让你按照顺序查找第一个有m个连续not occupy的格子, 如果成功的话，return第一个数组index, 并且给这个operation assign一个id
+
+           erase 会给你一个id, 你要清空第id operation中所 assign的格子。
+           要求每一步operration的结果
+
+
+这道题他会提供一个动画，我觉得文字描述很难读懂，如果考到建议先看动画去理解。
+考点是hashmap, 题目不难，但是考察你写子函数的能力。
+```
+
 # Q4
 ```
 4. combineTheGivenNumber  
