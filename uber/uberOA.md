@@ -1,4 +1,19 @@
 # Q1
+
+```
+'''
+1. 给一个int，然后从最大位两两reverse，位数为奇数的话，最后一位保持不变。
+64839 - 》 46389
+'''
+
+
+def reverse(num, k):  # k = 2
+    s = list(str(num))
+    for i in range(0, len(s), k):
+        s[i:i+k] = reversed(s[i:i+k])
+    return "".join(s)
+ ```   
+ 
 ```
 1. mergingLetters  
 ex:
@@ -25,6 +40,10 @@ Input/Output
 ```
 
 # Q2
+```
+2. 给一个手机键盘的图片，每个数字上对应一些字母。给一个数组，是可以使用的按键数字，在一个组String，判断这些String都能不能用给的按键数字打出来。 leetcode有
+```
+
 ```
 2. countWaysToSplit  
 给定字符串s，求分解成a, b, c三个substrings的所有可能性的个数，要求 a+ b != b + c != c + a。    
@@ -107,7 +126,9 @@ Input/Output
 
 ```
 3. 类似俄罗斯方块，给一个2d grid, 上面有一些grid表示某一个俄罗斯方块的形状，输出俄罗斯方块落到2d grid底部的grid。 在这个2d grid中可能会有以下obstacle导致俄罗斯方块被卡住不能掉到最底下。
+3. 矩阵题，一个矩阵，想像成大盒子，里有小木块，空，障碍三种元素。现在将整个矩阵顺时针旋转90度，则小木块会随着重力下降，小木块会落到障碍上，或者其他小木块上。输出旋转完的矩阵。
 ``` 
+
 # Q4
 ```
 4. combineTheGivenNumber  
