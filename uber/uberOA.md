@@ -261,7 +261,7 @@ class Solution(object):
         return res == arr
 ```
 
-```
+```python
 4. 给两个a=[3, -19, 1], b=[9,100, 0], 以及lower 和upper 值， 求有过少个pair 满足lower<= a[i]**2 + b[j]**2 <= upper. 我写出了个 O(nlogn)的，过了。O(N^2)会超时 
 A = sorted([ a_i**2 for a_i in a])
 B = sorted([ b_i**2 for b_i in b])
@@ -273,6 +273,32 @@ For a_val in A:
     right = bisect.bisect_right(B, upper_remain) # binary search 找在B中所在的index
     count += right - left
 return count
+
+def count(a, b, lower, upper):
+    A = sorted(x*x for x in a)
+    B = sorted(x*x for x in b)
+    re = 0
+    for n1 in A:
+        low_rest = lower - n1
+        up_rest = upper - n1
+        left = binary_search(B, low_rest)  # >= left
+        right = binary_search(B, up_rest)  # <= right
+        re += right - left + 1
+    return re
+
+
+def binary_search(nums, target):
+    l, r = 0, len(nums) - 1
+    while l < r:
+        mid = (l+r) // 2
+        if nums[mid] == target:
+            return mid
+
+        if target < nums[mid]:
+            r = mid
+        else:
+            l = mid + 1
+    return l
 
 ```
 
