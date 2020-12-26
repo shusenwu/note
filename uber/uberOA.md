@@ -250,6 +250,15 @@ print(diagnose(m))
 
 ```
 https://leetcode.com/problems/check-array-formation-through-concatenation/  
+class Solution(object):
+    def canFormArray(self, arr, pieces):
+        mp = {x[0]: x for x in pieces}
+        res = []
+        
+        for num in arr:
+            res += mp.get(num, [])
+            
+        return res == arr
 ```
 
 ```
