@@ -153,6 +153,17 @@ A = [12, 121, 2, 12], x = 1212
 那么12, 12 => 1212, 这个算两次，因为index (0, 3) 和（3, 0）都满足
 121， 2 => 1212
 所以最终输出3。
+def combine(arr, x):
+    x = str(x)
+    count = collections.Counter(str(s) for s in arr)
+    re = 0
+    for i in range(1, len(x)):
+        a, b = x[:i], x[i:]
+        if a == b:
+            re += (count[a]-1) * count[a]
+        else:
+            re += count[a] * count[b]
+    return re
 ```
 
 ``` 
