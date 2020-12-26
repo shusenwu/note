@@ -131,8 +131,50 @@ Input/Output
 3. 矩阵题，一个矩阵，想像成大盒子，里有小木块，空，障碍三种元素。现在将整个矩阵顺时针旋转90度，则小木块会随着重力下降，小木块会落到障碍上，或者其他小木块上。输出旋转完的矩阵。
 ``` 
 
-```
+```python
 3. 俄罗斯方块类似的设计。给5种方块每个方块不同的形状，编号从1到5。然后输入是一个matrix的size和一个方块数组。让你创建一个size大小的幕布(grid)然后开始依次往上填充方块。填充的时候优先顺序是minimize row, row相同要minimize col, 然后不同方块之间不能overlap。填充的方块内部可以用当前方块在输入序列里的index来fill。最后输出填充完的grid.
+class fakuai(object):
+    def __init__(self, n):
+        self.grid = [[0 for _ in range(n)] for _ in range(n)]
+        self.n = n
+
+    def input(self, m):  # 输入方块
+        # 尽量往左上方
+        for r in range(self.n):  #
+            for c in range(self.n):  # 找到第一个合适的位置
+                if self.can_fill(r, c, m):
+                    self.fill(r, c, m)
+                    self.draw()
+                    return True
+        return False
+
+    def can_fill(self, r, c, m):  # r, c 是grid的
+        re = True
+        for i in range(len(m)):
+            for j in range(len(m[0])):
+                if m[i][j]:
+                    if 0 <= r + i < self.n and 0 <= c + j < self.n:
+                        if self.grid[r+i][c+j] != 0:
+                            re = False
+                    else:
+                        re = False
+        return re
+
+    def fill(self, r, c, m):
+        for i in range(len(m)):
+            for j in range(len(m[0])):
+                if m[i][j]:
+                    self.grid[r+i][c+j] = m[i][j]
+
+    def draw(self):
+        for i in range(self.n):
+            print(self.grid[i])
+
+
+s = fakuai(5)
+print(s.input([[1, 1, 1], [0, 1, 0]]))
+print(s.input([[2, 2, 2], [0, 2, 0]]))
+print(s.input([[3, 3, 3], [0, 3, 0]]))
 ```
 
 ```
