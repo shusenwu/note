@@ -198,6 +198,55 @@ This matrix has n = 5 and contains 9 diagonals:
   ○ The diagonal with index 8 is ["b", "b"] and its corresponding cyclic string is "bbbbb",
   ○ The diagonal with index 9 is ["b"] and its corresponding cyclic string is "bbbbb".The lexicographical ordering of the matrix diagonals looks like ["aaaaa", "abeaa", "abeab", "acbac", "bbbbb", "bbbbb", "bbbbb", "cacgc", "cadbc"], so the answer is [1, 5, 3, 7, 2, 8, 9, 6, 4].Note that the cyclic string "bbbbb" occurs 3 times, and the indices corresponding to this cyclic string appear in ascending order in the output: [2, 8, 9].
 Input/Output
+def diagnose(matrix):
+    n = len(matrix)
+
+    diagnoses = []
+    for i in range(n)[::-1]:  # 左下半个matrix
+        s = ""
+        row = i
+        col = 0
+        for j in range(n):
+            if 0 <= row < n and 0 <= col < n:
+                s += matrix[row][col]
+            else:
+                row = i
+                col = 0
+                s += matrix[row][col]
+            row += 1
+            col += 1
+        diagnoses.append((s, len(diagnoses)+1))
+
+    for j in range(1, n):  # 右上边的半个m
+        s = ""
+        row = 0
+        col = j
+        for i in range(n):
+            if 0 <= row < n and 0 <= col < n:
+                print(row, col, 1)
+                s += matrix[row][col]
+            else:
+                row = 0
+                col = j
+                print(row, col, 2)
+                s += matrix[row][col]
+            row += 1
+            col += 1
+
+        diagnoses.append((s, len(diagnoses)+1))
+    diagnoses = sorted(diagnoses)
+    return [i for x, i in diagnoses]
+
+
+m = [
+    ['a', 'c', 'a', 'b', 'b'],
+    ['c', 'b', 'a', 'c', 'b'],
+    ['a', 'a', 'e', 'c', 'b'],
+    ['b', 'b', 'd', 'a', 'g'],
+    ['a', 'b', 'e', 'b', 'a'],
+]
+
+print(diagnose(m))
 ```
 
 ```
