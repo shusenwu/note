@@ -195,12 +195,69 @@ Example
 
 # Q3  
 
-```
+```python
 3. borderSort  
 给定n x n的方阵，要求剥洋葱似的一层层分别排序重新填回这个方阵。比如说  
 3 2 4                 1 2 3  
 1 9 6     ==>         8 9 4  
 5 7 8                 7 6 5  
+
+def sortMatrixBoarderByBoarder(matrix):
+    n = len(matrix)
+    boarder_num = int(n / 2 - 1) if n % 2 == 0 else n // 2
+
+    def sortBoarder(boarderI):
+        num_count = (n - boarderI) * 4 - 4
+        boarderArr = []
+        row_start, row_end = boarderI, n - boarderI - 1
+        col_start, col_end = boarderI, n - boarderI - 1
+        for j in range(col_start, col_end + 1):
+            boarderArr.append(matrix[row_start][j])
+
+        for i in range(row_start + 1, row_end + 1):
+            boarderArr.append(matrix[i][col_end])
+
+        for j in range(col_end - 1, col_start - 1, -1):
+            boarderArr.append(matrix[row_end][j])
+
+        for i in range(row_end - 1, row_start, -1):
+            boarderArr.append(matrix[i][col_start])
+
+        boarderArr.sort()
+
+        cnt = 0
+        for j in range(col_start, col_end + 1):
+            matrix[row_start][j] = boarderArr[cnt]
+            cnt += 1
+
+        for i in range(row_start + 1, row_end + 1):
+            matrix[i][col_end] = boarderArr[cnt]
+            cnt += 1
+
+        for j in range(col_end - 1, col_start - 1, -1):
+            matrix[row_end][j] = boarderArr[cnt]
+            cnt += 1
+
+        for i in range(row_end - 1, row_start, -1):
+            matrix[i][col_start] = boarderArr[cnt]
+            cnt += 1
+
+
+    if len(matrix) == 0 or len(matrix) == 1:
+        return matrix
+    for boarder in range(boarder_num + 1):
+        sortBoarder(boarder)
+
+    return matrix
+
+matrix = [[3,2,4],[1,9,6],[5,7,8]]
+for row in matrix:
+    print(row)
+
+print("=============================================")
+res = sortMatrixBoarderByBoarder(matrix)
+for row in res:
+    print(row)
 ```
 
 
