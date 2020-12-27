@@ -263,6 +263,18 @@ class Solution(object):
 ```
 3. 给一个 square matrix， 按照两个对角线，顺时针翻转K 次，每次都是90度，输出翻转后的矩阵，对角线上的数字不用动。
 类似这个https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/?ref=rp  
+
+class Solution(object):
+    def rotate(self, matrix):
+        n = len(matrix)
+        
+        for i in xrange(n):  # 根据对角线对称的交换
+            for j in xrange(i+1, n):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+ 
+        for i in xrange(n):   # 根据从上往下的中间线 对称交换
+            for j in xrange(0, n/2):
+                matrix[i][j], matrix[i][n-j-1] = matrix[i][n-j-1], matrix[i][j]
 ```
 
 ```
