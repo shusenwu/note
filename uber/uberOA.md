@@ -238,6 +238,26 @@ Input/Output
 • [input] array.integer algoAn array of 0s and 1s, representing the bot's buy / sell schedule for each day.Guaranteed constraints:algo.length = prices.length,0 ≤ algo[i] ≤ 1.
 • [input] integer kAn integer representing the number of consecutive days that can be made all equal to 1, i.e. marked as sell.Guaranteed constraints:0 ≤ k ≤ prices.length.
 • [output] integerThe value of the maximum revenue that can be obtained.
+
+class Solution(object):
+    def maxSatisfied(self, customers, grumpy, X):
+        """
+        :type customers: List[int]
+        :type grumpy: List[int]
+        :type X: int
+        :rtype: int
+        https://leetcode.com/problems/grumpy-bookstore-owner/discuss/299230/JavaPython-3-Sliding-window.
+        """
+        right = satisfied = win_of_unsatisfied = max_change = 0
+        for c, g in zip(customers, grumpy):
+            satisfied += (1-g) * c 
+            win_of_unsatisfied += g * c
+            if right >= X:
+                win_of_unsatisfied -= grumpy[right-X] * customers[right-X]
+                
+            max_change = max(max_change, win_of_unsatisfied)
+            right += 1
+        return satisfied + max_change
 ```
 
 ```
