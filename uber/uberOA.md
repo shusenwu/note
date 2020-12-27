@@ -342,6 +342,71 @@ print(s.input([[3, 3, 3], [0, 3, 0]]))
 
 这道题他会提供一个动画，我觉得文字描述很难读懂，如果考到建议先看动画去理解。
 考点是hashmap, 题目不难，但是考察你写子函数的能力。
+
+class Memory(object):
+    def __init__(self, arr):
+        self.memory = arr
+        self.index = []
+        self.operation = {}
+
+        size = 0
+        for i, v in enumerate(arr):
+            if v == 0:
+                size += 1
+                if i == len(arr) - 1:
+                    self.index.append([i-size+1, size])
+            elif v == 1:
+                if size > 0:
+                    self.index.append([i-size, size])  # start index, size
+                    size = 0
+
+        print("memory", self.memory)
+        print("index", self.index)
+        print("operation", self.operation)
+
+    def alloc(self, m, oper_id):
+        # oper_id should be unique
+        print("alloc size:", m, "op_id", oper_id)
+        for index_i, (memory_i, size) in enumerate(self.index):
+            if size >= m:  # find a place to alloc
+                for j in range(m):
+                    self.memory[memory_i+j] = 1
+                self.operation[oper_id] = memory_i, m
+                # update the self.index
+                if size > m:
+                    self.index[index_i] = [memory_i+m, size-m]
+                else:
+                    self.index.pop(index_i)
+
+                break
+
+        print("memory", self.memory)
+        print("index", self.index)
+        print("operation", self.operation)
+        return self.memory
+
+    def erase(self, oper_id):
+        print("erase", oper_id)
+        memory_index, m = self.operation[oper_id]
+        self.operation.pop(oper_id)  # remove the opera recorder
+
+        for i in range(m):  # erase memory
+            self.memory[memory_index+i] = 0
+
+        # change index
+        for index_i, (memory_i, size) in enumerate(self.index):
+            if memory_i > memory_index + m:
+                self.index.insert(index_i, [memory_index, m])
+                break
+            elif memory_i == memory_index + m:
+                self.index[index_i] = [memory_index, m+size]
+                break
+
+        print("memory", self.memory)
+        print("index", self.index)
+        print("operation", self.operation)
+
+        return self.memory
 ```
 
 # Q4
