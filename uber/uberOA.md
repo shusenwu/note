@@ -1,6 +1,6 @@
 # Q1
 
-```
+```python
 '''
 1. 给一个int，然后从最大位两两reverse，位数为奇数的话，最后一位保持不变。
 64839 - 》 46389
@@ -14,11 +14,22 @@ def reverse(num, k):  # k = 2
     return "".join(s)
  ```   
  
-```
+```python
 1. mergingLetters  
 ex:
 input: "abc", "12345", output: "a1b2c345"  
 input: "abc", "1", output: "a1bc"  
+
+def merge(A, B):
+    pairs = zip(A, B)
+    re = "".join(a+b for a, b in pairs)
+    n = len(re) // 2
+
+    if len(A) > n:
+        re += A[n:]
+    if len(B) > n:
+        re += B[n:]
+    return re
 ```
   
 ```
