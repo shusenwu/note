@@ -94,9 +94,78 @@ class Solution(object):
 ```
 
 
-```
+```python
 Q2: remove lowest peak from positive int array, input: [1,6,2,4,3] , output remove in order: [4,3,6,2,1], peak means a[i] > its left/right neighbors(if there are)  
 description mentioned each pair in the array is unique, I am not sure what it means  for [1,2,1] where  there is (1,2) and (2,1)  
+https://www.geeksforgeeks.org/minimum-peak-elements-from-an-array-by-their-repeated-removal-at-every-iteration-of-the-array/  
+def minPeaks(list1):
+ 
+    # Length of original list 
+    n = len(list1)
+     
+    # Initialize resultant list 
+    result = []
+ 
+    # Traverse each element of list 
+    for i in range (n):
+        min = sys.maxsize
+        index = -1
+ 
+        # Length of original list 
+        # after removing the peak 
+        # element 
+        size = len(list1)
+ 
+        # Traverse new list after removal 
+        # of previous min peak element 
+        for j in range (size):
+             
+            # Update min and index, 
+            # if first element of 
+            # list > next element 
+            if (j == 0 and j + 1 < size):
+       
+                if (list1[j] > list1[j + 1] and
+                    min > list1[j]):
+                    min = list1[j]; 
+                    index = j; 
+                
+            elif (j == size - 1 and
+                  j - 1 >= 0):
+             
+                # Update min and index, 
+                # if last elemnt of 
+                # list > previous one 
+                if (list1[j] > list1[j - 1] and
+                    min > list1[j]):
+                    min = list1[j]
+                    index = j
+               
+            # Update min and index, if 
+            # list has single element 
+            elif (size == 1):
+                min = list1[j]
+                index = j
+        
+            # Update min and index, 
+            # if current element > 
+            # adjacent elements 
+            elif (list1[j] > list1[j - 1] and
+                  list1[j] > list1[j + 1] and
+                  min > list1[j]):
+                min = list1[j]
+                index = j
+      
+        # Remove current min peak 
+        # element from list 
+        list1.pop(index)
+ 
+        # Insert min peak into 
+        # resultant list 
+        result.append(min)
+    
+    # Print resultant list 
+    print (result)
 ```
 
 ```
