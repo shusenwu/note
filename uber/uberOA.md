@@ -364,4 +364,54 @@ def binary_search(nums, target):
 
 ```
 
+```python
+'''
+4. 两个数组的绝对差的定义：两个数组每个对应位置的数字的差的绝对值，之和。两个给定数组a, b保证长度相等，
+然后a中的每个数字可以被a中任意不同位置的数字所代替，在只允许在a里做一次这种替代的情况下输出可能的最小的两个数组的绝对差。
+a = [1, 3, 5, 9]
+b = [1, 5, 6, 10]
+
+diff = 0, 2, 1, 1  O(n)
+sort a  nlogn
+for ele in b:  N
+    _a = binary_search(ele, a)  logN
+    new_diff = abs(_a-ele)
+    if diff[i] > new_diff:
+        reduce_diff = max(diff[i] - new_diff, reduce_diff)
+return sum(diff) - reduce_diff
+'''
+
+
+def diff(a, b):
+    diff = [abs(a[i] - b[i]) for i in range(len(a))]
+    a = sorted(a)
+    reduce_diff = 0
+    for i, _b in enumerate(b):
+        _a = a[binary_search(a, _b)]
+        _diff = abs(_a - _b)
+        if diff[i] > _diff:
+            reduce_diff = max(reduce_diff, diff[i] - _diff)
+    return sum(diff) - reduce_diff
+
+
+def binary_search(nums, target):
+    l, r = 0, len(nums) - 1
+    while l < r:
+        mid = (l+r) // 2
+        if nums[mid] == target:
+            return mid
+
+        if target < nums[mid]:
+            r = mid
+        else:
+            l = mid + 1
+    if l - 1 >= 0 and abs(nums[l-1] - target) < abs(nums[l]-target) :
+        return l - 1
+    return l
+
+
+a = [1, 3, 5, 9]
+b = [1, 5, 6, 10]
+print(diff(a, b))
+```
  
