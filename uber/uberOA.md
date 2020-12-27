@@ -51,7 +51,7 @@ Input/Output
 ```
 
 # Q2
-```
+```python
 2. 给一个手机键盘的图片，每个数字上对应一些字母。给一个数组，是可以使用的按键数字，在一个组String，判断这些String都能不能用给的按键数字打出来。  
 create a  字母对应数字的map
 loop a string
