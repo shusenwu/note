@@ -52,7 +52,40 @@ Input/Output
 
 # Q2
 ```
-2. 给一个手机键盘的图片，每个数字上对应一些字母。给一个数组，是可以使用的按键数字，在一个组String，判断这些String都能不能用给的按键数字打出来。 leetcode有
+2. 给一个手机键盘的图片，每个数字上对应一些字母。给一个数组，是可以使用的按键数字，在一个组String，判断这些String都能不能用给的按键数字打出来。  
+create a  字母对应数字的map
+loop a string
+see each of the digit are in the arry or not
+类似https://leetcode.com/problems/letter-combinations-of-a-phone-number/ 
+
+class Solution(object):
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        if not digits: return []
+        kvmaps = {
+            '2': 'abc',
+            '3': 'def',
+            '4': 'ghi',
+            '5': 'jkl',
+            '6': 'mno',
+            '7': 'pqrs',
+            '8': 'tuv',
+            '9': 'wxyz'
+        }
+        
+        res = [""]
+        
+        for i in digits:
+            chars = kvmaps[i]
+            newRes = []
+            for c in chars:
+                for r in res:
+                    newRes.append(r+c)
+            res = newRes
+        return res
 ```
 
 ```
