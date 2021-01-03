@@ -83,3 +83,19 @@ s = Solution()
 re = s.findString(arr, "ta")
 print(re)
 ```
+
+```python
+Flatten nexted list
+l = [1, 2, [3, 4, [5, 6]], 7, 8, [9, [10]]]
+# output list
+output = []
+
+# function used for removing nested
+# lists in python.
+def reemovNestings(l):
+    for i in l:
+        if type(i) == list:
+            reemovNestings(i)
+        else:
+            output.append(i)
+```
