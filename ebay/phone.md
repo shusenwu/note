@@ -57,3 +57,29 @@ class Solution(object):
 https://leetcode.com/problems/boundary-of-binary-tree/ 
 545. Boundary of Binary Tree
 ```
+
+
+```python
+Sparse array search
+class Solution:
+    def findString(self, words, s):
+        left, right = 0, len(words) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            tmp = mid  # 避免重复扫描
+            while mid > left and words[mid] == '':
+                mid -= 1
+            if words[mid] == s:
+                return mid
+            elif words[mid] > s:
+                right = mid - 1
+            else:
+                left = tmp + 1
+        return -1
+
+
+arr = ["", "", "", "", "", "", "", "", "", "dad", "", "ta"]
+s = Solution()
+re = s.findString(arr, "ta")
+print(re)
+```
