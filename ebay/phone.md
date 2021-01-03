@@ -16,3 +16,39 @@ class Solution(object):
             print ans
         return ans
 ```
+
+```python
+https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/ 
+1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit  
+class Solution(object):
+    def longestSubarray(self, nums, limit):
+        """
+        :type nums: List[int]
+        :type limit: int
+        :rtype: int
+        Monotonic Queue O（n）
+        https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/discuss/609743/Java-Detailed-Explanation-Sliding-Window-Deque-O(N)
+        """
+        max_deque, min_deque = deque(), deque()
+        res, l = 1, 0
+        for r in range(len(nums)):
+            while max_deque and max_deque[-1] < nums[r]:  # max_queue 递减
+                max_deque.pop()
+            max_deque.append(nums[r])
+            
+            while min_deque and min_deque[-1] > nums[r]:  # max_queue 递增
+                min_deque.pop()
+            min_deque.append(nums[r])
+            
+            while max_deque[0] - min_deque[0] > limit:
+                if max_deque[0] == nums[l]:
+                    max_deque.popleft()
+                    
+                if min_deque[0] == nums[l]:
+                    min_deque.popleft()
+                
+                l += 1
+            res = max(res, r - l + 1)
+        return res
+            
+```
