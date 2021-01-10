@@ -1,3 +1,9 @@
+1293. Shortest Path in a Grid with Obstacles Elimination
+https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/   
+
+Meeting room  
+
+
 ```
 第一轮：是个国人妹子。面经里最近的热门topic，类似于meeting room，这次换了个马甲成了program执行时间的安排。
 input是一个N行2列的int[][]，每行第一个元素是程序开始时间，第二个元素是程序持续时间（这是一个改动，meeting room给的是起始时间）。然后给一个新的程序[起始时间，持续时间]，问能不能加到现有的schedule里面，不能跟现有的interval 重合。可以就加，返回true，不行就不加，返回false。我先给了个解法按开始时间sort，然后一个一个interval试着往里塞，因为要sort所以TC是O(NlogN)。写了code。
