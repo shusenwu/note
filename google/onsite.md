@@ -22,3 +22,10 @@ if n = 3, dict = ["I": 1, "have": 1, "a": 2, "pen": 1, "and": 1, "book": 1, "I h
 
 Follow up: how to reduce the memory usage of the dict
 ```
+
+```
+1. 1423. Maximum Points You Can Obtain from Cards  
+https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/  
+follow-up：还是取数组头和尾k次，新加入multiplier int[k], 每次也从multiplier 按序取出数相乘算结果，
+求max，例子：k=2, array [3,2,1,4], multiplier [1,2], 第一次取结果：4*1， 第二次取 3*2, 总共10；用的dfs + memorization
+```
