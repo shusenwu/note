@@ -1,3 +1,11 @@
+843. Guess the Word 
+https://leetcode.com/problems/guess-the-word/  
+
+
+833. Find And Replace in String    
+https://leetcode.com/problems/find-and-replace-in-string/  
+
+
 715. Range Module  
 https://leetcode.com/problems/range-module/  
 
