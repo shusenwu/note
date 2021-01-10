@@ -1,4 +1,7 @@
- 
+```
+1. Two Sum https://leetcode.com/problems/two-sum/
+39. Combination Sum https://leetcode.com/problems/combination-sum/
+```
 
 ```
 833. Find And Replace in String    
