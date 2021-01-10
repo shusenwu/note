@@ -1,5 +1,4 @@
-843. Guess the Word 
-https://leetcode.com/problems/guess-the-word/  
+ 
 
 
 833. Find And Replace in String    
