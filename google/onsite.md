@@ -38,3 +38,9 @@ follow-up：还是取数组头和尾k次，新加入multiplier int[k], 每次也
 问3: Validate given graph，用topology sort
  
 ```
+
+
+```
+Delay Sechdule 
+https://www.1point3acres.com/bbs/thread-161803-2-1.html
+```
