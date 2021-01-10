@@ -1,3 +1,12 @@
+715. Range Module  
+https://leetcode.com/problems/range-module/  
+
+843. Guess the Word  
+https://leetcode.com/problems/guess-the-word/  
+
+833. Find And Replace in String  
+https://leetcode.com/problems/find-and-replace-in-string/  
+
 1293. Shortest Path in a Grid with Obstacles Elimination
 https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/   
  
