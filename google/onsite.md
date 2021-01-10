@@ -1,3 +1,11 @@
+第一题，给一个0.1的matrix，类似于number of island，有点不一样的是，island定义是如果0water被1land包围住，他也属于island。最后求max size of island。  
+可以从边界的0开始bfs/dfs, mark起来，剩下的没被mark的 就是都是不同的岛屿了。  
+
+ 
+第二题，给一个int array，select elements,使得sum最大。条件是，选择的数字之间abs gap不能等于1.比如 [1,2,2,3,3]，最后的选择[1,3,3], return 7.不能选2是因为它和1或者3的abs diff是1。  
+
+ 
+
 面经题，ceo, manager， 问某个manager底下有多少员工。大家可以搜一搜面经
 
 最短路径，deliver 东西。 有的地方有加油站，到加油站把油加满。 问最短路径能把东西都送到客人家。
@@ -44,3 +52,10 @@ follow-up：还是取数组头和尾k次，新加入multiplier int[k], 每次也
 Delay Sechdule 
 https://www.1point3acres.com/bbs/thread-161803-2-1.html
 ```
+
+
+
+BQ:
+
+另外还有一轮就是behavior. 问了challenging project,如何跟同事相处，如何处理deadline之类的。  
+ 
