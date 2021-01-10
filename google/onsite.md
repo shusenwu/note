@@ -29,3 +29,12 @@ https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
 follow-up：还是取数组头和尾k次，新加入multiplier int[k], 每次也从multiplier 按序取出数相乘算结果，
 求max，例子：k=2, array [3,2,1,4], multiplier [1,2], 第一次取结果：4*1， 第二次取 3*2, 总共10；用的dfs + memorization
 ```
+
+
+```
+第2轮：最近常见的简单雇主树结构；给adjacent list (有向图)
+问1： 什么情况下valid：graph 中只有一个disjoint set并且没有cycle， 不在意是否indegree>=2
+问2: Valid 下求某个人的分数，即此subtree的count
+问3: Validate given graph，用topology sort
+ 
+```
