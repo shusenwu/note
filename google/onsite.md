@@ -3,7 +3,7 @@
 
  
 第二题，给一个int array，select elements,使得sum最大。条件是，选择的数字之间abs gap不能等于1.比如 [1,2,2,3,3]，最后的选择[1,3,3], return 7.不能选2是因为它和1或者3的abs diff是1。  
-
+https://leetcode.com/problems/delete-and-earn/  
  
 
 面经题，ceo, manager， 问某个manager底下有多少员工。大家可以搜一搜面经
