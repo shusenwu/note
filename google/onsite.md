@@ -1,3 +1,6 @@
+679. 24 Game https://leetcode.com/problems/24-game/   
+279. Perfect Squares  https://leetcode.com/problems/perfect-squares/  
+
 ```
 76. Minimum Window Substring https://leetcode.com/problems/minimum-window-substring/
 ```
