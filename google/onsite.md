@@ -97,11 +97,37 @@ if n = 3, dict = ["I": 1, "have": 1, "a": 2, "pen": 1, "and": 1, "book": 1, "I h
 Follow up: how to reduce the memory usage of the dict
 ```
 
-```
+```python
 1. 1423. Maximum Points You Can Obtain from Cards  
 https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/  
 follow-up：还是取数组头和尾k次，新加入multiplier int[k], 每次也从multiplier 按序取出数相乘算结果，
 求max，例子：k=2, array [3,2,1,4], multiplier [1,2], 第一次取结果：4*1， 第二次取 3*2, 总共10；用的dfs + memorization
+
+class Solution(object):
+    def max_points(self, arr, multiplier, k):
+        self.memory = {}
+        self.dfs(arr, multiplier, k)
+        return self.memory[tuple(arr)]
+
+    def dfs(self, arr, multiplier, k):  # assume k >= 1
+        if tuple(arr) in self.memory:
+            return self.memory[tuple(arr)]
+        left = arr[0] * multiplier[0]
+        right = arr[-1] * multiplier[0]
+        if k == 1:
+            self.memory[tuple(arr)] = max(left, right)
+        else:
+            left_sum = left + self.dfs(arr[1:], multiplier[1:], k - 1)
+            right_sum = right + self.dfs(arr[:-1], multiplier[1:], k - 1)
+            self.memory[tuple(arr)] = max(left_sum, right_sum)
+        return self.memory[tuple(arr)]
+
+
+arr = [3, 2, 1, 4]
+multiplier = [1, 2]
+s = Solution()
+
+print(s.max_points(arr, multiplier, 2))
 ```
 
 
