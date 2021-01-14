@@ -1,3 +1,5 @@
+1287. Element Appearing More Than 25% In Sorted Array https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/  
+
 679. 24 Game https://leetcode.com/problems/24-game/   
 279. Perfect Squares  https://leetcode.com/problems/perfect-squares/  
 
