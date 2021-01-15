@@ -12,8 +12,9 @@ eg. scores = [4, 5, 6, 5] ages = [2, 1, 2, 1]
 ```
 
 
-```
-Given an integer array nums, find number of distinct contiguous subarrays with at most k odd elements. Two subarrays are distinct when they have at least one different element.
+```java
+Given an integer array nums, find number of distinct contiguous subarrays with at most k odd elements.
+Two subarrays are distinct when they have at least one different element.
 
 Example 1:
 
