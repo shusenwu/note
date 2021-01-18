@@ -144,3 +144,22 @@ print(isCircle([1, 2, 1], [2, 3, 3]))  # F
 
 print(isCircle([1, 3, 2, 4], [4, 1, 3, 2]))  # T
 ```
+
+
+```python 
+The longest subarray with 2 elements
+https://leetcode.com/problems/fruit-into-baskets/submissions/
+class Solution(object):
+    def totalFruit(self, tree):
+        bucket = {}
+        re = left = 0
+        for right, f in enumerate(tree):
+            bucket[f] = bucket.get(f, 0) + 1
+            while len(bucket) > 2:
+              
+                bucket[tree[left]] -= 1
+                if bucket[tree[left]] == 0:  del bucket[tree[left]]
+                left += 1
+            re = max(re, right-left+1)
+        return re
+```
