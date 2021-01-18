@@ -106,6 +106,9 @@ https://leetcode.com/submissions/detail/206565428/
 ```
 # BQ
 general BQ，怎么跟组员相处，有conflict怎么解决，  
+BQ 1: showcase technical skill  
+BQ 1: resolved conflict  
+BQ 3: career discussion  
 
 # System Design
 ## 设计uber 
