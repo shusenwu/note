@@ -121,3 +121,5 @@ req: lat/long radius
 
 ## 第二轮：1小时， system design，要求设计一个实时评论显示系统，给你一个Post component和一个Command component，
 其他的什么storage啊 traffic都已经take care了，然后不刷新页面，如何在别人评论了之后看到这条评论。聊到了使用websocket和pub-sub的一些。
+
+## 系统设计: tinyUrl  
