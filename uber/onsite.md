@@ -104,7 +104,8 @@ public class Main {
 https://leetcode.com/problems/evaluate-division/
 https://leetcode.com/submissions/detail/206565428/
 ```
-
+# BQ
+general BQ，怎么跟组员相处，有conflict怎么解决，  
 
 # System Design
 ## 设计uber 
