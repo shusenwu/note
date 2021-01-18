@@ -126,3 +126,5 @@ req: lat/long radius
 其他的什么storage啊 traffic都已经take care了，然后不刷新页面，如何在别人评论了之后看到这条评论。聊到了使用websocket和pub-sub的一些。
 
 ## 系统设计: tinyUrl  
+
+## 基本围绕简历，how did you collaborate, constructive feedback，some mentorship details.  
