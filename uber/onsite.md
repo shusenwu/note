@@ -1,3 +1,25 @@
+
+```python
+1626. Best Team With No Conflicts https://leetcode.com/problems/best-team-with-no-conflicts/
+class Solution:
+    def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
+        n = len(scores)
+        players = sorted([(a, s) for a, s in zip(ages, scores)], reverse=True)
+        
+        dp = [players[i][1] for i in range(n)]  # dp[i] means the max sum scores between players0 to players i-1 and player i-1 is included 
+        re = 0
+        for i in range(n):
+            cur_player_score = players[i][1]
+            for j in range(0, i):
+                if players[j][1] >= players[i][1]:
+                    dp[i] = max(dp[j] + cur_player_score, dp[i])
+            re = max(re, dp[i])
+        return re
+        
+         
+```
+31. Next Permutation  https://leetcode.com/problems/next-permutation/  
+
 655. Print Binary Tree https://leetcode.com/problems/print-binary-tree/  
 
 
