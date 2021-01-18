@@ -109,4 +109,10 @@ https://leetcode.com/submissions/detail/206565428/
 # System Design
 ## 设计uber 
 
-
+## Design a location tracking service.  
+Imagine there are a lot of Uber driver running on the road and each of their uber app will send location periodically.   
+Design a service that keep track of thos locations to support other backend services.  
+This system will  
+1. record the driver's latest location  
+2. reply the query of : how many drivers are in a specific geo fence and who are those drivers  
+req: lat/long radius  
