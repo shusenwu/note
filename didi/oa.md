@@ -87,3 +87,60 @@ int solution(const string & s) {
 }
 
 ```
+
+```python 
+找index，可以把A, B 拆成2部分sum一样的。 找有几个这样的INDEX.
+https://www.1point3acres.com/bbs/thread-663257-1-1.html
+def findNumberOfIndex(A, B):
+    sum_a = sum(A)
+    sum_b = sum(B)
+    if sum_a % 2 or sum_b % 2:
+        return 0
+
+    count = 0
+    pre_sum_a = pre_sum_b = 0
+    for i in range(len(A)):
+        pre_sum_a += A[i]
+        pre_sum_b += B[i]
+
+        if pre_sum_a == sum_a / 2 and pre_sum_b == sum_b / 2:
+            count += 1
+
+    return count
+
+A = [1, 4, 2, -2, 5]
+B = [7, -2, -2, 2, 5]
+
+print(findNumberOfIndex(A, B))
+```
+
+```python
+def isCircle(A, B):
+    # https://www.1point3acres.com/bbs/thread-663257-1-1.html
+    if len(set(A)) != len(A) or len(set(B)) != len(B):
+        return False
+    m = {}
+    nodes = set(A)
+    for i in range(len(A)):
+        m[A[i]] = B[i]
+
+    start = dummy = A[0]
+    while m[start] != dummy and len(nodes):
+        nodes.remove(start)
+        start = m[start]
+    nodes.remove(start)
+    return len(nodes) == 0
+
+A = [3, 1, 2]
+B = [2, 3, 1]
+
+print(isCircle(A, B))  # True
+
+print(isCircle([1, 2, 3, 4], [2, 1, 4, 4]))  # F
+
+print(isCircle([1, 2, 3, 4], [2, 1, 4, 3]))  # F
+
+print(isCircle([1, 2, 1], [2, 3, 3]))  # F
+
+print(isCircle([1, 3, 2, 4], [4, 1, 3, 2]))  # T
+```
