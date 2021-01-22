@@ -12,6 +12,16 @@
 followup 1: 给你12张牌，如何判断里面是不是至少有1个set
 followup 2: 给你stream of cards，告诉你有一个constant time的算法可以判断什么时候有第一个set。也就是说在一定数量的牌里面一定会有一个set，
 问你怎么写这个算法。这道题没做出来，面试官提示的（我的理解）是用抽屉原理（pigeonhole）找相斥。
+
+2. Coding: 给你list of log，每个log包括[time, task_id, start/finish]，比如[[1, 1, start], [3, 2, start], [6, 2, finish], [8, 1, finish]]，整个list是按照time排序好的，然后告诉你每个task最多只能用多少时间（比如3）完成。给你这样一个list和int（最多运行时间），问你是不是有任何的task超时，如果有的话要在最早的时间返回。在上面的例子里，在时间6的时候我们就要返回超时，因为task 1已经超时了，不用等到时间8的时候再返回。用的还是sliding window的方法。
+
+ 
+
+4. Coding: 类似刷题网五二八。给的是List[List[int]]，比如[[1, 3], [5, 10], [11, 12]]，每个sublist是排序好而且不overlap的，要求随机返回[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12]中的一个数。用的还是binary search，先找到是哪个sublist，然后再确定是这个sublist里的第几个数。
+followup 1: 如果sublist之间有overlap要怎么算。重点是先问清楚对于重复的数字，是只算一次，还是按照多个算。如果按照多个算，之前的算法还是可以用的。如果同样的数字只算一次，我说的是先merge interval然后再用之前的算法。
+https://leetcode.com/problems/random-pick-with-weight/  
+
+
 ```
 
 1287. Element Appearing More Than 25% In Sorted Array https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/  
