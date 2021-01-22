@@ -1,3 +1,19 @@
+
+```
+1. Coding: 一种纸牌游戏叫game of set，网上搜的到。每张牌有四种属性（普通的扑克牌有两种属性，数字和花色，数字有13种值，花色有4种值），每个属性都有3种值。比如
+大小：大中小
+数字：123
+颜色：红黄蓝
+花色：梅心方
+也就是说一共有81张不同的牌
+任意三张牌可以组成一个set的条件是，对于任意一个属性，三张牌要么都是同样的值，要么都是不同的值。比如“小1红梅”， “中1蓝心”
+， “大1黄方”这三张牌就能组成一个set，因为对于任意一个属性，这三张牌要么值都一样，要么值都不一样。显然三张一样的牌是可以组成一个set的。
+题目是，给你三张牌，如何判断它们是不是能组成set。
+followup 1: 给你12张牌，如何判断里面是不是至少有1个set
+followup 2: 给你stream of cards，告诉你有一个constant time的算法可以判断什么时候有第一个set。也就是说在一定数量的牌里面一定会有一个set，
+问你怎么写这个算法。这道题没做出来，面试官提示的（我的理解）是用抽屉原理（pigeonhole）找相斥。
+```
+
 1287. Element Appearing More Than 25% In Sorted Array https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/  
 
 679. 24 Game https://leetcode.com/problems/24-game/   
