@@ -1,3 +1,15 @@
+
+```
+Shortest Manhattan distance between x and y in a matrix, 我只写出了， o(m * n)的solution, 有比這個更好的嗎？ 謝謝
+[ x, 0, 0, 0 ]
+[ 0, y, 0, y ]
+[ x, x, 0, 0 ]
+[ 0, y, 0, 0 ]
+ 
+
+   
+ 
+```
  
 843. Guess the Word  https://leetcode.com/problems/guess-the-word/   
 
