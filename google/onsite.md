@@ -1,3 +1,121 @@
+
+```python
+"""
+第一轮：一条直路 分布在坐标y1, y2 之间， 这条路上分布了很多灯（x,y），
+灯光照亮范围是半径为r的圆形，照亮的地方无法通过， 问从左往右走，是否能通过这条路
+"""
+import math
+from collections import defaultdict
+ 
+ 
+class Circle:
+    def __init__(self, x, y, r):
+        self.x = x
+        self.y = y
+        self.r = r
+     
+    def intersect(self, other: 'Circle'):
+        if math.pow(self.x - other.x, 2) + math.pow(self.y - other.y, 2) <= math.pow(self.r + other.r, 2):
+            return True
+        return False
+     
+    def __repr__(self):
+        return f'<{(self.x, self.y)}>'
+     
+    def __lt__(self, other: 'Circle'):
+        return (self.x, self.y, self.r, id(self)) < (other.x, other.y, other.r, id(other))
+ 
+ 
+class Solution:
+    def can_pass(self, y1, y2, circles):
+        assert y1 <= y2
+        fathers = self._union_find(circles)
+        group_dct = defaultdict(set)
+        for c, root in fathers.items():
+            group_dct[root].add(c)
+        print(group_dct)
+        print(fathers)
+        for circle_set in group_dct.values():
+            group_upper_y, group_lower_y = self.get_upper_lower(circle_set)
+            print(group_upper_y, group_lower_y)
+            if group_upper_y >= y2 and group_lower_y <= y1:
+                return False
+        return True
+     
+    def get_upper_lower(self, circles):
+        return (
+            max(c.y + c.r for c in circles),
+            min(c.y - c.r for c in circles),
+        )
+     
+    def _union_find(self, circles):
+        fathers = {c: c for c in circles}
+        for i in range(len(circles)):
+            c1 =  circles[i]
+            for j in range(i + 1, len(circles)):
+                c2 =  circles[j]
+                if c1.intersect(c2):
+                    self._merge(fathers, c1, c2)
+        return fathers
+ 
+    def _merge(self, fathers, c1, c2):
+        root1 = self._find(fathers, c1)
+        root2 = self._find(fathers, c2)
+        if root1 is not root2:
+            if root1 < root2:
+                fathers[root2] = root1
+                self._find(fathers, c2)
+            else:
+                fathers[root1] = root2
+                self._find(fathers, c1)
+ 
+ 
+    def _find(self, fathers, c):
+        root = c
+        while fathers[root] is not root:
+            root = fathers[root]
+         
+        while fathers[c] is not c:
+            c, fathers[c] = fathers[c], root
+        return root
+ 
+ 
+import unittest
+class Test(unittest.TestCase):
+    def test1(self):
+        circles = [
+            Circle(x, y , r) for x, y, r in [
+                (1, 1, 1),
+                (1, 2, 1),
+                (1, 5, 1),
+                (1, 6, 1),
+                (1, 3, 1),
+            ]
+        ]
+        sol = Solution()
+        self.assertEqual(
+            sol.can_pass(1, 2, circles),
+            False
+        )
+ 
+    def test2(self):
+        circles = [
+            Circle(x, y , r) for x, y, r in [
+                (0, 1, 1),
+                (1, 2, 1),
+                (3, 0, 1),
+                (3, 1, 1),
+            ]
+        ]
+        sol = Solution()
+        self.assertEqual(
+            sol.can_pass(-1, 3, circles),
+            True
+        )
+unittest.main(verbosity=2)
+```
+
+
 732. My Calendar III  https://leetcode.com/problems/my-calendar-iii/  
 
 input是{4,9,2,8,14}，output就是{4,2}, {9,2}, {9,8}。  
