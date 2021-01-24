@@ -51,7 +51,7 @@ Shortest Manhattan distance between x and y in a matrix, 我只写出了， o(m 
 [ x, x, 0, 0 ]
 [ 0, y, 0, 0 ]
  
-
+把所有的y放到queue里面，bfs 每层距离加1， 一直到找到x
    
  
 ```
