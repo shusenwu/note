@@ -1,3 +1,48 @@
+```python
+'''
+https://leetcode.com/discuss/interview-question/634115/google-onsite-merge-intervals-with-labels 
+Given a set of inputs which represents [from, to, comment] in google docs.
+Transform the input with overlapping offsets & unique comments to non overlapping offsets and duplicate comments.
+Input: 
+(0, 3): A
+(2, 4): B
+(5, 6): C
+
+Output:
+(0, 2): [A]
+(2, 3): [A, B]
+(3, 4): [B]
+(5, 6): [C]
+'''
+    def merge_labels(self, labels: 'List[Tuple]') -> 'List[Tuple]':
+        OPEN, CLOSE = 0, 1
+        events = []
+
+        for label in labels:
+            events.append((label[0], OPEN, label[2]))
+            events.append((label[1], CLOSE, label[2]))
+
+        events.sort()
+
+        res = []
+        seen = set()
+        prevStart = float("inf")
+
+        for time, eventType, label in events:
+            if prevStart is not time:
+                if seen:
+                    # previously: res.append((prevStart, time, sorted(list(seen))))
+                    res.append((prevStart, time, sorted(seen)))
+                prevStart = time
+
+            if eventType is OPEN:
+                seen.add(label)
+            else:
+                seen.remove(label)
+
+        return res
+ ```
+
 
 ```
 Shortest Manhattan distance between x and y in a matrix, 我只写出了， o(m * n)的solution, 有比這個更好的嗎？ 謝謝
