@@ -1,4 +1,42 @@
- 
+```python
+'''
+ 给(* (+ 13 2)(* 2 2))
+s ['']
++,  13,  2    = 15
+* 15
+'''
+
+# Using a stack, when encountering '(', save the current tokens and variable states in the stack.
+from functools import reduce
+
+def calculate(express):  # (* (+ 13 2)(* 2 2))
+    s = []
+    tokens = ['']
+    val = 0
+    for c in express:
+        if c == '(':
+            s.append(tokens)
+            tokens = ['']
+        elif c == ' ':
+            tokens.append('')
+        elif c == ')':
+            val = evaluate(tokens)
+            tokens = s.pop()
+            tokens.append(val)
+        else:  # digit
+            tokens[-1] += c
+    print(val)
+
+
+def evaluate(tokens):
+    if tokens[0] == '+':
+        return str(sum(int(x) for x in tokens[1:] if x != ''))
+    else:  # *
+        return reduce(lambda x, y: x * y, [int(x) for x in tokens[1:] if x != ''])
+
+calculate('(* (+ 13 2)(* 2 2))')
+calculate('(+ 1 2 1)')
+```
 
 465. Optimal Account Balancing  https://leetcode.com/problems/optimal-account-balancing/   
  
