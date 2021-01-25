@@ -14,7 +14,7 @@ class Solution:
             s += cardPoints[-i] - cardPoints[k-i]
             res = max(res, s)
         return res
-        ```
+```
 
 218. The Skyline Problem  https://leetcode.com/problems/the-skyline-problem/  
 
