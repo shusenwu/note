@@ -1,45 +1,4 @@
-722. Remove Comments  https://leetcode.com/problems/remove-comments/  
 
-
-1423. Maximum Points You Can Obtain from Cards https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
-```python 
-class Solution:
-    def maxScore(self, cardPoints: List[int], k: int) -> int:
-        '''
-        情况分别是， 要么取前面的K个
-        要么取后面的K个
-        要么取前面i个， + 后面的K-i个
-        或者DP的解法，思路一样： https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/discuss/598111/Java-dp-solution(explanation-with-picture)
-        '''
-        s = sum(cardPoints[:k])  # 取前面的K个
-        res = s
-        for i in range(1, k+1):  # 前面每次少取1个
-            s += cardPoints[-i] - cardPoints[k-i]
-            res = max(res, s)
-        return res
-```
-
-218. The Skyline Problem  https://leetcode.com/problems/the-skyline-problem/  
-
-```python
-1626. Best Team With No Conflicts https://leetcode.com/problems/best-team-with-no-conflicts/
-class Solution:
-    def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
-        n = len(scores)
-        players = sorted([(a, s) for a, s in zip(ages, scores)], reverse=True)
-        
-        dp = [players[i][1] for i in range(n)]  # dp[i] means the max sum scores between players0 to players i-1 and player i-1 is included 
-        re = 0
-        for i in range(n):
-            cur_player_score = players[i][1]
-            for j in range(0, i):
-                if players[j][1] >= players[i][1]:
-                    dp[i] = max(dp[j] + cur_player_score, dp[i])
-            re = max(re, dp[i])
-        return re
-        
-         
-```
 31. Next Permutation  https://leetcode.com/problems/next-permutation/  
 
 655. Print Binary Tree https://leetcode.com/problems/print-binary-tree/  
