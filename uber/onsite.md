@@ -1,3 +1,21 @@
+1423. Maximum Points You Can Obtain from Cards https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
+```python 
+class Solution:
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
+        '''
+        情况分别是， 要么取前面的K个
+        要么取后面的K个
+        要么取前面i个， + 后面的K-i个
+        或者DP的解法，思路一样： https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/discuss/598111/Java-dp-solution(explanation-with-picture)
+        '''
+        s = sum(cardPoints[:k])  # 取前面的K个
+        res = s
+        for i in range(1, k+1):  # 前面每次少取1个
+            s += cardPoints[-i] - cardPoints[k-i]
+            res = max(res, s)
+        return res
+        ```
+
 218. The Skyline Problem  https://leetcode.com/problems/the-skyline-problem/  
 
 ```python
