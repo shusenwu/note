@@ -1,3 +1,18 @@
+```python
+853. Car Fleet https://leetcode.com/problems/car-fleet/
+853变种. infinite destination, output the car index which can catach up other car by meeting timestamp sequence
+e.g.
+speed [2,1,4, 5,3,2],
+position [0,3,4,5,8,10],
+output [ 3, 4, 0, 2]
+
+
+按照位置排序所有汽车，然后将每辆车与前车的距离/两车速度差得到追上时间，速度差为负就是永远追不上，然后按照追上时间排序
+
+```
+
+
+
 注意edge case
 ==
 722. Remove Comments  https://leetcode.com/problems/remove-comments/  
