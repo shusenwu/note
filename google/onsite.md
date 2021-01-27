@@ -1,4 +1,31 @@
 ```python
+1088. Confusing Number II
+class Solution:
+    def confusingNumberII(self, N: int) -> int:
+        # 0, 1, 6, 8, 9
+        # 0, 1, 9, 8, 6
+        # 19 to 61
+        
+        valid = [0, 1, 6, 8, 9]
+        m = {0: 0, 1: 1, 6: 9, 8: 8, 9: 6}
+        
+        self.count = 0
+        
+        def helper(n, rotation, digit):
+            if n != rotation:
+                self.count += 1
+            for v in valid:
+                if n == 0 and v == 0: continue  # 避免 helper（0, 0, xx）的死循环 因为永远不会到下一个break
+                if n * 10 + v > N:
+                    break
+                helper(n * 10 + v, m[v] * digit + rotation, digit * 10)
+        
+        helper(0, 0, 1)
+        return self.count
+```
+
+
+```python
 853. Car Fleet https://leetcode.com/problems/car-fleet/
 853变种. infinite destination, output the car index which can catach up other car by meeting timestamp sequence
 e.g.
