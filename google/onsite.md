@@ -1,3 +1,5 @@
+995. Minimum Number of K Consecutive Bit Flips  https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/  
+
 1377. Frog Position After T Seconds  https://leetcode.com/problems/frog-position-after-t-seconds/  
 
 552. Student Attendance Record II  https://leetcode.com/problems/student-attendance-record-ii/  
