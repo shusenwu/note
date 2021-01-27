@@ -1,3 +1,13 @@
+552. Student Attendance Record II  https://leetcode.com/problems/student-attendance-record-ii/  
+```
+Input: n = 2
+Output: 8 
+Explanation:
+There are 8 records with length 2 will be regarded as rewardable:
+"PP" , "AP", "PA", "LP", "PL", "AL", "LA", "LL"
+Only "AA" won't be regarded as rewardable owing to more than one absent times. 
+```
+
 715. Range Module  https://leetcode.com/problems/range-module/  
 
 ```python
