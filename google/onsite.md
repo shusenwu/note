@@ -1,3 +1,4 @@
+846. Hand of Straights  https://leetcode.com/problems/hand-of-straights/  拆成长度为W的多个连续数组  
 995. Minimum Number of K Consecutive Bit Flips  https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/  
 
 1377. Frog Position After T Seconds  https://leetcode.com/problems/frog-position-after-t-seconds/  
