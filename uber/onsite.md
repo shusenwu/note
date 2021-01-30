@@ -111,3 +111,11 @@ req: lat/long radius
 ## 系统设计: tinyUrl  
 
 ## 基本围绕简历，how did you collaborate, constructive feedback，some mentorship details.  
+```
+ 设计一个交通的heat map。每个司机每秒会把自己的位置发给系统，然后通过这些信息来显示某个区域，
+ 比如三番，的实时交通密度情况。主要有两个要求，第一个要求是以每分钟为一个bucket来统计，然后需要记录过去二十分钟的数据，
+ 这个要求对realtime的要求比较高。第二个要求是保存过去两年的数据，只需要每天更新一次就行，主要用于offline的研究
+ 。问了面试官如果一个司机在一分钟的时间里去过地图上不同的点（把地图分成很多个grid的话一分钟内去过多个grid），
+ 那这个司机是算一次还是多次。面试官的回答是多次，我觉得多次应该也比较好算一点。我的感觉就是设计data pipeline来收集和汇总数据，
+ 然后同时满足realtime和batch处理的需求。
+ ```
